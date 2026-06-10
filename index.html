@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>roteiro.mg — Guia de Viagem em Minas Gerais</title>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#111;--g2:#444;--g3:#666;--g4:#999;--g5:#ccc;
+  --g6:#e8e8e8;--g7:#f2f2f2;--g8:#fafafa;--white:#fff;
+  --blue:#2563eb;--blue-h:#1d4ed8;--blue-lt:#eff6ff;--blue-bd:#bfdbfe;
+  --green:#16a34a;--amber:#d97706;--red:#dc2626;--purple:#7c3aed;--sky:#0284c7;
+  --r:10px;--r-lg:14px;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;background:var(--white);color:var(--black);-webkit-font-smoothing:antialiased;font-size:14px;line-height:1.5}
+
+/* ── NAV ── */
+.nav{display:flex;align-items:center;justify-content:space-between;padding:0 20px;height:52px;border-bottom:1px solid var(--g6);background:var(--white);position:sticky;top:0;z-index:100}
+.logo{font-size:15px;font-weight:700;letter-spacing:-.3px;cursor:pointer}
+.logo em{color:var(--blue);font-style:normal}
+.nav-badge{font-size:11px;background:var(--blue-lt);border:1px solid var(--blue-bd);border-radius:40px;padding:3px 10px;color:var(--blue);white-space:nowrap}
+
+/* ── HERO ── */
+.hero{background:var(--blue-lt);border-bottom:1px solid var(--blue-bd);padding:40px 20px 32px}
+.hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);opacity:.8;margin-bottom:12px}
+.hero h1{font-size:clamp(1.8rem,5vw,2.9rem);font-weight:700;letter-spacing:-1.5px;color:var(--black);line-height:1.05;margin-bottom:8px}
+.hero h1 em{color:var(--blue);font-style:normal}
+.hero-sub{font-size:14px;color:var(--g3);max-width:460px;line-height:1.6;margin-bottom:28px}
+
+/* ── CITY SEARCH ── */
+.city-search-wrap{max-width:540px}
+.city-search-row{display:flex;gap:10px;flex-wrap:wrap}
+.city-select-wrap{flex:1;min-width:200px;position:relative}
+.city-select-wrap select{width:100%;padding:11px 36px 11px 14px;border:1px solid var(--g5);border-radius:var(--r);font-size:14px;color:var(--black);background:var(--white);outline:none;-webkit-appearance:none;appearance:none;transition:border-color .12s;font-family:inherit;cursor:pointer}
+.city-select-wrap select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.09)}
+.city-select-wrap::after{content:'';position:absolute;right:12px;top:50%;transform:translateY(-50%);border:5px solid transparent;border-top-color:var(--g4);pointer-events:none;margin-top:2px}
+.btn-explorar{padding:11px 20px;background:var(--black);color:var(--white);border:none;border-radius:var(--r);font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap;transition:background .13s;font-family:inherit}
+.btn-explorar:hover{background:var(--g2)}
+.btn-explorar:disabled{background:var(--g5);cursor:not-allowed}
+
+/* ── FORM SECTION ── */
+.form-section{background:var(--white);padding:24px 20px 36px}
+.form-card{background:var(--white);border:1px solid var(--g6);border-radius:var(--r-lg);padding:20px;max-width:740px}
+.form-card-title{font-size:13px;font-weight:600;color:var(--g3);margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--g6)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.form-row-3{display:grid;grid-template-columns:1fr 1fr 100px;gap:12px;margin-bottom:18px}
+.field label{display:block;font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--g3);margin-bottom:5px}
+.field select,.field input,.field textarea{width:100%;padding:9px 12px;border:1px solid var(--g6);border-radius:var(--r);font-size:14px;color:var(--black);background:var(--white);outline:none;-webkit-appearance:none;appearance:none;transition:border-color .12s;font-family:inherit}
+.field textarea{resize:vertical;min-height:76px;line-height:1.5}
+.field select:focus,.field input:focus,.field textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.09)}
+.field select:disabled{color:var(--g4);background:var(--g8)}
+.field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px}
+.field-hint{font-size:11px;color:var(--g4);margin-top:4px;line-height:1.4}
+
+/* ── PREFS ── */
+.prefs-lbl{font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--g3);margin-bottom:8px;display:block}
+.prefs-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}
+.chip{padding:6px 12px;border-radius:40px;font-size:12px;font-weight:500;border:1px solid var(--g6);color:var(--g3);cursor:pointer;transition:all .12s;background:var(--white);user-select:none}
+.chip.on{background:var(--blue-lt);color:var(--blue);border-color:var(--blue-bd)}
+.chip:hover:not(.on){border-color:var(--g5);color:var(--black)}
+.form-divider{height:1px;background:var(--g6);margin:4px 0 18px}
+
+/* ── ERRORS / BTNS ── */
+.err{background:#fff5f5;border:1px solid #fecaca;border-radius:var(--r);padding:9px 13px;font-size:13px;color:var(--red);display:flex;align-items:flex-start;gap:7px;margin-bottom:8px;line-height:1.45}
+.btn-gerar{width:100%;padding:13px;background:var(--blue);color:var(--white);border:none;border-radius:var(--r);font-size:14px;font-weight:600;cursor:pointer;transition:background .15s;display:flex;align-items:center;justify-content:center;gap:8px;font-family:inherit;margin-top:4px}
+.btn-gerar:hover{background:var(--blue-h)}
+.btn-gerar:active{transform:scale(.99)}
+.btn-gerar:disabled{background:var(--g5);cursor:not-allowed}
+
+/* ── CITY PAGE ── */
+.city-page-wrap{max-width:740px;margin:0 auto;padding:28px 20px}
+.city-page-hd{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:10px}
+.city-page-name{font-size:22px;font-weight:700;letter-spacing:-.5px;margin-bottom:3px}
+.city-page-sub{font-size:13px;color:var(--g4)}
+.city-actions{display:flex;gap:8px;flex-wrap:wrap;flex-shrink:0}
+.btn-outline{padding:9px 16px;border:1px solid var(--g6);border-radius:var(--r);font-size:13px;font-weight:500;cursor:pointer;background:var(--white);color:var(--g2);transition:all .12s;font-family:inherit;white-space:nowrap}
+.btn-outline:hover{border-color:var(--black);color:var(--black)}
+.btn-solid{padding:9px 16px;border:none;border-radius:var(--r);font-size:13px;font-weight:600;cursor:pointer;background:var(--blue);color:var(--white);transition:background .12s;font-family:inherit;white-space:nowrap}
+.btn-solid:hover{background:var(--blue-h)}
+
+/* ── CATEGORY TABS ── */
+.cat-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px}
+.ctab{padding:6px 14px;border-radius:40px;font-size:12px;font-weight:500;border:1px solid var(--g6);color:var(--g3);cursor:pointer;background:var(--white);transition:all .12s;font-family:inherit}
+.ctab:hover{border-color:var(--g5);color:var(--black)}
+.ctab.on{background:var(--black);color:var(--white);border-color:var(--black)}
+
+/* ── PLACES GRID ── */
+.places-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.place-card{border:1px solid var(--g6);border-radius:var(--r-lg);padding:16px;cursor:pointer;transition:all .15s;background:var(--white);text-align:left;width:100%;font-family:inherit}
+.place-card:hover{border-color:var(--blue-bd);box-shadow:0 2px 12px rgba(37,99,235,.08);transform:translateY(-1px)}
+.place-card-emoji{font-size:22px;margin-bottom:10px;display:block}
+.place-card-name{font-size:14px;font-weight:600;color:var(--black);margin-bottom:4px;line-height:1.3}
+.place-card-desc{font-size:12px;color:var(--g3);line-height:1.5;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.place-card-tip{font-size:11px;color:var(--g4);font-style:italic}
+.place-card-footer{display:flex;align-items:center;justify-content:space-between;margin-top:10px;padding-top:10px;border-top:1px solid var(--g6)}
+.contact-dot{width:7px;height:7px;border-radius:50%;display:inline-block}
+.empty-state{text-align:center;padding:48px 20px;color:var(--g4)}
+.empty-state-icon{font-size:40px;margin-bottom:12px}
+.empty-state-title{font-size:15px;font-weight:600;color:var(--g3);margin-bottom:6px}
+.empty-state-sub{font-size:13px;line-height:1.5}
+
+/* ── ROTEIRO RESULT ── */
+.result-wrap{max-width:740px;margin:0 auto;padding:28px 20px}
+.result-hd{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:22px;flex-wrap:wrap;gap:10px}
+.result-title{font-size:19px;font-weight:700;letter-spacing:-.4px}
+.result-meta{font-size:12px;color:var(--g4);margin-top:3px;line-height:1.5}
+.legend{display:flex;gap:12px;flex-wrap:wrap;padding:12px 0;border-top:1px solid var(--g6);border-bottom:1px solid var(--g6);margin-bottom:24px}
+.leg{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--g3)}
+.leg-d{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.loading{text-align:center;padding:52px 20px}
+.spinner{width:28px;height:28px;border:2px solid var(--g6);border-top-color:var(--blue);border-radius:50%;animation:spin .7s linear infinite;margin:0 auto 14px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading p{font-size:14px;color:var(--g3);font-weight:500}
+.loading small{font-size:12px;color:var(--g5);display:block;margin-top:4px}
+
+/* ── DAY / TIMELINE ── */
+.day-block{margin-bottom:32px}
+.day-hd{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--g6);flex-wrap:wrap}
+.day-num{background:var(--black);color:var(--white);font-size:10px;font-weight:700;padding:3px 9px;border-radius:40px;letter-spacing:.06em;white-space:nowrap}
+.day-title{font-size:14px;font-weight:600;color:var(--black)}
+.day-date{font-size:11px;color:var(--g4);margin-left:auto}
+.tl-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--g6)}
+.tl-item:last-child{border-bottom:none}
+.tl-left{flex-shrink:0;width:56px;text-align:right;padding-top:4px}
+.tl-time{font-size:11px;font-weight:600;color:var(--g4)}
+.tl-icon{flex-shrink:0;width:18px;display:flex;flex-direction:column;align-items:center}
+.tl-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:5px}
+.tl-line{flex:1;width:1px;background:var(--g6);margin-top:3px}
+.tl-dot.cafe{background:var(--amber)}.tl-dot.almoco,.tl-dot.jantar{background:var(--red)}.tl-dot.bar{background:var(--purple)}.tl-dot.visita{background:var(--sky)}.tl-dot.exp{background:var(--green)}.tl-dot.other{background:var(--g5)}
+.tl-body{flex:1;min-width:0}
+.tl-type{font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--g4);margin-bottom:1px}
+.tl-name{font-size:14px;font-weight:600;color:var(--black);margin-bottom:3px;line-height:1.3}
+.tl-desc{font-size:13px;color:var(--g3);line-height:1.5;margin-bottom:4px}
+.tl-tip{font-size:12px;color:var(--g4);font-style:italic;line-height:1.4}
+.dica-dia{background:var(--blue-lt);border:1px solid var(--blue-bd);border-radius:var(--r);padding:11px 14px;margin-top:14px;font-size:13px;color:var(--g2);line-height:1.5}
+.dica-dia b{color:var(--blue)}
+
+/* ── PILLS ── */
+.pills{display:flex;gap:5px;flex-wrap:wrap;margin-top:8px}
+.pill{display:inline-flex;align-items:center;gap:3px;padding:4px 10px;border-radius:40px;font-size:11px;font-weight:500;text-decoration:none;border:1px solid var(--g6);color:var(--g3);transition:all .12s;background:var(--white)}
+.pill:hover{border-color:var(--g5);color:var(--black)}
+.pill.w{border-color:#bbf7d0;color:#15803d}.pill.w:hover{background:#22c55e;border-color:#22c55e;color:#fff}
+.pill.ig{border-color:var(--g6);color:var(--g4)}.pill.ig:hover{border-color:#e1306c;color:#e1306c}
+.pill.g{border-color:var(--blue-bd);color:var(--blue)}.pill.g:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+
+/* ── MODAL ── */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:200;display:flex;align-items:flex-end;justify-content:center;padding:0;opacity:0;transition:opacity .2s;display:none}
+.modal-overlay.open{opacity:1;display:flex}
+@media(min-width:580px){.modal-overlay{align-items:center;padding:20px}}
+.modal{background:var(--white);width:100%;max-width:480px;border-radius:var(--r-lg) var(--r-lg) 0 0;padding:24px;max-height:90vh;overflow-y:auto;transform:translateY(30px);transition:transform .22s;position:relative}
+@media(min-width:580px){.modal{border-radius:var(--r-lg);transform:scale(.96)}}
+.modal-overlay.open .modal{transform:translateY(0)}
+@media(min-width:580px){.modal-overlay.open .modal{transform:scale(1)}}
+.modal-close{position:absolute;top:14px;right:14px;width:28px;height:28px;border-radius:50%;border:none;background:var(--g7);cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;color:var(--g3);transition:all .12s}
+.modal-close:hover{background:var(--g6);color:var(--black)}
+.modal-emoji{font-size:32px;margin-bottom:12px;display:block}
+.modal-cat{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--g4);margin-bottom:6px}
+.modal-name{font-size:18px;font-weight:700;color:var(--black);margin-bottom:8px;letter-spacing:-.3px;line-height:1.2;padding-right:32px}
+.modal-desc{font-size:14px;color:var(--g3);line-height:1.6;margin-bottom:12px}
+.modal-tip{font-size:13px;color:var(--g4);font-style:italic;padding:10px 12px;background:var(--g8);border-radius:var(--r);margin-bottom:16px}
+.modal-pills{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px}
+.modal-search{display:block;text-align:center;padding:10px;border:1px solid var(--g6);border-radius:var(--r);font-size:13px;color:var(--g3);text-decoration:none;transition:all .12s}
+.modal-search:hover{border-color:var(--black);color:var(--black)}
+
+/* ── ADS ── */
+.ad-slot{background:var(--g8);border:1px solid var(--g6);border-radius:var(--r);padding:12px;text-align:center;margin:20px 0;overflow:hidden}
+.ad-label{font-size:10px;color:var(--g4);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+
+/* ── FOOTER ── */
+.footer{border-top:1px solid var(--g6);padding:24px 20px;font-size:12px;color:var(--g4);text-align:center}
+
+.hidden{display:none!important}
+/* ── CARD CONTACT BUTTONS (replace dots) ── */
+.card-contacts{display:flex;gap:5px;flex-wrap:wrap}
+.card-contact-btn{display:inline-flex;align-items:center;gap:3px;padding:3px 9px;border-radius:40px;font-size:10px;font-weight:600;text-decoration:none;border:1px solid;cursor:pointer;transition:all .12s;background:var(--white);line-height:1.4}
+.card-contact-btn.w{border-color:#bbf7d0;color:#15803d}.card-contact-btn.w:hover{background:#22c55e;border-color:#22c55e;color:#fff}
+.card-contact-btn.ig{border-color:#f9c;color:#c13584}.card-contact-btn.ig:hover{background:#e1306c;border-color:#e1306c;color:#fff}
+.card-contact-btn.maps{border-color:var(--blue-bd);color:var(--blue)}.card-contact-btn.maps:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+
+/* ── CITY PAGE ACTIONS ── */
+.city-page-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:8px}
+.btn-cadastrar{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border:1px dashed var(--g5);border-radius:var(--r);font-size:12px;font-weight:500;color:var(--g3);cursor:pointer;background:var(--white);font-family:inherit;transition:all .12s}
+.btn-cadastrar:hover{border-color:var(--blue);color:var(--blue)}
+
+/* ── REGISTER MODAL ── */
+.reg-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:300;display:none;align-items:flex-end;justify-content:center;opacity:0;transition:opacity .2s}
+.reg-overlay.open{opacity:1;display:flex}
+@media(min-width:580px){.reg-overlay{align-items:center;padding:20px}}
+.reg-modal{background:var(--white);width:100%;max-width:520px;border-radius:var(--r-lg) var(--r-lg) 0 0;padding:24px;max-height:92vh;overflow-y:auto;transform:translateY(40px);transition:transform .22s;position:relative}
+@media(min-width:580px){.reg-modal{border-radius:var(--r-lg);transform:scale(.96)}}
+.reg-overlay.open .reg-modal{transform:translateY(0)}
+@media(min-width:580px){.reg-overlay.open .reg-modal{transform:scale(1)}}
+.reg-title{font-size:17px;font-weight:700;margin-bottom:4px;padding-right:36px;letter-spacing:-.3px}
+.reg-sub{font-size:13px;color:var(--g3);margin-bottom:20px}
+.reg-form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+.reg-field{margin-bottom:10px}
+.reg-field label{display:block;font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--g3);margin-bottom:4px}
+.reg-field input,.reg-field select,.reg-field textarea{width:100%;padding:8px 11px;border:1px solid var(--g6);border-radius:var(--r);font-size:14px;color:var(--black);background:var(--white);outline:none;font-family:inherit;transition:border-color .12s;-webkit-appearance:none;appearance:none}
+.reg-field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23999' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 11px center;padding-right:30px}
+.reg-field input:focus,.reg-field select:focus,.reg-field textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.09)}
+.reg-field textarea{resize:vertical;min-height:72px;line-height:1.5}
+.reg-required{color:var(--red)}
+.reg-btn-row{display:flex;gap:8px;margin-top:4px;flex-wrap:wrap}
+.reg-btn-cancel{flex:0 0 auto;padding:11px 18px;border:1px solid var(--g6);border-radius:var(--r);font-size:14px;font-weight:500;cursor:pointer;background:var(--white);color:var(--g2);font-family:inherit;transition:all .12s}
+.reg-btn-cancel:hover{border-color:var(--black);color:var(--black)}
+.reg-btn-send{flex:1;padding:11px;background:var(--blue);color:var(--white);border:none;border-radius:var(--r);font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:background .15s;display:flex;align-items:center;justify-content:center;gap:8px}
+.reg-btn-send:hover{background:var(--blue-h)}
+.reg-btn-send:disabled{background:var(--g5);cursor:not-allowed}
+.reg-feedback{padding:12px 14px;border-radius:var(--r);font-size:13px;margin-top:12px;line-height:1.5;display:none}
+.reg-feedback.ok{background:#f0fdf4;border:1px solid #bbf7d0;color:#15803d}
+.reg-feedback.err{background:#fff5f5;border:1px solid #fecaca;color:var(--red)}
+
+/* ── EVENTO CARD ── */
+.ev-card{border:1px solid var(--g6);border-radius:var(--r-lg);padding:16px;background:var(--white)}
+.ev-card-date{font-size:11px;font-weight:600;color:var(--blue);margin-bottom:4px;letter-spacing:.04em}
+.ev-card-name{font-size:14px;font-weight:600;color:var(--black);margin-bottom:4px;line-height:1.3}
+.ev-card-desc{font-size:12px;color:var(--g3);line-height:1.5;margin-bottom:8px}
+.ev-card-tip{font-size:11px;color:var(--g4);font-style:italic;margin-bottom:8px}
+
+@media(max-width:580px){.reg-form-row{grid-template-columns:1fr}}
+
+
+/* ── RESPONSIVE ── */
+@media(max-width:580px){
+  .form-row{grid-template-columns:1fr}
+  .form-row-3{grid-template-columns:1fr 1fr}
+  .city-search-row{flex-direction:column}
+  .btn-explorar{width:100%}
+}
+@media(max-width:480px){
+  .hero{padding:24px 16px 24px}
+  .form-section{padding:18px 14px 28px}
+  .form-card{padding:14px}
+  .city-page-wrap,.result-wrap{padding:20px 14px}
+  .nav{padding:0 14px}
+  .places-grid{grid-template-columns:1fr 1fr}
+  .city-actions{width:100%}
+  .btn-outline,.btn-solid{flex:1;text-align:center}
+}
+@media(max-width:360px){
+  .places-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <span class="logo" onclick="goHome()">roteiro<em>.mg</em></span>
+  <span class="nav-badge" id="nav-badge">13 cidades</span>
+</nav>
+
+<!-- ══ VIEW: HOME ══════════════════════════════════════════════════════════ -->
+<div id="view-home">
+  <div class="hero">
+    <p class="hero-eyebrow">Minas Gerais · Guia de viagem</p>
+    <h1>Descubra <em>Minas Gerais</em></h1>
+    <p class="hero-sub">Selecione uma cidade para explorar os melhores lugares ou criar um roteiro personalizado.</p>
+    <div class="city-search-wrap">
+      <div class="city-search-row">
+        <div class="city-select-wrap">
+          <select id="sel-cidade-home" onchange="onCidadeHome()">
+            <option value="">Escolha uma cidade...</option>
+            <optgroup label="Cidades disponíveis">
+              <option value="tiradentes">Tiradentes</option>
+              <option value="ouro_preto">Ouro Preto</option>
+              <option value="sao_joao">São João del-Rei</option>
+              <option value="diamantina">Diamantina</option>
+              <option value="mariana">Mariana</option>
+              <option value="congonhas">Congonhas</option>
+              <option value="lavras_novas">Lavras Novas</option>
+              <option value="carrancas">Carrancas</option>
+              <option value="capitolio">Capitólio</option>
+              <option value="monte_verde">Monte Verde</option>
+              <option value="serra_cipo">Serra do Cipó</option>
+              <option value="brumadinho">Brumadinho</option>
+              <option value="belo_horizonte">Belo Horizonte</option>
+            </optgroup>
+          </select>
+        </div>
+        <button class="btn-explorar" id="btn-explorar-home" onclick="explorarCidade()" disabled>
+          Explorar cidade →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="ad-slot">
+    <p class="ad-label">Publicidade</p>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1111111111" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+</div>
+
+<!-- ══ VIEW: CITY PAGE ════════════════════════════════════════════════════ -->
+<div id="view-city" class="hidden">
+  <div class="city-page-wrap">
+    <div class="city-page-hd">
+      <div>
+        <h2 class="city-page-name" id="city-name">Tiradentes</h2>
+        <p class="city-page-sub" id="city-sub">Minas Gerais · Patrimônio Histórico</p>
+      </div>
+      <div class="city-actions">
+        <button class="btn-outline" onclick="goHome()">← Cidades</button>
+        <button class="btn-solid" onclick="openRegModal()">+ Cadastrar experiência</button>
+      </div>
+    </div>
+
+    <div class="cat-tabs" id="cat-tabs"></div>
+    <div id="places-grid" class="places-grid"></div>
+  </div>
+
+  <div class="ad-slot" style="max-width:740px;margin:0 auto 0;padding:0 20px">
+    <p class="ad-label">Publicidade</p>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="2222222222" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+</div>
+
+<!-- ══ VIEW: ROTEIRO FORM ═════════════════════════════════════════════════ -->
+<div id="view-form" class="hidden">
+  <div class="form-section">
+    <div class="form-card">
+      <p class="form-card-title">📋 Criar roteiro para <span id="form-cidade-nome">Tiradentes</span></p>
+
+      <div class="form-row-3">
+        <div class="field">
+          <label>Data de início</label>
+          <input type="date" id="dt-in">
+        </div>
+        <div class="field">
+          <label>Data de fim</label>
+          <input type="date" id="dt-fim">
+        </div>
+        <div class="field">
+          <label>Viajantes</label>
+          <input type="number" id="viaj" value="2" min="1" max="20">
+        </div>
+      </div>
+
+      <span class="prefs-lbl">Preferências</span>
+      <div class="prefs-row">
+        <div class="chip on" data-p="gastronomia">🍽️ Gastronomia</div>
+        <div class="chip on" data-p="cafe">☕ Cafés</div>
+        <div class="chip on" data-p="bares">🍸 Bares & Drinks</div>
+        <div class="chip on" data-p="vinhos">🍷 Vinhos</div>
+        <div class="chip on" data-p="cachaca">🥃 Cachaça</div>
+        <div class="chip on" data-p="queijos">🧀 Queijos</div>
+        <div class="chip" data-p="trilhas">🥾 Trilhas</div>
+        <div class="chip" data-p="cultura">🏛️ Cultura</div>
+        <div class="chip" data-p="compras">🛍️ Artesanato</div>
+      </div>
+
+      <div class="form-divider"></div>
+
+      <div class="field" style="margin-bottom:18px">
+        <label>Conte mais sobre sua viagem <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--g4)">(opcional)</span></label>
+        <textarea id="contexto" placeholder="Ex: lua de mel, prefiro restaurantes calmos, quero degustação de vinhos ao pôr do sol..."></textarea>
+        <p class="field-hint">Quanto mais detalhes, mais personalizado o roteiro.</p>
+      </div>
+
+      <div id="err-datas" class="err hidden">⚠ Selecione datas válidas (fim igual ou após início).</div>
+
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn-outline" style="flex:0 0 auto" onclick="abrirCidade()">← Voltar</button>
+        <button class="btn-gerar" id="btn-gerar" onclick="gerar()" style="flex:1">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          Criar meu roteiro
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ VIEW: RESULTADO ════════════════════════════════════════════════════ -->
+<div id="view-result" class="hidden">
+  <div class="result-wrap">
+    <div class="result-hd">
+      <div style="min-width:0">
+        <h2 class="result-title" id="res-title">Roteiro</h2>
+        <p class="result-meta" id="res-meta"></p>
+      </div>
+      <div style="display:flex;gap:8px;flex-shrink:0;flex-wrap:wrap">
+        <button class="btn-outline" onclick="abrirCidade()">🗺️ Explorar</button>
+        <button class="btn-outline" onclick="abrirRoteiro()">⚙️ Refazer</button>
+        <button class="btn-outline" onclick="goHome()">← Início</button>
+      </div>
+    </div>
+
+    <div class="legend">
+      <div class="leg"><div class="leg-d" style="background:#d97706"></div>Café</div>
+      <div class="leg"><div class="leg-d" style="background:#dc2626"></div>Refeição</div>
+      <div class="leg"><div class="leg-d" style="background:#7c3aed"></div>Bar</div>
+      <div class="leg"><div class="leg-d" style="background:#0284c7"></div>Visita</div>
+      <div class="leg"><div class="leg-d" style="background:#16a34a"></div>Experiência</div>
+    </div>
+
+    <div id="loading" class="loading hidden">
+      <div class="spinner"></div>
+      <p>Montando seu roteiro...</p>
+      <small>Selecionando os melhores lugares para você</small>
+    </div>
+    <div id="output"></div>
+  </div>
+
+  <div class="ad-slot" style="max-width:740px;margin:0 auto;padding:0 20px">
+    <p class="ad-label">Publicidade</p>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="3333333333" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+</div>
+
+<!-- ══ MODAL ══════════════════════════════════════════════════════════════ -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+  <div class="modal" role="dialog" aria-modal="true">
+    <button class="modal-close" onclick="closeModalBtn()" aria-label="Fechar">✕</button>
+    <span class="modal-emoji" id="modal-emoji"></span>
+    <p class="modal-cat" id="modal-cat"></p>
+    <h3 class="modal-name" id="modal-name"></h3>
+    <p class="modal-desc" id="modal-desc"></p>
+    <p class="modal-tip" id="modal-tip"></p>
+    <div class="modal-pills" id="modal-pills"></div>
+    <a class="modal-search" id="modal-search" href="#" target="_blank">🔍 Buscar no Google</a>
+  </div>
+</div>
+
+
+<!-- ══ REGISTER MODAL ════════════════════════════════════════════════════ -->
+<div class="reg-overlay" id="reg-overlay" onclick="closeRegModal(event)">
+  <div class="reg-modal">
+    <button class="modal-close" onclick="closeRegModalBtn()" aria-label="Fechar">✕</button>
+    <h3 class="reg-title">Cadastrar experiência</h3>
+    <p class="reg-sub">Envie sua sugestão para análise. Publicaremos após verificação.</p>
+
+    <div class="reg-form-row">
+      <div class="reg-field">
+        <label>Nome do local <span class="reg-required">*</span></label>
+        <input type="text" id="reg-nome" placeholder="Ex: Restaurante da Vovó" maxlength="100">
+      </div>
+      <div class="reg-field">
+        <label>Tipo <span class="reg-required">*</span></label>
+        <select id="reg-tipo">
+          <option value="">Selecione...</option>
+          <option>Restaurante</option>
+          <option>Café</option>
+          <option>Bar</option>
+          <option>Experiência</option>
+          <option>Evento</option>
+          <option>Trilha</option>
+          <option>Cachoeira</option>
+          <option>Fazenda</option>
+          <option>Museu</option>
+          <option>Igreja</option>
+          <option>Outro</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="reg-field">
+      <label>Cidade <span class="reg-required">*</span></label>
+      <select id="reg-cidade">
+        <option value="">Selecione...</option>
+        <option>Tiradentes</option>
+        <option>Ouro Preto</option>
+        <option>São João del-Rei</option>
+        <option>Diamantina</option>
+        <option>Mariana</option>
+        <option>Congonhas</option>
+        <option>Lavras Novas</option>
+        <option>Carrancas</option>
+        <option>Capitólio</option>
+        <option>Monte Verde</option>
+        <option>Serra do Cipó</option>
+        <option>Brumadinho</option>
+        <option>Belo Horizonte</option>
+        <option>Outra cidade de MG</option>
+      </select>
+    </div>
+
+    <div class="reg-form-row">
+      <div class="reg-field">
+        <label>WhatsApp</label>
+        <input type="tel" id="reg-wpp" placeholder="(35) 99999-9999">
+      </div>
+      <div class="reg-field">
+        <label>Instagram</label>
+        <input type="text" id="reg-ig" placeholder="@nomedoperfil">
+      </div>
+    </div>
+
+    <div class="reg-field">
+      <label>Endereço ou localização</label>
+      <input type="text" id="reg-end" placeholder="Rua, número ou ponto de referência" maxlength="200">
+    </div>
+
+    <div class="reg-field">
+      <label>Breve descrição <span class="reg-required">*</span></label>
+      <textarea id="reg-desc" placeholder="Conte o que torna este lugar especial..." maxlength="500"></textarea>
+    </div>
+
+    <div id="reg-feedback" class="reg-feedback"></div>
+
+    <div class="reg-btn-row">
+      <button class="reg-btn-cancel" onclick="closeRegModalBtn()">Cancelar</button>
+      <button class="reg-btn-send" id="reg-send-btn" onclick="enviarCadastro()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        Enviar cadastro
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <strong style="color:#444">roteiro.mg</strong> · Guia de viagem em Minas Gerais<br>
+  Dados baseados em Google, TripAdvisor e guias especializados · 13 cidades de Minas Gerais
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════════════════
+// DB — estrutura escalável por cidade
+// Para adicionar nova cidade: DB['slug'] = { nome, desc, cafes, almoco, jantar, bares, experiencias, visitas }
+// Campos mínimos por item: { n, desc, tip }   Opcionais: wpp, ig, g
+// ═══════════════════════════════════════════════════════════════════════════
+const DB = {
+
+  tiradentes: {
+    nome: 'Tiradentes',
+    desc: 'Minas Gerais · Patrimônio Histórico Nacional',
+    cafes: [
+      {n:'Café da Viela',desc:'Café colonial com pão de queijo fresco, biscoito de polvilho, queijo canastra e doce de leite artesanal em casarão do séc. XVIII. Um dos mais queridos da cidade.',tip:'📍 Viela das Mercês, 14 · Centro histórico',ig:'https://instagram.com/cafedaviela'},
+      {n:'Marcas Mineiras Café',desc:'Você entra numa loja de decoração e descobre ao fundo um café aconchegante em meio à natureza. Ambiente único e encantador no centro histórico.',tip:'📍 Centro histórico de Tiradentes',ig:'https://instagram.com/marcasmineiras_loja_cafe'},
+      {n:"Taberna d'Omar",desc:'Cozinha e padaria artesanal com pães premiados, tortas caseiras e cafés especiais. Vista privilegiada para a Igreja do Carmo em São João del-Rei.',tip:'📍 Rua Direita, 187 · Tiradentes · (32) 99981-9478',ig:'https://instagram.com/tabernad.omar'},
+      {n:'Porão Tiradentes',desc:'Café intimista no centro histórico com ambiente acolhedor. Espaço que também recebe eventos e noites especiais com música.',tip:'📍 Centro histórico de Tiradentes',ig:'https://instagram.com/poraotiradentes'},
+    ],
+    almoco: [
+      {n:'Empório Santo Antônio',desc:'A comida aqui é simplesmente um absurdo de bom! Bufê regional completo com pernil, cupim e clássicos mineiros. Reserve com antecedência para o domingo!',tip:'📍 Av. Gov. Israel Pinheiro s/n · Reserve antes!',ig:'https://instagram.com/emporiosantoantonio'},
+      {n:"Temperos d'Angela",desc:'Comida típica mineira feita direto no fogão a lenha com ingredientes fresquinhos. Não deixe de experimentar a caipirinha de maracujá com cachaça em amburana! Visita obrigatória!',tip:'📍 Bichinho · 7km de Tiradentes',g:'https://share.google/hzrRisYQUV7H2ZQkJ'},
+      {n:'Viradas do Largo',desc:'Feijão tropeiro, frango com quiabo e couve refogada — a essência da cozinha mineira em ambiente histórico aconchegante com vista para as igrejas.',tip:'📍 Rua do Moinho, 11 · Tiradentes'},
+      {n:'Pau de Angu',desc:'Culinária mineira raiz em Bichinho — pratos caprichados e ambiente campestre irresistível. Vale o desvio de 3km da cidade.',tip:'📍 Estrada para Bichinho, km 3',ig:'https://instagram.com/paudeangutda'},
+      
+    ],
+    jantar: [
+      {n:'Tragaluz',desc:"Top 100 Restaurantes do Brasil (Exame Casual 2024). A galinha d'Angola com molho de cogumelo é o prato mais falado. Casarão colonial de quase 300 anos.",tip:'📍 Rua Direita, 52 · Qua–Seg a partir das 19h · Reserve!',ig:'https://instagram.com/tragaluztiradentes'},
+      {n:'Angatu',desc:'Menu degustação requintado. Membro da Boa Lembrança. Pratos autorais que reinterpretam Minas com técnica e elegância.',tip:'📍 Rua da Cadeia, 38 · Somente jantar · Reserve!'},
+      {n:'UaiThai',desc:'Uma das maiores surpresas de Tiradentes: culinária tailandesa autoral com ingredientes mineiros. Experiência única e inesquecível.',tip:'📍 Centro histórico · Reserve com antecedência',ig:'https://instagram.com/uaithai'},
+      {n:'Ora Restaurante',desc:'Cozinha contemporânea com técnica apurada e ingredientes locais. Uma das grandes descobertas do circuito gastronômico de Tiradentes.',tip:'📍 Centro histórico · Tiradentes',ig:'https://instagram.com/orarestaurante'},
+      {n:'Pacco & Bacco',desc:'Italiana contemporânea com excelente carta de vinhos. Ótimo para um jantar especial ou romântico em ambiente aconchegante.',tip:'📍 Rua Direita, 166 · Tiradentes'},
+      {n:'O Provençal',desc:'Culinária francesa com frutos do mar autorais. Ambiente intimista — perfeito para ocasiões especiais.',tip:'📍 Rua da Cadeia, 226A · Tiradentes'},
+    ],
+    bares: [
+      {n:'Entrepot du Vin',desc:'Sem dúvida os melhores drinks de Tiradentes. Carta de vinhos impressionante, coquetéis autorais e ambiente sofisticado.',tip:'📍 Centro histórico · Tiradentes',ig:'https://instagram.com/entrepotduvin'},
+      {n:'Conto de Reis Bar',desc:'Se você gosta de uma polenta com jiló num boteco autêntico, este é o lugar. Se você não gosta é porque ainda não foi lá!',tip:'📍 Centro histórico · Tiradentes',ig:'https://instagram.com/contodereis_bar'},
+      {n:'Beta do Rosário',desc:'De dia é restaurante, à noite vira bar animado com petiscos mineiros e cerveja gelada. Ambiente descontraído no centro histórico.',tip:'📍 Centro histórico · Tiradentes',ig:'https://instagram.com/betadorosario'},
+    ],
+    experiencias: [
+      {n:'Vinícola Luiz Porto',desc:'Visita guiada às caves com barricas de carvalho e degustação de 4 rótulos de vinhos finos mineiros. Tour de 1h30 — encanta mesmo quem não é especialista.',tip:'📍 Av. Gov. Israel Pinheiro, 878 · Qui–Sáb 10h–14h · R$125/pessoa',ig:'https://instagram.com/luizportovinhosfinos'},
+      {n:'Sunset na Vinícola Trindade',desc:'Domo geodésico em Bichinho: pôr do sol sobre a Serra de São José, vinho mineiro, queijo e música ao vivo. A experiência mais memorável da região.',tip:'📍 Bichinho – 7 km de Tiradentes · Vagas limitadas — reserve!',ig:'https://instagram.com/vinicolatrindade',wpp:'https://wa.me/5531972342195?text=Reserva+Sunset+Trindade'},
+      {n:'Ateliê da Cachaça CM',desc:'Pioneiros desde 1998 com mais de 1100 rótulos. Degustação guiada explicando cada cachaça envelhecida em madeiras brasileiras. Degustação gratuita na loja!',tip:'📍 Centro histórico · Tiradentes · 23 anos de tradição',ig:'https://instagram.com/ateliedacachacacm'},
+      {n:'Cachaçaria Mazuma',desc:'Do canavial à destilação — visita guiada completa ao alambique em Bichinho. Cachaças premiadas envelhecidas em madeiras raras como amburana e jequitibá.',tip:'📍 Bichinho · Seg–Sáb 9h30–17h · Dom até 14h',ig:'https://instagram.com/mazumamineira'},
+      {n:'Degustação de Queijos Artesanais',desc:'Queijaria premiada com queijos da Canastra, Serro e Alagoa harmonizados com cervejas artesanais. Também: goiabadas, doces e azeites artesanais.',tip:'📍 Centro histórico · Tiradentes'},
+      {n:'Maria Fumaça — Trem Histórico',desc:'Viagem nostálgica de trem a vapor entre Tiradentes e São João del-Rei pelos trilhos históricos do séc. XIX. Uma das experiências mais inesquecíveis de Minas.',tip:'📍 Estação Ferroviária de Tiradentes · Sáb, Dom e feriados'},
+    ],
+    natureza: [
+      {n:'Trilha da Serra de São José',desc:'Trilha de 8km com vista panorâmica de Tiradentes e São João del-Rei, cachoeiras e flora nativa da Mata Atlântica. Dificuldade moderada, 4–5h.',tip:'📍 Acesso pela Rua do Chafariz · Tiradentes · Guia recomendado'},
+      {n:'Cachoeira do Mangue',desc:'Cachoeira escondida nas matas da Serra de São José. Acesso por trilha de ~3h, dificuldade fácil. Ideal para um banho refrescante e fotos.',tip:'📍 ~4km de Tiradentes · Estrada do Mangue'},
+    ],
+    visitas: [
+      {n:'Matriz de Santo Antônio',desc:'Interior dourado a ouro, fachada em pedra-sabão esculpida por discípulos de Aleijadinho e órgão do séc. XVIII ainda em funcionamento.',tip:'📍 Praça Padre Lourival · Centro histórico · Aberta diariamente'},
+      {n:'Museu Padre Toledo',desc:'Casa original do padre inconfidente com acervo histórico da Inconfidência Mineira — documentos e mobiliário originais do séc. XVIII.',tip:'📍 Rua Padre Toledo · Centro histórico'},
+      {n:'Chafariz de São José',desc:'O chafariz mais antigo de Tiradentes, ainda abastecido por fonte natural. Ponto histórico e simbólico da cidade desde o séc. XVIII.',tip:'📍 Rua da Câmara · Centro histórico'},
+      {n:'Estação Ferroviária de Tiradentes',desc:'Museu ferroviário em estação do séc. XIX com acervo fotográfico e histórico. Ponto de partida da histórica Maria Fumaça.',tip:'📍 Largo das Forras · Centro histórico'},
+    ],
+    eventos: [
+      {n:'Festival de Inverno de Tiradentes',desc:'Um dos festivais culturais mais tradicionais do Brasil, com shows, teatro, gastronomia e exposições no centro histórico.',tip:'📍 Centro histórico · Julho de cada ano',data:'Julho',ig:'https://instagram.com/festivaltiradentes'},
+      {n:'Semana da Inconfidência',desc:'Cortejo histórico, teatro de rua e exposições sobre Tiradentes e a Inconfidência Mineira. Evento cívico e cultural de grande relevância nacional.',tip:'📍 Centro histórico · 15 de novembro',data:'15 de novembro'},
+      {n:'Cantata de Natal nas Igrejas Barrocas',desc:'Concertos de coral e música sacra nas igrejas históricas iluminadas de Tiradentes. Encerramento de ano inesquecível.',tip:'📍 Igrejas históricas · Dezembro',data:'Dezembro'},
+    ],
+  },
+
+  ouro_preto: {
+    nome: 'Ouro Preto',
+    desc: 'Minas Gerais · Patrimônio Mundial UNESCO',
+    cafes: [
+      {n:'Café das Flores',desc:'A varanda mais charmosa de Ouro Preto! Cafés exclusivos de produção própria com vista para as igrejas coloniais. Um dos mais seguidos e queridos da cidade.',tip:'📍 Centro histórico · Ouro Preto',ig:'https://instagram.com/cafedasfloresop'},
+      {n:'Café Esquina da Realeza',desc:'Na Praça Tiradentes número 4, aberto todos os dias das 9h às 19h. Ambiente privilegiado no coração histórico de Ouro Preto.',tip:'📍 Praça Tiradentes, 4 · Centro',ig:'https://instagram.com/cafeesquinadarealeza'},
+      {n:'OULM — O Único Lugar do Mundo',desc:'Cafés especiais e plantas alimentícias não convencionais (PANCs) num projeto único de café e cultura latina. Torra própria premiada.',tip:'📍 Rua Gabriel Santos, 16 · Rosário · Qui–Dom',ig:'https://instagram.com/ounicolugardomundo'},
+      {n:'Café da Escadinha',desc:'Café charmoso com café, chopp, pão de queijo, doces, salgados e sanduíches. Aberto de terça a domingo das 9h às 18h.',tip:'📍 Centro histórico · Ouro Preto',ig:'https://instagram.com/cafedaescadinha'},
+    ],
+    almoco: [
+      {n:'Bené da Flauta',desc:'Um dos 20 melhores restaurantes de Minas Gerais (TasteAtlas). Cozinha mineira e internacional em sobrado colonial ao lado da Igreja de São Francisco. Vista única dos telhados da cidade.',tip:'📍 Rua São Francisco de Assis, 32 · Centro · (31) 3551-1036',ig:'https://instagram.com/benedaflauta'},
+      {n:'Casa do Ouvidor',desc:'Desde 1972 no centro histórico. À la carte com feijão tropeiro, frango com quiabo e pratos mineiros em sobrado barroco de 1892 na Rua Direita.',tip:'📍 Rua Conde de Bobadela (Direita), 42 · (31) 3551-2141',ig:'https://instagram.com/casadoouvidor'},
+      {n:'Restaurante Jacubas',desc:'Comida mineira tradicional bem avaliada na Praça Tiradentes. Boa opção para almoço no coração histórico da cidade.',tip:'📍 Praça Tiradentes · Centro histórico'},
+    ],
+    jantar: [
+      {n:'Bené da Flauta',desc:'Também excelente para jantar ao som de jazz ou MPB. Uma das melhores cartas de vinho de Ouro Preto e vista da Igreja São Francisco iluminada.',tip:'📍 Rua São Francisco de Assis, 32 · Reserve com antecedência',ig:'https://instagram.com/benedaflauta'},
+      {n:'Casa do Ouvidor',desc:'Ambiente familiar e aconchegante para jantar com pratos mineiros clássicos e internacionais. Sacada com vista da Rua Direita.',tip:'📍 Rua Conde de Bobadela, 42 · (31) 3551-2141',ig:'https://instagram.com/casadoouvidor'},
+      {n:'Tanino Wine Bar',desc:'Wine bar com carta de vinhos cuidadosa e pratos para harmonizar. Ambiente intimista para um jantar especial no centro histórico.',tip:'📍 Rua Cláudio Manoel, 130 · Centro'},
+    ],
+    bares: [
+      {n:'Jair Boêmio',desc:'Bar tradicional na Praça Tiradentes com ambiente descontraído, cerveja gelada e petiscos mineiros. Ponto de encontro clássico de estudantes e turistas.',tip:'📍 Praça Tiradentes, 95 · Centro histórico'},
+      
+    ],
+    experiencias: [
+      {n:'Mina do Chico Rei',desc:'Visita guiada a uma das minas de ouro mais antigas e turísticas de Ouro Preto. Mergulho na história do ciclo do ouro do séc. XVIII.',tip:'📍 Rua Dom Silvério · Centro · Aberta diariamente'},
+      {n:'Mina da Passagem — Mariana',desc:'A maior mina de ouro aberta à visitação do mundo, a 14km de Ouro Preto. Desce de vagonete 30m até um lago subterrâneo cristalino.',tip:'📍 Passagem de Mariana · 14km de Ouro Preto · Aberta diariamente'},
+    ],
+    natureza: [
+      {n:'Parque Estadual do Itacolomi',desc:'Parque com trilhas diversas e o icônico Pico do Itacolomi (1.722m). Vista panorâmica de Ouro Preto e região. Fauna e flora da Mata Atlântica preservadas.',tip:'📍 Saída sul de Ouro Preto · Entrada paga · Guia recomendado'},
+    ],
+    visitas: [
+      {n:'Igreja de São Francisco de Assis',desc:'Obra-prima do barroco brasileiro. Fachada esculpida por Aleijadinho e interior pintado por Mestre Ataíde — um dos monumentos mais importantes das Américas.',tip:'📍 Largo do Coimbra · Ter–Dom'},
+      {n:'Praça Tiradentes',desc:'Coração histórico de Ouro Preto, rodeada pelo Museu da Inconfidência, a Escola de Minas e igrejas barrocas. Ponto de partida para conhecer a cidade.',tip:'📍 Centro histórico · Livre acesso'},
+      {n:'Museu da Inconfidência',desc:'Um dos mais importantes museus históricos do Brasil na antiga Casa de Câmara e Cadeia. Acervo sobre a Inconfidência Mineira e obras de arte sacra.',tip:'📍 Praça Tiradentes · Ter–Dom · Entrada paga'},
+      {n:'Igreja Nossa Senhora do Pilar',desc:'Uma das mais ricas igrejas barrocas do Brasil, com mais de 400kg de ouro nos altares e acervo impressionante de arte sacra.',tip:'📍 Praça Monsenhor Castilho Barbosa'},
+    ],
+    eventos: [
+      {n:'Carnaval de Ouro Preto',desc:'Um dos carnavais históricos mais famosos do Brasil, com blocos pelas ruas de pedra e a tradicional festa estudantil universitária.',tip:'📍 Centro histórico · Fevereiro/Março',data:'Fevereiro/Março'},
+    ],
+  },
+
+  sao_joao: {
+    nome: 'São João del-Rei',
+    desc: 'Minas Gerais · Barroco & Maria Fumaça',
+    cafes: [
+      {n:"Taberna d'Omar",desc:'Cozinha e padaria artesanal completa: café da manhã, almoço, jantar e brunch. Pão de queijo eleito um dos melhores de Minas Gerais. Vista para a Igreja do Carmo.',tip:'📍 R. Getúlio Vargas, 238 · Centro · (32) 98882-2014',ig:'https://instagram.com/tabernad.omar'},
+      {n:'Abades Ludo',desc:'Cafeteria com jogos de tabuleiro, mas igualmente ótima para quem quer só um café. Cardápio com paninis, bebidas, pastel de angu e sobremesas.',tip:'📍 Centro histórico · Qui–Sex 15h–23h · Sáb 15h–0h · Dom 12h–21h'},
+    ],
+    almoco: [
+      {n:'Restaurante Villeiros',desc:'Bufê por quilo em charmoso casarão colonial do séc. XIX no centro histórico. Uma das primeiras colocadas no TripAdvisor de São João del-Rei.',tip:'📍 Centro histórico · São João del-Rei'},
+      {n:'Mineirim Restaurante',desc:'Comida mineira caseira feita no fogão a lenha — irresistível. Um dos mais autênticos e queridos da cidade para um almoço regional.',tip:'📍 Centro · São João del-Rei'},
+      {n:'Restaurante Gramado',desc:'Aberto para almoço todos os dias com porções, à la carte e executivo. Bem avaliado e frequentado por moradores e turistas.',tip:'📍 Rua Paulo Freitas, 16 · Centro',ig:'https://instagram.com/gramadorestaurante'},
+    ],
+    jantar: [
+      
+      {n:'Dedo de Moça',desc:'Restaurante com menu degustação especial e pratos como costelinha laqueada, acarajé mineiro e frango com quiabo. Uma das melhores experiências gastronômicas da cidade.',tip:'📍 Centro histórico · São João del-Rei'},
+    ],
+    bares: [
+      {n:"Pennas Bar",desc:'O bar mais famoso da cidade entre os moradores. Cardápio com pastel de angu, lambari frito, torresmo, caldo de feijão e chouriço. Só aceita dinheiro.',tip:'📍 Av. Leite de Castro, 2702 · Fábricas · Diário 17h30–0h'},
+      {n:'Retrô Cine Bar',desc:'Bar com decoração retrô e quadros fantásticos. Dois shows por noite (pop rock e rock internacional). Cover R$20–30.',tip:'📍 Rua Industrial Paulo Agostini, 36 · Sex–Sáb 21h–4h'},
+      {n:"Rua da Cachaça",desc:'A rua mais animada de São João del-Rei à noite, com vários bares, petiscos mineiros e ambiente boêmio. Coração da vida noturna da cidade.',tip:'📍 Centro histórico · São João del-Rei'},
+    ],
+    experiencias: [
+      {n:'Maria Fumaça SJdR → Tiradentes',desc:'O famoso trem histórico a vapor que liga São João del-Rei a Tiradentes pelos trilhos do séc. XIX. Uma das experiências mais nostálgicas e memoráveis de Minas.',tip:'📍 Estação Ferroviária · Sáb, Dom e feriados'},
+    ],
+    natureza: [],
+    visitas: [
+      {n:'Igreja de São Francisco de Assis',desc:'Uma das mais belas igrejas barrocas de Minas, com fachada em pedra-sabão e rico interior em talha dourada. Joia do conjunto histórico.',tip:'📍 Praça Frei Orlando · Centro'},
+      {n:'Catedral Basílica de Nossa Sra. do Pilar',desc:'Principal catedral da cidade com impressionante acervo de arte sacra e uma das torres mais altas das igrejas históricas mineiras.',tip:'📍 Praça Presidente Tancredo Neves'},
+      {n:'Largo do Rosário e centro histórico',desc:'Passeio a pé pelo Largo do Rosário, Largo das Mercês e os casarões coloniais. Um dos conjuntos barrocos mais preservados de Minas Gerais.',tip:'📍 Centro histórico · Livre'},
+    ],
+    eventos: [
+      {n:'FELIT — Festival de Literatura',desc:'Festival de Literatura de São João del-Rei e Tiradentes, um dos mais importantes do circuito literário mineiro.',tip:'📍 São João del-Rei e Tiradentes · Anual',data:'Anual'},
+      {n:'Semana Santa de São João del-Rei',desc:'Uma das mais tradicionais do Brasil, com concertos das orquestras históricas e procissões pelas ruas coloniais. Experiência única.',tip:'📍 Centro histórico · Semana Santa',data:'Semana Santa'},
+    ],
+  },
+
+  diamantina: {
+    nome: 'Diamantina',
+    desc: 'Minas Gerais · Patrimônio Mundial UNESCO · Vale do Jequitinhonha',
+    cafes: [
+      {n:'Café Carmelita',desc:'Café charmoso no famoso Beco da Tecla em construção histórica do centro. Café especial e doces artesanais no coração histórico de Diamantina.',tip:'📍 Beco da Tecla · Centro histórico'},
+    ],
+    almoco: [
+      {n:'Restaurante Grupiara',desc:'Um dos mais tradicionais e bem avaliados do Beco da Tecla. Culinária mineira com pratos fartos e ambiente histórico. Dom a Qui 11h–23h · Sex e Sáb 11h–0h.',tip:'📍 Beco da Tecla, 61 · (38) 3531-3887',ig:'https://instagram.com/rgrupiara'},
+      {n:'Apocalipse Restaurante',desc:'Self-service gourmet bem servido na Praça Barão Guaicuí. Ótimo para repor energia após as longas caminhadas pelas ladeiras históricas. Almoço todos os dias.',tip:'📍 Praça Barão Guaicuí, 78 · (38) 3531-3242 · (38) 98813-9890',ig:'https://instagram.com/apocalipse_restaurante'},
+      {n:'Relicário Diamantina',desc:'Restaurante bem avaliado com comida generosa e saborosa. Destaque para o petit gateau de pão de mel. Um dos favoritos de quem conhece a cidade.',tip:'📍 Centro histórico · Diamantina',ig:'https://instagram.com/relicariodiamantina'},
+    ],
+    jantar: [
+      {n:'Vittelo Diamantina',desc:'A melhor Steakhouse de Diamantina na melhor localização: na Rua da Quitanda na esquina com a Catedral. Carnes, drinks e vinho.',tip:'📍 Rua da Quitanda, esquina com a Catedral',ig:'https://instagram.com/vittelodiamantina'},
+      
+    ],
+    bares: [
+      {n:'Catedral Pub',desc:'Mais de 100 rótulos de cervejas especiais, fingerfoods, culinária alemã e hamburgeria. Na Rua Direita, 68 — um dos bares mais seguidos de Diamantina.',tip:'📍 Rua Direita, 68 · Diamantina',ig:'https://instagram.com/catedralpub'},
+      {n:'Sagui Bar e Restaurante',desc:'Um dos bares mais animados de Diamantina. Ambiente descontraído com boa cerveja e petiscos pelas ruas históricas à noite.',tip:'📍 Centro histórico · Ter–Sex 17h30–1h · Sáb 10h–2h',ig:'https://instagram.com/saguidiamantina'},
+      {n:'Rua da Quitanda',desc:'À noite, a Rua da Quitanda (fechada para carros) vira um corredor animado de bares e mesas na calçada. Local das famosas Vesperatas.',tip:'📍 Rua da Quitanda · Centro · Noite'},
+    ],
+    experiencias: [
+      
+      {n:'Café no Beco (Domingos)',desc:'Todo domingo de manhã no Beco da Tecla: músicos ao vivo enquanto moradores e turistas aproveitam barraquinhas com delícias típicas. Gratuito.',tip:'📍 Beco da Tecla · Domingos pela manhã · Entrada gratuita'},
+    ],
+    natureza: [
+      {n:'Parque Estadual do Biribiri',desc:'A 12km do centro: cachoeiras cristalinas (Sentinela e dos Cristais) e a charmosa Vila do Biribiri com antiga fábrica de tecidos do séc. XIX.',tip:'📍 12km do centro de Diamantina · R$10 entrada'},
+    ],
+    visitas: [
+      {n:'Centro Histórico de Diamantina',desc:'Um dos centros coloniais mais bem preservados do Brasil: igrejas barrocas, casarões com sacadas de madeira e becos encantadores. Patrimônio Mundial UNESCO.',tip:'📍 Centro · Diamantina · Livre acesso'},
+      {n:'Museu do Diamante',desc:'Exposição sobre o ciclo dos diamantes no séc. XVIII e a Estrada dos Diamantes. Compreender o passado da cidade que leva o nome das pedras.',tip:'📍 Praça Barão de Guaicuí · Ter–Dom'},
+      {n:'Catedral de Santo Antônio',desc:'A principal igreja de Diamantina com imponente fachada e rico interior barroco. Domina o skyline histórico da cidade.',tip:'📍 Praça JK · Centro'},
+      {n:'Casa de JK — Museu de Juscelino Kubitschek',desc:'A casa natal do presidente Juscelino Kubitschek, fundador de Brasília. Museu gratuito em casarão colonial do centro histórico.',tip:'📍 Rua São Francisco, 241 · Centro · Entrada gratuita'},
+    ],
+    eventos: [
+      {n:'Vesperata de Diamantina',desc:'Músicos nas sacadas históricas da Rua da Quitanda — evento que acontece em datas específicas ao longo do ano. Consulte o calendário da prefeitura.',tip:'📍 Rua da Quitanda · Datas variadas',data:'Datas variadas'},
+      {n:'Festival Internacional de Inverno de Diamantina',desc:'Um dos festivais culturais mais tradicionais de MG, com shows, teatro e exposições nas ruas históricas da cidade.',tip:'📍 Centro histórico · Julho',data:'Julho'},
+    ],
+  },
+
+  capitolio: {
+    nome: 'Capitólio',
+    desc: 'Minas Gerais · Cânions & Lago de Furnas',
+    cafes: [],
+    almoco: [
+      {n:'Restaurante do Turvo',desc:'Vencedor do Prêmio Cumbucca 2025. Desde 1963 às margens do lago, especialidade em traíra desossada preparada de 10 maneiras. Aberto diariamente das 10h30 às 16h30.',tip:'📍 Rod. MG-050, Km 306 · Zona Rural Turvo · (35) 99981-0760',ig:'https://instagram.com/restaurantedoturvo'},
+      {n:'Porto do Turvo — Restaurante Flutuante',desc:'Restaurante flutuante às margens do Lago de Furnas. Seg–Sex 9h30–17h · Fds 9h30–18h30.',tip:'📍 Rod. MG-050, Km 306 · Capitólio · (35) 98458-1031',ig:'https://instagram.com/portodoturvo'},
+      {n:'Kanto da Ilha',desc:'O mais charmoso restaurante do Lago de Furnas. Com decks, vários ambientes e por do sol espetacular. Drinks especiais. Aberto todos os dias das 12h às 18h.',tip:'📍 Lago de Furnas · Capitólio · (37) 99937-0308',ig:'https://instagram.com/kantodailha'},
+    ],
+    jantar: [
+      {n:"Hud's Lounge",desc:'Alta gastronomia no Condomínio Escarpas do Lago com vista para o lago. Frutos do mar, peixes, carnes e grelhados. Menu vegano e kids. ~R$250/pessoa.',tip:'📍 Rua dos Saveiros, 200 · Escarpas do Lago · (37) 99937-0308'},
+      {n:'Kanto da Ilha',desc:'Também abre para eventos noturnos com DJs e festas. Vista incrível do Lago de Furnas ao entardecer.',tip:'📍 Lago de Furnas · Capitólio',ig:'https://instagram.com/kantodailha'},
+    ],
+    bares: [
+      
+    ],
+    experiencias: [
+      {n:'Passeio de Lancha pelo Lago de Furnas',desc:'O passeio mais imperdível de Capitólio. Pelos cânions, Lagoa Azul e cachoeiras com paradas para mergulho. Duração: 2h a 7h. Saída na Ponte do Rio Turvo.',tip:'📍 Ponte do Rio Turvo · Rod. MG-050 Km 306 · 15km da cidade'},
+      {n:'Trilha do Sol',desc:'3km pelo Cerrado passando por três cachoeiras: Poço Dourado, Cachoeira do Grito e No Limite. A trilha mais popular de Capitólio.',tip:'📍 Capitólio · Entrada R$30–40'},
+      {n:'Cascata Eco Park',desc:'18 piscinas naturais e 8 quedas de água cristalinas em meio ao Cerrado. Estrutura para passar o dia inteiro.',tip:'📍 Zona rural de Capitólio · Entrada paga'},
+    ],
+    natureza: [
+      {n:'Mirante dos Cânions de Capitólio',desc:'Vista espetacular dos cânions e do Lago de Furnas de cima — uma das paisagens mais fotogênicas de Minas Gerais. Acesso gratuito de carro.',tip:'📍 Capitólio · Acesso pela Rod. MG-050'},
+      {n:'Lagoa Azul — Cânions',desc:'A estrela dos passeios de lancha: piscina natural de água cristalina entre os cânions de arenito. Acesso apenas por barco.',tip:'📍 Lago de Furnas · Acesso exclusivo por barco'},
+    ],
+    visitas: [
+      {n:'Igreja de São Sebastião',desc:'Igreja matriz no centrinho de Capitólio na Praça Padre João Machado. Ponto de referência e símbolo histórico da cidade.',tip:'📍 Praça Padre João Machado · Centro de Capitólio'},
+    ],
+    eventos: [
+      {n:'Temporada de Verão no Lago',desc:'Alta temporada com maior movimento de turistas, eventos náuticos e festas no Lago de Furnas. Reserve passeios e hospedagem com antecedência.',tip:'📍 Lago de Furnas · Dezembro a Março',data:'Dezembro a Março'},
+    ],
+  },
+
+  monte_verde: {
+    nome: 'Monte Verde',
+    desc: 'Minas Gerais · Serra da Mantiqueira · Clima de Montanha',
+    cafes: [
+      {n:'Benditto Café Gourmet',desc:'O café mais querido de Monte Verde na Av. Principal. Ambiente acolhedor, pão de milho na chapa, expresso forte, chocolate quente e strudel. Seg/Ter/Qui 9h–18h · Sex 9h–19h · Sáb/Dom 8h30–18h.',tip:'📍 Av. Monte Verde, 606 · (35) 3438-1782',ig:'https://instagram.com/benditocafegourmet'},
+      {n:'Jaguatirica Coffee',desc:'O lugar onde se leva café mais a sério em Monte Verde, fora da avenida principal. Torra própria premiada, café em incontáveis métodos, sanduíches, tortas e café para levar.',tip:'📍 Rua do Aeroporto, 95 · (11) 97137-0913',ig:'https://instagram.com/jaguatiricacoffee'},
+      {n:'Chalé do Strudel',desc:'Considerado o melhor strudel de Monte Verde: assado diariamente na hora (cada pedaço individualmente). Funciona também como loja de antiguidades.',tip:'📍 Av. Monte Verde, 1034 · (11) 98246-8238'},
+      {n:'Piparkukas Biscoiteria',desc:'Biscoitos decorados artesanais, cucas, chás e café na prensa francesa. Ambiente semiaberto charmoso com flores. Aberto todos os dias 10h–18h.',tip:'📍 Galeria das Flores, Av. Monte Verde, 1035'},
+    ],
+    almoco: [
+      {n:'O Caipira',desc:'Culinária interiorana autêntica no fogão a lenha: vaca atolada, costela no bafo, leitão à pururuca. Pratos para duas pessoas.',tip:'📍 Av. das Montanhas, 43 · (35) 3438-2141'},
+      {n:'Paulo das Trutas',desc:'Especializado em trutas de criação própria — sempre frescas. Diversas preparações do peixe mais típico de Monte Verde.',tip:'📍 Av. das Montanhas, 120 · (35) 3438-1214'},
+      {n:'Villa Donna Bistrô',desc:'Massas e risotos feitos na hora em ambiente de artesanato mineiro com sacada com vista. Abre para almoço (12h) e jantar (19h) Qui–Dom.',tip:'📍 Av. Monte Verde, 33 · Galeria Europa'},
+    ],
+    jantar: [
+      {n:'Villa Donna Bistrô',desc:'Um dos melhores de Monte Verde. Massas e risotos artesanais com opções vegetarianas. Serviço impecável e preço justo. Reserve na alta temporada.',tip:'📍 Av. Monte Verde, 33 · Galeria Europa',ig:'https://instagram.com/villadonnabistro'},
+      {n:'A Casa do Fondue',desc:'Fondue completo (queijo + carne + chocolate) — o jantar mais icônico de Monte Verde. Obrigatório nas noites frias da serra.',tip:'📍 Monte Verde · Reserve na alta temporada'},
+      {n:'Galinha da Roça',desc:'Anexo à pousada homônima, serve galinhada no fogão a lenha e rodízio de fondue. Bufê e à la carte de culinária mineira.',tip:'📍 Shopping Oak Plaza, Av. das Montanhas, 1160'},
+    ],
+    bares: [
+      {n:'Fritz Cervejaria Artesanal',desc:'Cervejaria artesanal de referência em Monte Verde com carta de cervejas autorais e petiscos. Um dos melhores programas noturnos da vila.',tip:'📍 Monte Verde · Centrinho',ig:'https://instagram.com/fritzcervejaria'},
+      {n:'Café Pinhão',desc:'Bar e restaurante na avenida principal que serve fondue, truta e cervejas. Ambiente animado com vista para a movimentação da vila.',tip:'📍 Av. Monte Verde, esquina com Rua Bem-Te-Vi'},
+    ],
+    experiencias: [
+      {n:'Destilaria Monte Verde',desc:'Visita à produção artesanal de cachaça mineira em ambiente preparado para turistas. Une tradição, história e fotografia.',tip:'📍 Monte Verde · Consulte horários'},
+      {n:'Trenzinho — City Tour',desc:'Passeio de trem pela vila passando por fábrica de chocolate, queijaria, docerias e pontos turísticos. Duração 1h30–2h. Vendedores na avenida principal.',tip:'📍 Saída Av. Monte Verde · R$50/pessoa'},
+      {n:'Shopping Celeiro & Casa dos Esquilos',desc:'Complexo rústico-alpino com lojas de roupas de lã, queijos, geleias, chocolates e artesanato. No fundo: a Casa dos Esquilos. Melhor horário 11h–14h.',tip:'📍 Av. Monte Verde · Centrinho'},
+    ],
+    natureza: [
+      {n:'Parque Oshin',desc:'Parque natural a 6 min do centro com trilhas sinalizadas, lago, cascatas, lhamas, arvorismo e tirolesa. Ingresso ~R$40.',tip:'📍 6 minutos do centro de Monte Verde'},
+      {n:'Mirante do Pico da Pedra',desc:'Vista panorâmica da Serra da Mantiqueira. Acesso por trilha ou carro. Um dos mirantes mais altos e bonitos da região.',tip:'📍 Arredores de Monte Verde'},
+    ],
+    visitas: [
+      {n:'Avenida Monte Verde',desc:'O coração da vila: chalets, lojas de artesanato, chocolates, queijos e o famoso termômetro que marca as temperaturas baixas da serra.',tip:'📍 Av. Monte Verde · A pé · Livre'},
+    ],
+    eventos: [
+      {n:'Festival de Inverno de Monte Verde',desc:'Julho é a alta temporada: fondue, chocolates quentes, shows, feiras e temperatura baixa fazem de Monte Verde um dos destinos de inverno mais procurados.',tip:'📍 Centro de Monte Verde · Julho',data:'Julho'},
+      {n:'Natal em Monte Verde',desc:'Monte Verde é um dos destinos natalinos mais procurados do Sul de Minas, com decoração especial e mercados temáticos em dezembro.',tip:'📍 Centro de Monte Verde · Dezembro',data:'Dezembro'},
+    ],
+  },
+
+  serra_cipo: {
+    nome: 'Serra do Cipó',
+    desc: 'Minas Gerais · Parque Nacional · Ecoturismo',
+    cafes: [],
+    almoco: [
+      {n:'Petras Bistrô',desc:'O bistrô mais bem recomendado da Serra do Cipó. Culinária caseira com ingredientes regionais e ambiente aconchegante. Ótimo para almoçar após as trilhas.',tip:'📍 Vila Cipó · Santana do Riacho',ig:'https://instagram.com/petrasbistro'},
+    ],
+    bares: [],
+    experiencias: [
+      {n:'Rafting e Esportes Radicais',desc:'Rafting, trekking, rapel, ciclismo e alpinismo organizados por empresas de ecoturismo da vila. Empresas credenciadas na Vila Cipó.',tip:'📍 Empresas na Vila Cipó · Serra do Cipó'},
+      {n:'Trilha dos Escravos',desc:'Trilha histórica do séc. XVIII criada por escravos para transporte de diamantes. Leva à Cachoeira Véu da Noiva. ~2km de extensão em pedras.',tip:'📍 Parque Nacional Serra do Cipó'},
+    ],
+    natureza: [
+      {n:'Cachoeira Grande',desc:'A mais imponente da Serra do Cipó. Trilha de fácil acesso e queda de tirar o fôlego. Visita obrigatória.',tip:'📍 Parque Nacional da Serra do Cipó · Entrada gratuita'},
+      {n:'Cachoeira Véu da Noiva',desc:'A cachoeira mais popular e acessível da região. Belíssima queda e poço para banho. Acesso fácil pela trilha histórica.',tip:'📍 Parque Nacional da Serra do Cipó'},
+      {n:'Cânion das Bandeirinhas',desc:'Passeio completo com trilhas, cascatas, cachoeiras e piscinas naturais. Um dos mais espetaculares da Serra do Cipó.',tip:'📍 Serra do Cipó · Guia recomendado'},
+      {n:'Morro da Pedreira',desc:'Ponto para ver o pôr do sol e praticar rapel ou escalada. Vista panorâmica impressionante sobre a Serra.',tip:'📍 Serra do Cipó · Fim de tarde'},
+    ],
+    visitas: [
+      {n:'Parque Nacional da Serra do Cipó',desc:'33.800 hectares chamado de "Jardim do Brasil" por Burle Marx. Trilhas, cachoeiras, cânions e uma das biodiversidades mais ricas do mundo.',tip:'📍 Km 94 da MG-10 · Santana do Riacho'},
+      {n:'Estátua do Juquinha',desc:'Homenagem ao andarilho real que vivia nas montanhas e oferecia flores aos turistas. Marco simbólico da Serra do Cipó.',tip:'📍 Parque Nacional Serra do Cipó'},
+    ],
+    eventos: [],
+  },
+
+  belo_horizonte: {
+    nome: 'Belo Horizonte',
+    desc: 'Minas Gerais · Capital · UNESCO Cidade Criativa da Gastronomia',
+    cafes: [
+      {n:'Café Palhares',desc:'Fundado em 1938, o mais histórico bar-café do centro. Famoso pelo kaol (cachaça, arroz, ovo e linguiça). Comer no balcão é uma experiência autêntica.',tip:'📍 Centro de BH · Desde 1938'},
+      {n:'Mercado Central de BH',desc:'O coração gastronômico de BH desde 1929: frutas tropicais, queijos mineiros, cachaças, doces e o famoso licor de jabuticaba. Seg–Sáb.',tip:'📍 Av. Augusto de Lima, 744 · Centro'},
+    ],
+    almoco: [
+      {n:'Dona Lucinha',desc:'Um dos restaurantes mais famosos de Minas Gerais. Culinária da fazenda em sua melhor forma. Uma das três matriarcas da cozinha mineira.',tip:'📍 Belo Horizonte · Reserve com antecedência',ig:'https://instagram.com/donalucinha'},
+      {n:'Cantina do Lucas',desc:'Aberta em 1962 no Edifício Maletta e tombada como patrimônio cultural de BH. Filé à parmegiana clássico, ambiente nostálgico.',tip:'📍 Edifício Maletta · Centro · Desde 1962'},
+      {n:'Pacato',desc:'Chef Caio Soter (ex-Mestre do Sabor) e a cozinha de quintal mineira autoral. Costelão braseado, frango assado e picanha do sol no almoço.',tip:'📍 Belo Horizonte · Reserve',ig:'https://instagram.com/pacatobh'},
+    ],
+    jantar: [
+      {n:'Glouton',desc:'Alta gastronomia do chef Leo Paixão na Rua São Paulo, em Lourdes. Um dos melhores restaurantes de BH com cozinha autoral de ingredientes mineiros.',tip:'📍 Rua São Paulo · Lourdes · Reserve',ig:'https://instagram.com/gloutombh'},
+      {n:'Cervejaria Albanos',desc:'Clássico da Rua Pium-í. Churrasco e cortes suculentos com acompanhamentos mineiros. Um dos corredores gastronômicos mais antigos de BH.',tip:'📍 Rua Pium-í, 230 · Cruzeiro'},
+    ],
+    bares: [
+      {n:'Rua Sapucaí',desc:'O ponto mais boêmio de BH no Bairro Floresta. Mesas na calçada, mureta famosa, cerveja barata e vibe cultural única. Salumeria Central e Sirène são destaques.',tip:'📍 Rua Sapucaí · Floresta · BH'},
+      {n:'Mercado Novo',desc:'Hub gastronômico e cultural revitalizado no centro. Bares, restaurantes e propostas inovadoras que não esquecem as raízes mineiras.',tip:'📍 Rua Rio Grande do Sul, 499 · Centro'},
+    ],
+    experiencias: [
+      {n:'Instituto Inhotim',desc:'O maior museu de arte contemporânea a céu aberto do mundo, a 45km de BH. Arte e jardim botânico em 5.000 hectares. Reserve o dia inteiro.',tip:'📍 Brumadinho · 45km de BH · Ter–Dom · Ingresso pago',ig:'https://instagram.com/inhotim'},
+    ],
+    natureza: [
+      {n:'Parque das Mangabeiras',desc:'Parque ecológico com trilhas, mirante panorâmico e preservação da Mata Atlântica no topo da Serra do Curral.',tip:'📍 Bairro Mangabeiras · Sul de BH · Entrada gratuita'},
+      {n:'Parque Municipal Américo Renné Giannetti',desc:'Pulmão verde de BH no coração da cidade. Lagos, pássaros e o Palácio das Artes. Ideal para caminhada matinal.',tip:'📍 Av. Afonso Pena · Centro · Livre'},
+    ],
+    visitas: [
+      {n:'Conjunto Arquitetônico da Pampulha',desc:'Patrimônio Mundial UNESCO: Museu de Arte, Igreja São Francisco e Casino projetados por Niemeyer e Portinari às margens da Lagoa da Pampulha.',tip:'📍 Av. Otacílio Negrão de Lima · Pampulha'},
+    ],
+    eventos: [
+      {n:'Virada Cultural de BH',desc:'Evento cultural de 24h com atrações gratuitas nas ruas e espaços culturais. Uma das maiores viradas culturais do Brasil.',tip:'📍 Várias regiões de BH · Data anual variável',data:'Anual'},
+    ],
+  },
+
+  brumadinho: {
+    nome: 'Brumadinho',
+    desc: 'Minas Gerais · Arte Contemporânea & Natureza',
+    cafes: [
+      {n:'Café com Arte (Inhotim)',desc:'Café dentro do Instituto Inhotim. Pausa ideal durante a visita ao museu. Lanches, cafés e pratos rápidos em ambiente cercado de arte e natureza.',tip:'📍 Instituto Inhotim · Brumadinho'},
+      {n:'Café das Flores (Inhotim)',desc:'Outro ponto de café dentro do Inhotim. Aberto das 9h30 às 16h30 (sáb/dom/feriado até 17h30).',tip:'📍 Instituto Inhotim · Brumadinho'},
+    ],
+    almoco: [
+      {n:'Restaurante Oiticica (Inhotim)',desc:'Bufê por peso dentro do Inhotim com cozinha brasileira prática. Ideal para almoço rápido entre uma galeria e outra.',tip:'📍 Instituto Inhotim · Brumadinho'},
+      {n:'Restaurante Tamboril (Inhotim)',desc:'Serviço à la carte dentro do Inhotim com pratos contemporâneos e boa carta de bebidas. Para um almoço mais demorado.',tip:'📍 Instituto Inhotim · Brumadinho'},
+      {n:'Ponto Gê',desc:'No fogão a lenha, cozinha mineira tradicional com criações surpreendentes. Destaque para a batata doce assada com lavanda.',tip:'📍 Brumadinho · Almoço · Reserve'},
+    ],
+    jantar: [],
+    bares: [],
+    experiencias: [
+      {n:'Instituto Inhotim',desc:'O maior museu de arte contemporânea a céu aberto do mundo. Obras de Cildo Meireles e Adriana Varejão em 5.000 hectares. Reserve ao menos 6h para visitar.',tip:'📍 Brumadinho · Ter–Sex 9h30–16h30 · Sáb/Dom 9h30–17h30',ig:'https://instagram.com/inhotim'},
+    ],
+    natureza: [
+      {n:'Parque Estadual Serra do Rola-Moça',desc:'Terceiro maior parque urbano do Brasil com trilhas, mirantes, voo livre e balonismo. Acesso pela Serra da Moeda.',tip:'📍 Brumadinho · Entrada pela Serra da Moeda'},
+      {n:'Serra da Moeda — Parapente',desc:'No alto da Serra (1.550m), voos monitorados de parapente de 15–30 min com vista espetacular. Escolas de voo livre no topo. ~R$350.',tip:'📍 Serra da Moeda · Brumadinho · Consulte condições de vento'},
+    ],
+    visitas: [
+      {n:'Instituto Inhotim (acervo)',desc:'Mais de 500 obras de 100 artistas de 40 países integradas à paisagem. Galerias como a de Matthew Barney e Chris Burden são imperdíveis.',tip:'📍 Brumadinho · Site oficial para ingressos'},
+      {n:'Distrito de Piedade do Paraopeba',desc:'Comunidade histórica do séc. XVII com a Igreja Matriz Nossa Senhora da Piedade (1729) e patrimônio cultural entre paisagens exuberantes.',tip:'📍 20km de Brumadinho'},
+    ],
+    eventos: [
+      {n:'Exposições e Performances no Inhotim',desc:'O Inhotim realiza regularmente concertos, palestras, oficinas e novos lançamentos. Confira a programação no site oficial.',tip:'📍 Instituto Inhotim · Ao longo do ano',data:'Ao longo do ano',ig:'https://instagram.com/inhotim'},
+    ],
+  },
+
+  mariana: {
+    nome: 'Mariana',
+    desc: 'Minas Gerais · Primeira Cidade de Minas · Cidade Matriz',
+    cafes: [
+      {n:'Mais1.Café Mariana',desc:'Franquia de cafés especiais com presença em Mariana. Aberto de segunda a domingo das 8h às 20h na Rua Frei Durão, 197.',tip:'📍 Rua Frei Durão, 197 · Centro · Mariana',ig:'https://instagram.com/mais1cafe.marianamg'},
+    ],
+    almoco: [
+      {n:'Restaurante Lua Cheia',desc:'Self-service com autêntica comida mineira e jardim nos fundos para refeição ao ar livre. Sabor e aroma irresistíveis. Referência local para o almoço.',tip:'📍 Centro histórico · Próximo à Praça Minas Gerais'},
+      {n:'Casarão Grill',desc:'Um dos mais bem avaliados de Mariana segundo o TripAdvisor. Culinária mineira com grelhados em ambiente de casarão colonial.',tip:'📍 Centro histórico · Mariana'},
+      {n:'Rancho da Praça',desc:'Comida mineira servida em panelas de pedra e fogão à lenha no entorno da Praça Gomes Freire.',tip:'📍 Praça Gomes Freire · Centro histórico'},
+    ],
+    jantar: [
+      {n:'Bistrô de Mariana',desc:'Ambiente charmoso com varanda no segundo andar. Cardápio à la carte com pratos generosos e petiscos para compartilhar.',tip:'📍 2 minutos da Praça Minas Gerais · Centro'},
+    ],
+    bares: [],
+    experiencias: [
+      {n:'Mina da Passagem',desc:'Uma das maiores minas de ouro abertas à visitação do mundo: 30km de túneis e um lago subterrâneo cristalino. Desce de vagonete! Fundada em 1729.',tip:'📍 Passagem de Mariana · Aberta diariamente'},
+      {n:'Passeio de Trem Mariana–Ouro Preto',desc:'A Estação Parque de Mariana conecta a cidade a Ouro Preto por um passeio de trem de 55 minutos pela paisagem histórica e rural.',tip:'📍 Estação Ferroviária de Mariana · Sáb, Dom e feriados'},
+    ],
+    natureza: [],
+    visitas: [
+      {n:'Praça Minas Gerais — Igrejas Gêmeas',desc:'O mais importante ponto turístico: as famosas Igrejas Gêmeas (São Francisco de Assis e Nossa Senhora do Carmo) frente a frente, o Pelourinho e a Casa de Câmara.',tip:'📍 Praça Minas Gerais · Centro histórico · Livre'},
+      {n:'Catedral Basílica da Sé de Mariana',desc:'Famosa pelo órgão alemão do séc. XVIII, um dos mais antigos e preservados da América Latina. Concertos regulares.',tip:'📍 Praça da Sé · Centro histórico'},
+    ],
+    eventos: [
+      {n:'Semana Santa de Mariana',desc:'Procissões históricas e concertos de música sacra na primeira cidade de Minas. Uma das mais tradicionais do estado.',tip:'📍 Centro histórico · Semana Santa',data:'Semana Santa'},
+    ],
+  },
+
+  congonhas: {
+    nome: 'Congonhas',
+    desc: 'Minas Gerais · Cidade dos Profetas · Aleijadinho · UNESCO',
+    cafes: [],
+    almoco: [
+      {n:'Restaurante Casa da Ladeira',desc:'O mais indicado e aclamado de Congonhas para gastronomia mineira. Na Rua da Ladeira que sobe à Basílica — ambiente histórico e comida típica bem feita.',tip:'📍 Rua da Ladeira · Congonhas · Próximo à Basílica'},
+    ],
+    jantar: [],
+    bares: [],
+    experiencias: [
+      {n:'Visita guiada ao Santuário e Profetas',desc:'Guias locais credenciados oferecem visitas interpretativas aos 12 Profetas, ao Jardim dos Passos e à Basílica. Imprescindível para entender o contexto histórico.',tip:'📍 Basílica do Bom Jesus · Centro de Congonhas'},
+    ],
+    natureza: [
+      {n:'Parque Ecológico da Cachoeira',desc:'Área verde de 57.000 m² com a Cachoeira da Água Limpa, Horto Florestal, camping, piscina e restaurante. Boa pedida após as visitas culturais.',tip:'📍 Congonhas · Entrada paga'},
+    ],
+    visitas: [
+      {n:'Basílica do Senhor Bom Jesus de Matosinhos',desc:'A joia de Congonhas. Construída em 1734, sua fachada foi esculpida por Aleijadinho. Centro de peregrinação religiosa e Patrimônio Mundial UNESCO.',tip:'📍 Alto de Congonhas · Diário · Livre'},
+      {n:'Os 12 Profetas de Aleijadinho',desc:'As maiores obras do barroco brasileiro: 12 estátuas em pedra-sabão no adro da Basílica. Obras-primas reconhecidas mundialmente.',tip:'📍 Adro da Basílica do Bom Jesus · Congonhas'},
+      {n:'Museu de Congonhas',desc:'Três andares com acervo histórico, réplicas digitais dos Profetas e recursos interativos. Arquitetura moderna em diálogo com o barroco histórico.',tip:'📍 Próximo à Basílica · Ter–Dom'},
+      {n:'Rua da Ladeira — Casario Histórico',desc:'Subindo à Basílica pela Rua da Ladeira, você vê casarões coloniais do séc. XVIII e XIX perfeitamente conservados — como uma máquina do tempo.',tip:'📍 Centro histórico · Congonhas'},
+    ],
+    eventos: [
+      {n:'Jubileu do Senhor Bom Jesus de Matosinhos',desc:'A maior romaria de Congonhas e uma das mais importantes de Minas Gerais, atraindo milhares de devotos ao Santuário.',tip:'📍 Basílica do Bom Jesus · Setembro',data:'Setembro'},
+    ],
+  },
+
+  lavras_novas: {
+    nome: 'Lavras Novas',
+    desc: 'Minas Gerais · Distrito de Ouro Preto · Serra & Artesanato',
+    cafes: [
+      {n:'Cadivo Confeitaria',desc:'Chocolates, bolos, sobremesas e loja em Lavras Novas. Pet friendly. R. Nossa Sra. dos Prazeres, 1276. (38) 98846-5950.',tip:'📍 R. Nossa Sra. dos Prazeres, 1276 · Lavras Novas',ig:'https://instagram.com/cadivoconfeitaria',wpp:'https://wa.me/5538988465950'},
+      {n:'Café da Mata',desc:'Café no centro de Lavras Novas com variedade de salgados, bolos e doces caseiros. Atmosfera de vila serrana.',tip:'📍 R. Nossa Sra. dos Prazeres, 428 · Lavras Novas'},
+    ],
+    almoco: [
+      {n:'Restaurante Serra do Luar',desc:'Culinária mineira autêntica servida em panelas de ferro no fogão de lenha. Feijão tropeiro, frango com quiabo, polenta e linguiça. Preço justo.',tip:'📍 Lavras Novas · Almoço'},
+      {n:'Restaurante Taberna Casa Antiga',desc:'Comida caseira mineira e ambiente histórico acolhedor. Uma das melhores e mais citadas opções de Lavras Novas.',tip:'📍 Lavras Novas'},
+      {n:'Restaurante Pimenta Rosa',desc:'Pratos típicos mineiros com vista incrível da região serrana. Um dos restaurantes com melhor paisagem do distrito.',tip:'📍 Lavras Novas · Vista panorâmica'},
+    ],
+    jantar: [],
+    bares: [],
+    experiencias: [
+      {n:'Ateliês de Artesanato de Lavras Novas',desc:'Visita aos ateliês dos artistas locais: quadros, cerâmicas, esculturas de anjos, pinturas em azulejos e esculturas em madeira. O artesanato é a principal fonte de renda do vilarejo.',tip:'📍 Casarão vermelho atrás da Igreja · Lavras Novas'},
+      {n:'Passeio de Quadriciclo',desc:'Empresas locais oferecem passeios de quadriciclo pela Chapada dos Perdizes e pelas serras de Lavras Novas.',tip:'📍 Empresas de turismo em Lavras Novas'},
+    ],
+    natureza: [
+      {n:'Cachoeira dos Namorados',desc:'Uma das mais conhecidas de Lavras Novas: águas cristalinas e poço ideal para nadar. Trilha de fácil acesso com belas vistas.',tip:'📍 Lavras Novas · Fácil acesso'},
+      {n:'Cachoeira do Castelinho',desc:'Várias quedas e piscinas naturais em sequência. Ideal para um dia relaxante em meio à natureza da Serra do Espinhaço.',tip:'📍 Lavras Novas · Trilha moderada'},
+      {n:'Mirante da Pedra',desc:'Vista espetacular das montanhas que cercam Lavras Novas. Um dos mirantes mais bonitos do circuito de Ouro Preto.',tip:'📍 Lavras Novas · Acesso a pé'},
+    ],
+    visitas: [
+      {n:'Igreja de Nossa Sra. dos Prazeres',desc:'A histórica igreja colonial no coração do vilarejo. Marco arquitetônico do séc. XVIII e ponto de referência da vida comunitária de Lavras Novas.',tip:'📍 Centro de Lavras Novas'},
+    ],
+    eventos: [],
+  },
+
+  carrancas: {
+    nome: 'Carrancas',
+    desc: 'Minas Gerais · Mais de 70 Cachoeiras · Ecoturismo',
+    cafes: [],
+    almoco: [
+      {n:'Restaurante Tempero da Nair',desc:'Comida caseira mineira autêntica no centro de Carrancas. Um dos mais queridos pelos visitantes para um almoço farto antes ou depois das cachoeiras.',tip:'📍 Rua Nove de Abril, 30 · Centro · Carrancas'},
+      
+    ],
+    jantar: [],
+    bares: [
+      {n:'Recanto Bar',desc:'À noite funciona como bar animado com música ao vivo. O programa noturno mais completo de Carrancas.',tip:'📍 Centro de Carrancas'},
+    ],
+    experiencias: [
+      {n:'Passeios de 4x4 pela Serra',desc:'Para as cachoeiras mais remotas (Cachoeira da Fumaça, Serra das Broas, Chapada dos Perdizes), passeios de 4x4 com guias locais experientes.',tip:'📍 Agências no centro de Carrancas'},
+    ],
+    natureza: [
+      {n:'Complexo Vargem Grande — Cachoeira da Esmeralda',desc:'O complexo mais bonito de Carrancas: várias piscinas naturais e a Cachoeira da Esmeralda como joia da coroa. Trilha de ~30 min para chegar.',tip:'📍 9km de Carrancas · Estrada de terra · R$10 estacionamento'},
+      {n:'Complexo da Zilda — Cachoeira e Escorregador',desc:'Cachoeira da Zilda, escorregador natural de pedra lisa e Pinturas Rupestres de ~3.500 anos num mesmo passeio.',tip:'📍 12km de Carrancas · Estrada de terra · Guia recomendado'},
+      {n:'Complexo da Ponte',desc:'O mais acessível de Carrancas (2km do centro): Poço da Ponte, Cachoeira do Salomão, Cachoeira do Moinho e Gruta da Ponte. Ideal para famílias.',tip:'📍 2km do centro · Maioria por asfalto'},
+    ],
+    visitas: [
+      {n:'Igreja Matriz Nossa Sra. da Conceição das Carrancas',desc:'Igreja histórica no centro com pinturas a ouro e belo altar. Ponto de referência e símbolo do patrimônio colonial de Carrancas.',tip:'📍 Centro histórico · Carrancas'},
+    ],
+    eventos: [],
+  },
+
+};
+
+// ═══════════════════════════════════════════════════════════════════════════
+// CATEGORY CONFIG
+// ═══════════════════════════════════════════════════════════════════════════
+const CATS = [
+  {key:'cafes',        label:'☕ Cafés',            emoji:'☕', catLabel:'Cafés & Café da manhã'},
+  {key:'almoco',       label:'🍽️ Almoço',           emoji:'🍽️', catLabel:'Almoço'},
+  {key:'jantar',       label:'🍷 Jantar',            emoji:'🍷', catLabel:'Jantar'},
+  {key:'bares',        label:'🍸 Bares',             emoji:'🍸', catLabel:'Bares & Drinks'},
+  {key:'experiencias', label:'✨ Experiências',      emoji:'✨', catLabel:'Experiências'},
+  {key:'natureza',     label:'🌿 Natureza',          emoji:'🌿', catLabel:'Natureza & Ecoturismo'},
+  {key:'visitas',      label:'🏛️ Cultura & História',emoji:'🏛️', catLabel:'Cultura & História'},
+  {key:'eventos',      label:'🎭 Eventos',           emoji:'🎭', catLabel:'Eventos'},
+];
+
+// ═══════════════════════════════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════════════════════════════
+let activeCidade = null;  // slug da cidade ativa
+let activeCat    = null;  // categoria ativa na tela de cidade
+
+// ═══════════════════════════════════════════════════════════════════════════
+// NAVIGATION HELPERS
+// ═══════════════════════════════════════════════════════════════════════════
+function showView(id) {
+  ['view-home','view-city','view-form','view-result'].forEach(v => {
+    document.getElementById(v).classList.toggle('hidden', v !== id);
+  });
+  window.scrollTo(0,0);
+}
+
+function goHome() {
+  activeCidade = null;
+  document.getElementById('sel-cidade-home').value = '';
+  document.getElementById('btn-explorar-home').disabled = true;
+  document.getElementById('nav-badge').textContent = 'Minas Gerais';
+  showView('view-home');
+}
+
+function onCidadeHome() {
+  const val = document.getElementById('sel-cidade-home').value;
+  document.getElementById('btn-explorar-home').disabled = !val || !DB[val];
+}
+
+function explorarCidade() {
+  const val = document.getElementById('sel-cidade-home').value;
+  if (!val || !DB[val]) return;
+  activeCidade = val;
+  abrirCidade();
+}
+
+function abrirCidade() {
+  if (!activeCidade) return;
+  const db = DB[activeCidade];
+  document.getElementById('city-name').textContent = db.nome;
+  document.getElementById('city-sub').textContent  = db.desc || 'Minas Gerais';
+  document.getElementById('nav-badge').textContent  = db.nome;
+  buildCityTabs(activeCidade);
+  showView('view-city');
+}
+
+function abrirRoteiro() {
+  if (!activeCidade) return;
+  const db = DB[activeCidade];
+  document.getElementById('form-cidade-nome').textContent = db.nome;
+  showView('view-form');
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// CITY PAGE — category tabs + place cards
+// ═══════════════════════════════════════════════════════════════════════════
+function buildCityTabs(cidadeKey) {
+  const db  = DB[cidadeKey];
+  const tabs = document.getElementById('cat-tabs');
+
+  // find first non-empty category
+  const firstCat = CATS.find(c => (db[c.key]||[]).length > 0);
+  activeCat = firstCat ? firstCat.key : CATS[0].key;
+
+  tabs.innerHTML = CATS.map(c => {
+    const count = (db[c.key]||[]).length;
+    const on    = c.key === activeCat ? ' on' : '';
+    const dim   = count === 0 ? ' style="opacity:.4"' : '';
+    return `<button class="ctab${on}" data-cat="${c.key}" onclick="selectCat('${c.key}')"${dim}>${c.label}${count?` <span style="font-size:10px;opacity:.6">${count}</span>`:''}</button>`;
+  }).join('');
+
+  renderPlaces(cidadeKey, activeCat);
+}
+
+function selectCat(key) {
+  activeCat = key;
+  document.querySelectorAll('.ctab').forEach(t => t.classList.toggle('on', t.dataset.cat === key));
+  renderPlaces(activeCidade, key);
+}
+
+function renderPlaces(cidadeKey, catKey) {
+  const db    = DB[cidadeKey];
+  const items = db[catKey] || [];
+  const cfg   = CATS.find(c => c.key === catKey);
+  const grid  = document.getElementById('places-grid');
+
+  if (!items.length) {
+    const isEventos = catKey === 'eventos';
+    grid.innerHTML = `<div class="empty-state" style="grid-column:1/-1">
+      <div class="empty-state-icon">${isEventos ? '🎭' : '🔍'}</div>
+      <p class="empty-state-title">${isEventos ? 'Ainda não temos eventos cadastrados para esta cidade.' : 'Nenhum lugar cadastrado ainda'}</p>
+      ${!isEventos ? `<p class="empty-state-sub">Estamos mapeando os melhores lugares de ${db.nome}.<br>Em breve esta categoria terá conteúdo.</p>` : ''}
+    </div>`;
+    return;
+  }
+
+  // Eventos: render especial com data
+  if (catKey === 'eventos') {
+    grid.innerHTML = items.map((item, idx) => {
+      const btns = buildCardContactBtns(item);
+      return `<div class="ev-card">
+        ${item.data ? `<p class="ev-card-date">📅 ${item.data}</p>` : ''}
+        <p class="ev-card-name">${item.n}</p>
+        <p class="ev-card-desc">${item.desc||''}</p>
+        ${item.tip ? `<p class="ev-card-tip">${item.tip}</p>` : ''}
+        <div class="place-card-footer">
+          <div class="card-contacts">${btns}</div>
+          <button onclick="openModal('${cidadeKey}','${catKey}',${idx})" style="font-size:11px;color:var(--blue);background:none;border:none;cursor:pointer;font-family:inherit;padding:0">Ver detalhes →</button>
+        </div>
+      </div>`;
+    }).join('');
+    return;
+  }
+
+  grid.innerHTML = items.map((item, idx) => {
+    const btns = buildCardContactBtns(item);
+    return `<button class="place-card" onclick="openModal('${cidadeKey}','${catKey}',${idx})">
+      <span class="place-card-emoji">${cfg.emoji}</span>
+      <p class="place-card-name">${item.n}</p>
+      <p class="place-card-desc">${item.desc||''}</p>
+      ${item.tip ? `<p class="place-card-tip">${item.tip}</p>` : ''}
+      <div class="place-card-footer">
+        <div class="card-contacts">${btns}</div>
+        <span style="font-size:11px;color:var(--blue)">Ver detalhes →</span>
+      </div>
+    </button>`;
+  }).join('');
+}
+
+
+// ── CARD CONTACT BUTTONS ─────────────────────────────────────────────
+function buildCardContactBtns(item) {
+  let btns = '';
+  if (item.wpp) btns += `<a class="card-contact-btn w" href="${item.wpp}" target="_blank" onclick="event.stopPropagation()">📱 WhatsApp</a>`;
+  if (item.ig)  btns += `<a class="card-contact-btn ig" href="${item.ig}" target="_blank" onclick="event.stopPropagation()">📷 Instagram</a>`;
+  if (item.g)   btns += `<a class="card-contact-btn maps" href="${item.g}" target="_blank" onclick="event.stopPropagation()">🗺️ Maps</a>`;
+  return btns;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// MODAL
+// ═══════════════════════════════════════════════════════════════════════════
+function openModal(cidadeKey, catKey, idx) {
+  const item = DB[cidadeKey][catKey][idx];
+  const cfg  = CATS.find(c => c.key === catKey);
+
+  document.getElementById('modal-emoji').textContent = cfg.emoji;
+  document.getElementById('modal-cat').textContent   = cfg.catLabel;
+  document.getElementById('modal-name').textContent  = item.n;
+  document.getElementById('modal-desc').textContent  = item.desc || '';
+  const tipEl = document.getElementById('modal-tip');
+  tipEl.textContent  = item.tip || '';
+  tipEl.style.display = item.tip ? '' : 'none';
+
+  let pills = '';
+  if (item.wpp) pills += `<a class="pill w" href="${item.wpp}" target="_blank">📱 WhatsApp</a>`;
+  if (item.ig)  pills += `<a class="pill ig" href="${item.ig}" target="_blank">📷 Instagram</a>`;
+  if (item.g)   pills += `<a class="pill g" href="${item.g}" target="_blank">🗺️ Google</a>`;
+  document.getElementById('modal-pills').innerHTML = pills;
+
+  const q = encodeURIComponent(item.n + ' ' + DB[cidadeKey].nome + ' MG');
+  document.getElementById('modal-search').href = 'https://www.google.com/search?q=' + q;
+
+  const overlay = document.getElementById('modal-overlay');
+  overlay.style.display = 'flex';
+  requestAnimationFrame(() => overlay.classList.add('open'));
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModalBtn() {
+  const overlay = document.getElementById('modal-overlay');
+  overlay.classList.remove('open');
+  setTimeout(() => { overlay.style.display = 'none'; document.body.style.overflow = ''; }, 220);
+}
+
+function closeModal(e) {
+  if (e.target === document.getElementById('modal-overlay')) closeModalBtn();
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalBtn(); });
+
+// ═══════════════════════════════════════════════════════════════════════════
+// ROTEIRO — chips, form, gerar
+// ═══════════════════════════════════════════════════════════════════════════
+document.querySelectorAll('.chip').forEach(c => c.addEventListener('click', () => c.classList.toggle('on')));
+const prefs = () => [...document.querySelectorAll('.chip.on')].map(c => c.dataset.p);
+
+function fmtDate(d) {
+  return d.toLocaleDateString('pt-BR', {weekday:'short', day:'2-digit', month:'short'});
+}
+
+function gerar() {
+  const d1v = document.getElementById('dt-in').value;
+  const d2v = document.getElementById('dt-fim').value;
+  const v   = document.getElementById('viaj').value;
+  const prf = prefs();
+  const ctx = document.getElementById('contexto').value.trim();
+
+  document.getElementById('err-datas').classList.add('hidden');
+  if (!d1v || !d2v || d1v > d2v) {
+    document.getElementById('err-datas').classList.remove('hidden');
+    return;
+  }
+
+  const btn = document.getElementById('btn-gerar');
+  btn.disabled = true;
+  btn.textContent = 'Gerando...';
+
+  showView('view-result');
+
+  const d1   = new Date(d1v + 'T12:00:00');
+  const d2   = new Date(d2v + 'T12:00:00');
+  const dias = Math.round((d2 - d1) / 86400000) + 1;
+  const db   = DB[activeCidade];
+
+  document.getElementById('res-title').textContent = 'Roteiro · ' + db.nome;
+  document.getElementById('res-meta').textContent  =
+    fmtDate(d1) + ' → ' + fmtDate(d2) + ' · ' + dias + ' dia' + (dias > 1 ? 's' : '') +
+    ' · ' + v + ' viajante' + (v > 1 ? 's' : '') + (ctx ? ' · Personalizado' : '');
+  document.getElementById('loading').classList.remove('hidden');
+  document.getElementById('output').innerHTML = '';
+
+  callClaude(buildPrompt(db.nome, d1v, d2v, dias, v, prf, db, ctx), db, dias, d1)
+    .finally(() => {
+      btn.disabled = false;
+      btn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> Criar meu roteiro';
+    });
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// PROMPT — inalterado
+// ═══════════════════════════════════════════════════════════════════════════
+function buildPrompt(cidade, d1, d2, dias, v, prf, db, ctx) {
+  const l = cat => db[cat].map(x => x.n).join(' | ');
+  const ctxLine = ctx ? '\n\nDETALHES EXTRAS DO VIAJANTE: "' + ctx + '" — use essas informações para personalizar o roteiro.' : '';
+  return 'Você é um especialista em turismo em ' + cidade + ', MG. Monte um roteiro de ' + dias + ' dia(s) para ' + v + ' viajante(s) de ' + d1 + ' a ' + d2 + '. Preferências: ' + prf.join(', ') + '.' + ctxLine +
+    '\n\nLUGARES REAIS disponíveis — use SOMENTE estes nomes, exatamente como escritos:\nCAFÉS: ' + l('cafes') +
+    '\nALMOÇO: ' + l('almoco') +
+    '\nJANTAR: ' + l('jantar') +
+    '\nBARES: ' + l('bares') +
+    '\nEXPERIÊNCIAS: ' + l('experiencias') +
+    '\nVISITAS: ' + l('visitas') +
+    '\n\nREGRAS:\n1. Roteiro dia a dia com horários. Estrutura: café 8-10h, visita/exp manhã, almoço 12-14h, visita/exp tarde, jantar 19-21h, bar 21h+ (opcional).\n2. Use SOMENTE nomes da lista — exatamente como escritos.\n3. Não repita o mesmo lugar em dias diferentes.\n4. Adapte às preferências e detalhes extras.\n5. Inclua ao menos 1 experiência por dia.\n6. dica_dia: dica prática curta.\n\nResponda SOMENTE com JSON válido:\n{"dias":[{"titulo":"título temático criativo","itens":[{"horario":"09h00","tipo":"CAFÉ","nome":"Nome Exato","desc":"1-2 frases","dica":"dica curta"}],"dica_dia":"dica do dia"}]}';
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// RENDER ROTEIRO
+// ═══════════════════════════════════════════════════════════════════════════
+const DOTS = {'CAFÉ':'cafe','ALMOÇO':'almoco','JANTAR':'jantar','BAR':'bar','VISITA':'visita','EXPERIÊNCIA':'exp'};
+const LBLS = {'CAFÉ':'☕ Café da manhã','ALMOÇO':'🍽️ Almoço','JANTAR':'🍷 Jantar','BAR':'🍸 Bar & Drinks','VISITA':'🏛️ Visita','EXPERIÊNCIA':'✨ Experiência'};
+
+function findDB(db, nome) {
+  if (!nome) return null;
+  const all = [...db.cafes,...db.almoco,...db.jantar,...db.bares,...db.experiencias,...db.visitas];
+  const nm  = nome.toLowerCase().trim();
+  let found = all.find(x => x.n && x.n.toLowerCase() === nm);
+  if (found) return found;
+  found = all.find(x => x.n && (nm.includes(x.n.toLowerCase()) || x.n.toLowerCase().includes(nm)));
+  if (found) return found;
+  const qw = nm.split(/\s+/).filter(w => w.length > 2);
+  found = all.find(x => {
+    if (!x.n) return false;
+    const iw = x.n.toLowerCase().split(/\s+/);
+    return qw.filter(w => iw.some(i => i.includes(w) || w.includes(i))).length >= 2;
+  });
+  if (found) return found;
+  found = all.find(x => {
+    if (!x.n) return false;
+    const iw = x.n.toLowerCase().split(/\s+/).filter(w => w.length > 3);
+    return qw.some(w => iw.some(i => i === w));
+  });
+  return found || null;
+}
+
+function buildContactLinks(dbr) {
+  let pills = '';
+  if (!dbr) return pills;
+  if (dbr.wpp) pills += `<a class="pill w" href="${dbr.wpp}" target="_blank">📱 WhatsApp</a>`;
+  if (dbr.ig)  pills += `<a class="pill ig" href="${dbr.ig}" target="_blank">📷 Instagram</a>`;
+  if (dbr.g)   pills += `<a class="pill g" href="${dbr.g}" target="_blank">🗺️ Google</a>`;
+  if (!dbr.wpp && !dbr.ig && !dbr.g) {
+    const q = encodeURIComponent((dbr.n || '') + ' Tiradentes MG WhatsApp Instagram');
+    pills += `<a class="pill g" href="https://www.google.com/search?q=${q}" target="_blank">🔍 Buscar contato</a>`;
+  }
+  return pills;
+}
+
+function render(parsed, db, d1) {
+  const out = document.getElementById('output');
+  out.innerHTML = '';
+  if (!(parsed.dias || []).length) {
+    out.innerHTML = '<div class="err">Não foi possível gerar. Tente novamente.</div>';
+    return;
+  }
+  parsed.dias.forEach((dia, i) => {
+    const date = new Date(d1);
+    date.setDate(date.getDate() + i);
+    const itens = (dia.itens || []).map((item, idx) => {
+      const last  = idx === (dia.itens || []).length - 1;
+      const dot   = DOTS[item.tipo] || 'other';
+      const lbl   = LBLS[item.tipo] || item.tipo;
+      const dbr   = findDB(db, item.nome);
+      const pills = buildContactLinks(dbr);
+      return `<div class="tl-item">
+        <div class="tl-left"><span class="tl-time">${item.horario||''}</span></div>
+        <div class="tl-icon"><div class="tl-dot ${dot}"></div>${last?'':'<div class="tl-line"></div>'}</div>
+        <div class="tl-body">
+          <p class="tl-type">${lbl}</p>
+          <p class="tl-name">${item.nome}</p>
+          <p class="tl-desc">${item.desc||''}</p>
+          ${item.dica ? `<p class="tl-tip">💡 ${item.dica}</p>` : ''}
+          ${pills ? `<div class="pills">${pills}</div>` : ''}
+        </div>
+      </div>`;
+    }).join('');
+    const dica  = dia.dica_dia ? `<div class="dica-dia">🗓️ <b>Dica do dia:</b> ${dia.dica_dia}</div>` : '';
+    const block = document.createElement('div');
+    block.className = 'day-block';
+    block.innerHTML = `<div class="day-hd"><span class="day-num">DIA ${i+1}</span><span class="day-title">${dia.titulo||''}</span><span class="day-date">${fmtDate(date)}</span></div><div>${itens}</div>${dica}`;
+    out.appendChild(block);
+  });
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// API CLAUDE — inalterada
+// ═══════════════════════════════════════════════════════════════════════════
+async function callClaude(prompt, db, dias, d1) {
+  const APIKEY = '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';
+  let r;
+  try {
+    const headers = {'Content-Type':'application/json'};
+    if (APIKEY) {
+      headers['x-api-key'] = APIKEY;
+      headers['anthropic-version'] = '2023-06-01';
+      headers['anthropic-dangerous-direct-browser-access'] = 'true';
+    }
+    r = await fetch('https://api.anthropic.com/v1/messages', {
+      method:'POST', headers,
+      body: JSON.stringify({model:'claude-sonnet-4-5', max_tokens:4000, messages:[{role:'user', content:prompt}]})
+    });
+    if (!r.ok) { const e = await r.text(); throw new Error('HTTP ' + r.status + ': ' + e.slice(0,200)); }
+  } catch(fetchErr) {
+    document.getElementById('loading').classList.add('hidden');
+    document.getElementById('output').innerHTML =
+      '<div class="err" style="flex-direction:column;align-items:flex-start;gap:8px;border-radius:14px;padding:18px">' +
+      '<b>⚠ Erro de conexão com o serviço</b>' +
+      '<span>Verifique sua conexão e tente novamente.</span>' +
+      '<span style="color:#999;font-size:11px">' + fetchErr.message + '</span></div>';
+    return;
+  }
+  try {
+    const data  = await r.json();
+    const text  = (data.content||[]).map(b => b.text||'').join('');
+    let clean   = text.replace(/```json|```/g,'').trim();
+    const s = clean.indexOf('{'), e = clean.lastIndexOf('}');
+    if (s >= 0 && e >= 0) clean = clean.slice(s, e+1);
+    const parsed = JSON.parse(clean);
+    document.getElementById('loading').classList.add('hidden');
+    render(parsed, db, d1);
+  } catch(parseErr) {
+    document.getElementById('loading').classList.add('hidden');
+    document.getElementById('output').innerHTML =
+      '<div class="err" style="flex-direction:column;align-items:flex-start;gap:6px;border-radius:14px;padding:16px">' +
+      '<b>⚠ Erro ao processar roteiro</b><span>Tente novamente.</span>' +
+      '<span style="color:#999;font-size:11px">' + parseErr.message + '</span></div>';
+  }
+}
+
+
+// ═══════════════════════════════════════════════════════════════════════════
+// REGISTER MODAL
+// ═══════════════════════════════════════════════════════════════════════════
+function openRegModal() {
+  // Pre-fill city from active page
+  const cidSel = document.getElementById('reg-cidade');
+  if (activeCidade && DB[activeCidade]) {
+    const nome = DB[activeCidade].nome;
+    for (let i = 0; i < cidSel.options.length; i++) {
+      if (cidSel.options[i].text === nome) { cidSel.selectedIndex = i; break; }
+    }
+  }
+  const overlay = document.getElementById('reg-overlay');
+  overlay.style.display = 'flex';
+  requestAnimationFrame(() => overlay.classList.add('open'));
+  document.body.style.overflow = 'hidden';
+}
+
+function closeRegModalBtn() {
+  const overlay = document.getElementById('reg-overlay');
+  overlay.classList.remove('open');
+  setTimeout(() => { overlay.style.display = 'none'; document.body.style.overflow = ''; }, 220);
+}
+
+function closeRegModal(e) {
+  if (e.target === document.getElementById('reg-overlay')) closeRegModalBtn();
+}
+
+function showRegFeedback(msg, type) {
+  const el = document.getElementById('reg-feedback');
+  el.textContent = msg;
+  el.className = 'reg-feedback ' + type;
+  el.style.display = 'block';
+}
+
+async function enviarCadastro() {
+  const nome  = document.getElementById('reg-nome').value.trim();
+  const tipo  = document.getElementById('reg-tipo').value;
+  const cidade = document.getElementById('reg-cidade').value;
+  const desc  = document.getElementById('reg-desc').value.trim();
+  const wpp   = document.getElementById('reg-wpp').value.trim();
+  const ig    = document.getElementById('reg-ig').value.trim();
+  const end   = document.getElementById('reg-end').value.trim();
+
+  // Validate required
+  if (!nome || !tipo || !cidade || !desc) {
+    showRegFeedback('Preencha os campos obrigatórios: Nome, Tipo, Cidade e Descrição.', 'err');
+    return;
+  }
+
+  const btn = document.getElementById('reg-send-btn');
+  btn.disabled = true;
+  btn.innerHTML = '<div class="spinner" style="width:16px;height:16px;margin:0"></div> Enviando...';
+  document.getElementById('reg-feedback').style.display = 'none';
+
+  const payload = {
+    access_key: 'COLOQUE_SEU_WEB3FORMS_KEY_AQUI',
+    subject: `[roteiro.mg] Nova sugestão: ${nome} — ${cidade}`,
+    from_name: 'roteiro.mg',
+    nome, tipo, cidade, wpp, ig, descricao: desc, endereco: end,
+    data_envio: new Date().toLocaleString('pt-BR'),
+    to_email: 'roteirosmg@gmail.com',
+  };
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify(payload)
+    });
+    const data = await res.json();
+    if (data.success) {
+      showRegFeedback('Cadastro enviado com sucesso! Vamos analisar as informações antes de publicar.', 'ok');
+      // Clear form
+      ['reg-nome','reg-wpp','reg-ig','reg-end','reg-desc'].forEach(id => document.getElementById(id).value = '');
+      document.getElementById('reg-tipo').selectedIndex = 0;
+      document.getElementById('reg-cidade').selectedIndex = 0;
+      btn.disabled = false;
+      btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Enviar cadastro';
+    } else {
+      throw new Error(data.message || 'Erro desconhecido');
+    }
+  } catch (err) {
+    showRegFeedback('Não foi possível enviar agora. Tente novamente em alguns instantes.', 'err');
+    btn.disabled = false;
+    btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Enviar cadastro';
+  }
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    closeModalBtn();
+    closeRegModalBtn();
+  }
+});
+
+// ═══════════════════════════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════════════════════════
+const hoje = new Date().toISOString().split('T')[0];
+document.getElementById('dt-in').min  = hoje;
+document.getElementById('dt-fim').min = hoje;
+document.getElementById('dt-in').addEventListener('change', function() {
+  document.getElementById('dt-fim').min = this.value;
+  if (document.getElementById('dt-fim').value && document.getElementById('dt-fim').value < this.value)
+    document.getElementById('dt-fim').value = this.value;
+});
+</script>
+</body>
+</html>
