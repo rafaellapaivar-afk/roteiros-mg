@@ -4,8 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>roteiro.mg — Guia de Viagem em Minas Gerais</title>
+<meta name="description" content="Guia de turismo em Minas Gerais com restaurantes, cafés, experiências, trilhas e roteiros personalizados para as principais cidades históricas e naturais do estado.">
+<meta name="keywords" content="turismo Minas Gerais, roteiro Tiradentes, Ouro Preto turismo, Diamantina turismo, Serra do Cipó, Capitólio, Monte Verde, viagem MG">
+<meta name="author" content="roteiro.mg">
+<meta property="og:title" content="roteiro.mg — Guia de Viagem em Minas Gerais">
+<meta property="og:description" content="Descubra os melhores lugares de Minas Gerais: restaurantes, cafés, experiências, trilhas e roteiros personalizados para 13 cidades.">
+<meta property="og:type" content="website">
 <meta name="google-adsense-account" content="ca-pub-2485267589231876">
-<!-- Google AdSense -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2485267589231876" crossorigin="anonymous"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -166,25 +171,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 .modal-search{display:block;text-align:center;padding:10px;border:1px solid var(--g6);border-radius:var(--r);font-size:13px;color:var(--g3);text-decoration:none;transition:all .12s}
 .modal-search:hover{border-color:var(--black);color:var(--black)}
 
-/* ── ADS ── */
-.ad-slot{background:var(--g8);border:1px solid var(--g6);border-radius:var(--r);padding:12px;text-align:center;margin:20px 0;overflow:hidden}
-.ad-label{font-size:10px;color:var(--g4);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
-
-/* ── FOOTER ── */
-.footer{border-top:1px solid var(--g6);padding:24px 20px;font-size:12px;color:var(--g4);text-align:center}
-
-.hidden{display:none!important}
-/* ── CARD CONTACT BUTTONS (replace dots) ── */
+/* ── CARD CONTACT BUTTONS ── */
 .card-contacts{display:flex;gap:5px;flex-wrap:wrap}
 .card-contact-btn{display:inline-flex;align-items:center;gap:3px;padding:3px 9px;border-radius:40px;font-size:10px;font-weight:600;text-decoration:none;border:1px solid;cursor:pointer;transition:all .12s;background:var(--white);line-height:1.4}
 .card-contact-btn.w{border-color:#bbf7d0;color:#15803d}.card-contact-btn.w:hover{background:#22c55e;border-color:#22c55e;color:#fff}
 .card-contact-btn.ig{border-color:#f9c;color:#c13584}.card-contact-btn.ig:hover{background:#e1306c;border-color:#e1306c;color:#fff}
 .card-contact-btn.maps{border-color:var(--blue-bd);color:var(--blue)}.card-contact-btn.maps:hover{background:var(--blue);border-color:var(--blue);color:#fff}
-
-/* ── CITY PAGE ACTIONS ── */
-.city-page-bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:8px}
-.btn-cadastrar{display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border:1px dashed var(--g5);border-radius:var(--r);font-size:12px;font-weight:500;color:var(--g3);cursor:pointer;background:var(--white);font-family:inherit;transition:all .12s}
-.btn-cadastrar:hover{border-color:var(--blue);color:var(--blue)}
 
 /* ── REGISTER MODAL ── */
 .reg-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:300;display:none;align-items:flex-end;justify-content:center;opacity:0;transition:opacity .2s}
@@ -221,29 +213,68 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 .ev-card-desc{font-size:12px;color:var(--g3);line-height:1.5;margin-bottom:8px}
 .ev-card-tip{font-size:11px;color:var(--g4);font-style:italic;margin-bottom:8px}
 
-@media(max-width:580px){.reg-form-row{grid-template-columns:1fr}}
+/* ── HOMEPAGE CONTENT (SEO / AdSense) ── */
+.home-content{max-width:800px;margin:0 auto;padding:48px 20px}
+.home-content h2{font-size:20px;font-weight:700;letter-spacing:-.4px;margin-bottom:8px;color:var(--black)}
+.home-content h3{font-size:15px;font-weight:600;margin-bottom:6px;color:var(--black)}
+.home-content p{font-size:14px;color:var(--g3);line-height:1.7;margin-bottom:16px}
+.cities-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin:24px 0}
+.city-card-static{border:1px solid var(--g6);border-radius:var(--r-lg);padding:18px;background:var(--white);cursor:pointer;transition:all .15s;text-align:left;width:100%;font-family:inherit}
+.city-card-static:hover{border-color:var(--blue-bd);box-shadow:0 2px 12px rgba(37,99,235,.08);transform:translateY(-1px)}
+.city-card-static h3{font-size:15px;font-weight:700;color:var(--black);margin-bottom:4px}
+.city-card-static .city-type{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+.city-card-static p{font-size:12px;color:var(--g3);line-height:1.5;margin-bottom:10px}
+.city-card-static .city-tags{display:flex;gap:5px;flex-wrap:wrap}
+.city-tag{font-size:10px;padding:2px 7px;border-radius:4px;background:var(--g7);color:var(--g3);border:1px solid var(--g6)}
+.section-divider{border:none;border-top:1px solid var(--g6);margin:40px 0}
 
+/* ── STATIC PAGES ── */
+.static-page{max-width:720px;margin:0 auto;padding:40px 20px}
+.static-page h1{font-size:22px;font-weight:700;letter-spacing:-.4px;margin-bottom:6px}
+.static-page .page-sub{font-size:13px;color:var(--g4);margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid var(--g6)}
+.static-page h2{font-size:16px;font-weight:600;margin:28px 0 8px;color:var(--black)}
+.static-page p{font-size:14px;color:var(--g3);line-height:1.75;margin-bottom:12px}
+.static-page ul{font-size:14px;color:var(--g3);line-height:1.75;margin:8px 0 14px 20px}
+.static-page li{margin-bottom:4px}
+.static-page a{color:var(--blue);text-decoration:none}
+.static-page a:hover{text-decoration:underline}
+.contact-form{display:flex;flex-direction:column;gap:14px;margin-top:20px}
+.contact-form input,.contact-form textarea{padding:10px 12px;border:1px solid var(--g6);border-radius:var(--r);font-size:14px;font-family:inherit;outline:none;transition:border-color .12s}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(37,99,235,.09)}
+.contact-form textarea{min-height:120px;resize:vertical;line-height:1.5}
+.contact-submit{padding:11px 24px;background:var(--blue);color:var(--white);border:none;border-radius:var(--r);font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:background .15s;align-self:flex-start}
+.contact-submit:hover{background:var(--blue-h)}
+.contact-feedback{padding:12px 14px;border-radius:var(--r);font-size:13px;line-height:1.5;display:none;margin-top:8px}
+.contact-feedback.ok{background:#f0fdf4;border:1px solid #bbf7d0;color:#15803d}
+.contact-feedback.err{background:#fff5f5;border:1px solid #fecaca;color:var(--red)}
 
-/* ── RESPONSIVE ── */
+/* ── FOOTER ── */
+.footer{border-top:1px solid var(--g6);padding:28px 20px;font-size:12px;color:var(--g4);background:var(--g8)}
+.footer-inner{max-width:800px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
+.footer-links{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+.footer-links a{color:var(--g4);text-decoration:none;transition:color .12s}
+.footer-links a:hover{color:var(--black)}
+.footer-copy{font-size:11px;color:var(--g5)}
+
+.hidden{display:none!important}
+
 @media(max-width:580px){
   .form-row{grid-template-columns:1fr}
   .form-row-3{grid-template-columns:1fr 1fr}
   .city-search-row{flex-direction:column}
   .btn-explorar{width:100%}
+  .reg-form-row{grid-template-columns:1fr}
 }
 @media(max-width:480px){
   .hero{padding:24px 16px 24px}
   .form-section{padding:18px 14px 28px}
-  .form-card{padding:14px}
-  .city-page-wrap,.result-wrap{padding:20px 14px}
+  .form-card,.city-page-wrap,.result-wrap,.home-content,.static-page{padding-left:14px;padding-right:14px}
   .nav{padding:0 14px}
   .places-grid{grid-template-columns:1fr 1fr}
   .city-actions{width:100%}
   .btn-outline,.btn-solid{flex:1;text-align:center}
 }
-@media(max-width:360px){
-  .places-grid{grid-template-columns:1fr}
-}
+@media(max-width:360px){.places-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -258,7 +289,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
   <div class="hero">
     <p class="hero-eyebrow">Minas Gerais · Guia de viagem</p>
     <h1>Descubra <em>Minas Gerais</em></h1>
-    <p class="hero-sub">Selecione uma cidade para explorar os melhores lugares ou criar um roteiro personalizado.</p>
+    <p class="hero-sub">Explore restaurantes, cafés, trilhas, cachoeiras e experiências únicas nas principais cidades históricas e naturais do estado.</p>
     <div class="city-search-wrap">
       <div class="city-search-row">
         <div class="city-select-wrap">
@@ -288,10 +319,39 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
     </div>
   </div>
 
-  <div class="ad-slot">
-    <p class="ad-label">Publicidade</p>
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1111111111" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  <!-- CONTEÚDO ESTÁTICO — visível para o rastreador do AdSense -->
+  <div class="home-content">
+
+    <h2>O melhor guia de turismo em Minas Gerais</h2>
+    <p>Minas Gerais é um dos estados mais ricos do Brasil em cultura, história, gastronomia e natureza. Com cidades que preservam o barroco colonial português, serras cobertas de Mata Atlântica e Cerrado, cachoeiras cristalinas e uma culinária que é patrimônio afetivo nacional, Minas tem algo especial para cada perfil de viajante.</p>
+    <p>O roteiro.mg reúne em um só lugar as melhores indicações de restaurantes, cafés, bares, experiências culturais, trilhas e atrações turísticas das 13 principais cidades mineiras — com informações reais, atualizadas e verificadas.</p>
+
+    <hr class="section-divider">
+    <h2>Explore as cidades</h2>
+    <p>Clique em qualquer cidade para ver uma seleção completa de lugares recomendados, organizados por categoria.</p>
+
+    <div class="cities-grid" id="cities-grid-static">
+      <!-- preenchido via JS abaixo para evitar duplicação de dados -->
+    </div>
+
+    <hr class="section-divider">
+
+    <h2>Por que viajar para Minas Gerais?</h2>
+    <p>Minas Gerais concentra mais de 70% dos sítios históricos tombados como Patrimônio Nacional do Brasil. Cidades como Ouro Preto, Tiradentes, Diamantina e Congonhas foram palco da colonização portuguesa e da Inconfidência Mineira — o movimento que inspirou a independência do Brasil.</p>
+    <p>Além da riqueza histórica, o estado oferece experiências naturais únicas: a Serra do Cipó com suas cachoeiras e trilhas no Cerrado, o Lago de Furnas em Capitólio com cânions de tirar o fôlego, e a Serra da Mantiqueira em Monte Verde com clima de montanha europeia no coração de Minas.</p>
+
+    <h2>Gastronomia mineira</h2>
+    <p>A culinária de Minas Gerais é reconhecida mundialmente. Belo Horizonte foi eleita <strong>Cidade Criativa da Gastronomia pela UNESCO</strong>, e pratos como o feijão tropeiro, o frango com quiabo, o pão de queijo, a carne de porco com tutu e o queijo artesanal da Canastra fazem parte do patrimônio imaterial do estado. Cada cidade tem suas especialidades, seus restaurantes tradicionais e seus chefs que reinterpretam a tradição com criatividade.</p>
+
+    <h2>Experiências imperdíveis</h2>
+    <p>De degustações em vinícolas no Sul de Minas a visitas a alambiques centenários, de passeios de trem a vapor pela Maria Fumaça a cavalgadas pelas serras de Tiradentes — Minas oferece experiências que vão muito além do turismo convencional. A Vesperata de Diamantina, onde músicos tocam nas sacadas históricas, e o pôr do sol no domo geodésico da Vinícola Trindade em Bichinho são experiências únicas no mundo.</p>
+
+    <hr class="section-divider">
+
+    <h2>Sobre o roteiro.mg</h2>
+    <p>O roteiro.mg é um portal de turismo dedicado a Minas Gerais, criado para ajudar viajantes a descobrir os melhores lugares com informações confiáveis e atualizadas. Todos os locais cadastrados são reais, verificados e descritos com base em fontes como Google, TripAdvisor e guias especializados. Não inventamos dados — apenas curamos o melhor do que Minas tem a oferecer.</p>
+    <p>Acesse qualquer cidade pelo seletor acima e explore restaurantes, cafés, bares, experiências, trilhas, cachoeiras e pontos culturais com links diretos para WhatsApp, Instagram e Google Maps quando disponíveis.</p>
+
   </div>
 </div>
 
@@ -308,15 +368,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
         <button class="btn-solid" onclick="openRegModal()">+ Cadastrar experiência</button>
       </div>
     </div>
-
     <div class="cat-tabs" id="cat-tabs"></div>
     <div id="places-grid" class="places-grid"></div>
-  </div>
-
-  <div class="ad-slot" style="max-width:740px;margin:0 auto 0;padding:0 20px">
-    <p class="ad-label">Publicidade</p>
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="2222222222" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
 </div>
 
@@ -325,7 +378,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
   <div class="form-section">
     <div class="form-card">
       <p class="form-card-title">📋 Criar roteiro para <span id="form-cidade-nome">Tiradentes</span></p>
-
       <div class="form-row-3">
         <div class="field">
           <label>Data de início</label>
@@ -340,7 +392,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
           <input type="number" id="viaj" value="2" min="1" max="20">
         </div>
       </div>
-
       <span class="prefs-lbl">Preferências</span>
       <div class="prefs-row">
         <div class="chip on" data-p="gastronomia">🍽️ Gastronomia</div>
@@ -353,17 +404,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
         <div class="chip" data-p="cultura">🏛️ Cultura</div>
         <div class="chip" data-p="compras">🛍️ Artesanato</div>
       </div>
-
       <div class="form-divider"></div>
-
       <div class="field" style="margin-bottom:18px">
         <label>Conte mais sobre sua viagem <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--g4)">(opcional)</span></label>
         <textarea id="contexto" placeholder="Ex: lua de mel, prefiro restaurantes calmos, quero degustação de vinhos ao pôr do sol..."></textarea>
         <p class="field-hint">Quanto mais detalhes, mais personalizado o roteiro.</p>
       </div>
-
       <div id="err-datas" class="err hidden">⚠ Selecione datas válidas (fim igual ou após início).</div>
-
       <div style="display:flex;gap:10px;flex-wrap:wrap">
         <button class="btn-outline" style="flex:0 0 auto" onclick="abrirCidade()">← Voltar</button>
         <button class="btn-gerar" id="btn-gerar" onclick="gerar()" style="flex:1">
@@ -389,7 +436,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
         <button class="btn-outline" onclick="goHome()">← Início</button>
       </div>
     </div>
-
     <div class="legend">
       <div class="leg"><div class="leg-d" style="background:#d97706"></div>Café</div>
       <div class="leg"><div class="leg-d" style="background:#dc2626"></div>Refeição</div>
@@ -397,7 +443,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
       <div class="leg"><div class="leg-d" style="background:#0284c7"></div>Visita</div>
       <div class="leg"><div class="leg-d" style="background:#16a34a"></div>Experiência</div>
     </div>
-
     <div id="loading" class="loading hidden">
       <div class="spinner"></div>
       <p>Montando seu roteiro...</p>
@@ -405,11 +450,133 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
     </div>
     <div id="output"></div>
   </div>
+</div>
 
-  <div class="ad-slot" style="max-width:740px;margin:0 auto;padding:0 20px">
-    <p class="ad-label">Publicidade</p>
-    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="3333333333" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<!-- ══ VIEW: SOBRE ════════════════════════════════════════════════════════ -->
+<div id="view-sobre" class="hidden">
+  <div class="static-page">
+    <h1>Sobre o roteiro.mg</h1>
+    <p class="page-sub">Portal de turismo dedicado a Minas Gerais</p>
+
+    <h2>O que é o roteiro.mg?</h2>
+    <p>O roteiro.mg é um guia de viagem digital focado exclusivamente em Minas Gerais. Nosso objetivo é ajudar viajantes — tanto os que visitam pela primeira vez quanto quem já conhece o estado — a descobrir os melhores restaurantes, cafés, bares, experiências culturais, trilhas e atrações turísticas de 13 cidades mineiras.</p>
+
+    <h2>Como os dados são curados?</h2>
+    <p>Todos os locais cadastrados são reais e verificáveis. As informações são baseadas em fontes como Google Maps, TripAdvisor, guias especializados de turismo e indicações de viajantes experientes. <strong>Não inventamos dados, endereços, telefones ou redes sociais.</strong> Quando não encontramos uma informação confiável, deixamos o campo em branco.</p>
+
+    <h2>Por que Minas Gerais?</h2>
+    <p>Minas Gerais é um dos estados mais ricos do Brasil em diversidade de experiências. Concentra mais de 70% dos sítios históricos tombados como Patrimônio Nacional, tem a capital gastronômica do Brasil reconhecida pela UNESCO (Belo Horizonte), serras, cachoeiras, vinícolas, alambiques centenários e uma hospitalidade que é parte da identidade cultural do estado.</p>
+
+    <h2>Cidades disponíveis</h2>
+    <p>O portal cobre atualmente 13 cidades: Tiradentes, Ouro Preto, São João del-Rei, Diamantina, Mariana, Congonhas, Lavras Novas, Carrancas, Capitólio, Monte Verde, Serra do Cipó, Brumadinho e Belo Horizonte. Novas cidades são adicionadas continuamente.</p>
+
+    <h2>Como contribuir?</h2>
+    <p>Conhece um restaurante, café, trilha ou experiência incrível que ainda não está no roteiro.mg? Use o botão <strong>"+ Cadastrar experiência"</strong> dentro de qualquer cidade para enviar sua sugestão. Analisamos cada indicação antes de publicar.</p>
+
+    <h2>Contato</h2>
+    <p>Para parcerias, sugestões editoriais ou correções de dados, entre em contato através da nossa <a href="#" onclick="showView('view-contato');return false;">página de contato</a> ou pelo e-mail <a href="mailto:roteirosmg@gmail.com">roteirosmg@gmail.com</a>.</p>
+  </div>
+</div>
+
+<!-- ══ VIEW: CONTATO ═════════════════════════════════════════════════════ -->
+<div id="view-contato" class="hidden">
+  <div class="static-page">
+    <h1>Contato</h1>
+    <p class="page-sub">Fale conosco sobre parcerias, sugestões ou correções</p>
+
+    <h2>E-mail direto</h2>
+    <p>Para assuntos urgentes ou parcerias comerciais, escreva para: <a href="mailto:roteirosmg@gmail.com">roteirosmg@gmail.com</a></p>
+
+    <h2>Formulário de contato</h2>
+    <p>Preencha o formulário abaixo e responderemos em até 2 dias úteis.</p>
+
+    <form class="contact-form" onsubmit="enviarContato(event)">
+      <input type="text" id="ct-nome" placeholder="Seu nome" required>
+      <input type="email" id="ct-email" placeholder="Seu e-mail" required>
+      <input type="text" id="ct-assunto" placeholder="Assunto" required>
+      <textarea id="ct-msg" placeholder="Sua mensagem..." required></textarea>
+      <button type="submit" class="contact-submit">Enviar mensagem</button>
+      <div id="ct-feedback" class="contact-feedback"></div>
+    </form>
+
+    <h2>Sugerir um lugar</h2>
+    <p>Conhece um restaurante, café, trilha ou experiência que deveria estar no roteiro.mg? Selecione uma cidade na <a href="#" onclick="goHome();return false;">página inicial</a> e use o botão <strong>"+ Cadastrar experiência"</strong>.</p>
+  </div>
+</div>
+
+<!-- ══ VIEW: PRIVACIDADE ══════════════════════════════════════════════════ -->
+<div id="view-privacidade" class="hidden">
+  <div class="static-page">
+    <h1>Política de Privacidade</h1>
+    <p class="page-sub">Última atualização: junho de 2025</p>
+
+    <h2>1. Quem somos</h2>
+    <p>O roteiro.mg é um portal de turismo dedicado a Minas Gerais, disponível em roteiro.mg. Este documento descreve como tratamos as informações dos usuários que acessam nosso site.</p>
+
+    <h2>2. Dados coletados</h2>
+    <p>O roteiro.mg não coleta dados pessoais de forma direta além dos que você voluntariamente fornece ao usar o formulário de contato ou ao cadastrar uma experiência. Esses dados incluem: nome, e-mail e mensagem.</p>
+    <p>Como qualquer site na internet, nossos servidores e parceiros de publicidade podem registrar automaticamente informações como endereço IP, tipo de navegador, páginas visitadas e tempo de permanência.</p>
+
+    <h2>3. Google AdSense e cookies</h2>
+    <p>Este site utiliza o Google AdSense para exibir anúncios. O Google pode usar cookies para exibir anúncios personalizados com base nas suas visitas anteriores a este e a outros sites. Para desativar a publicidade personalizada, acesse as <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">configurações de anúncios do Google</a>.</p>
+    <p>Também utilizamos cookies essenciais para o funcionamento do site. Ao continuar navegando, você concorda com o uso de cookies conforme descrito nesta política.</p>
+
+    <h2>4. Como usamos os dados</h2>
+    <ul>
+      <li>Para responder mensagens enviadas pelo formulário de contato</li>
+      <li>Para analisar o uso do site e melhorar o conteúdo</li>
+      <li>Para exibir anúncios relevantes via Google AdSense</li>
+    </ul>
+
+    <h2>5. Compartilhamento de dados</h2>
+    <p>Não vendemos, alugamos ou compartilhamos suas informações pessoais com terceiros, exceto quando necessário para cumprir obrigações legais ou quando você explicitamente autorizar.</p>
+
+    <h2>6. Seus direitos (LGPD)</h2>
+    <p>De acordo com a Lei Geral de Proteção de Dados (LGPD — Lei 13.709/2018), você tem o direito de: acessar seus dados, corrigir informações incorretas, solicitar a exclusão dos seus dados e revogar o consentimento a qualquer momento. Para exercer esses direitos, entre em contato por <a href="mailto:roteirosmg@gmail.com">roteirosmg@gmail.com</a>.</p>
+
+    <h2>7. Links externos</h2>
+    <p>O roteiro.mg contém links para sites externos (Instagram, WhatsApp, Google Maps). Não nos responsabilizamos pelas práticas de privacidade desses sites. Recomendamos que você leia as políticas de privacidade de cada site que visitar.</p>
+
+    <h2>8. Alterações nesta política</h2>
+    <p>Podemos atualizar esta política periodicamente. Notificaremos sobre mudanças significativas publicando a nova política nesta página com a data de atualização.</p>
+
+    <h2>9. Contato</h2>
+    <p>Dúvidas sobre esta política? Escreva para <a href="mailto:roteirosmg@gmail.com">roteirosmg@gmail.com</a>.</p>
+  </div>
+</div>
+
+<!-- ══ VIEW: TERMOS ═══════════════════════════════════════════════════════ -->
+<div id="view-termos" class="hidden">
+  <div class="static-page">
+    <h1>Termos de Uso</h1>
+    <p class="page-sub">Última atualização: junho de 2025</p>
+
+    <h2>1. Aceitação dos termos</h2>
+    <p>Ao acessar e usar o roteiro.mg, você concorda com estes Termos de Uso. Se não concordar com algum item, pedimos que não utilize o site.</p>
+
+    <h2>2. Sobre o conteúdo</h2>
+    <p>O roteiro.mg oferece informações turísticas sobre Minas Gerais com fins informativos. Nos esforçamos para manter os dados atualizados e corretos, mas não garantimos a precisão ou completude das informações. Horários, preços e disponibilidade de estabelecimentos podem mudar — sempre confirme diretamente com o local antes de visitar.</p>
+
+    <h2>3. Links para terceiros</h2>
+    <p>O site contém links para sites externos (Google Maps, Instagram, WhatsApp). Esses links são fornecidos por conveniência. O roteiro.mg não controla esses sites e não se responsabiliza pelo seu conteúdo.</p>
+
+    <h2>4. Cadastro de experiências</h2>
+    <p>Ao cadastrar uma experiência no roteiro.mg, você declara que as informações enviadas são verdadeiras e que não violam direitos de terceiros. O roteiro.mg se reserva o direito de recusar ou remover conteúdos que não atendam aos nossos critérios editoriais ou que sejam imprecisos.</p>
+
+    <h2>5. Propriedade intelectual</h2>
+    <p>O conteúdo original do roteiro.mg — textos, descrições, estrutura e código — é de propriedade do roteiro.mg. Os nomes, marcas e logotipos de estabelecimentos mencionados pertencem aos seus respectivos donos.</p>
+
+    <h2>6. Limitação de responsabilidade</h2>
+    <p>O roteiro.mg não se responsabiliza por danos diretos ou indiretos resultantes do uso das informações aqui disponíveis, incluindo prejuízos decorrentes de visitas a estabelecimentos listados.</p>
+
+    <h2>7. Alterações nos termos</h2>
+    <p>Podemos atualizar estes termos a qualquer momento. O uso continuado do site após alterações implica aceitação dos novos termos.</p>
+
+    <h2>8. Legislação aplicável</h2>
+    <p>Estes termos são regidos pela legislação brasileira. Qualquer disputa será resolvida nos tribunais competentes do Brasil.</p>
+
+    <h2>9. Contato</h2>
+    <p>Dúvidas sobre estes termos? Escreva para <a href="mailto:roteirosmg@gmail.com">roteirosmg@gmail.com</a>.</p>
   </div>
 </div>
 
@@ -427,14 +594,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
   </div>
 </div>
 
-
 <!-- ══ REGISTER MODAL ════════════════════════════════════════════════════ -->
 <div class="reg-overlay" id="reg-overlay" onclick="closeRegModal(event)">
   <div class="reg-modal">
     <button class="modal-close" onclick="closeRegModalBtn()" aria-label="Fechar">✕</button>
     <h3 class="reg-title">Cadastrar experiência</h3>
     <p class="reg-sub">Envie sua sugestão para análise. Publicaremos após verificação.</p>
-
     <div class="reg-form-row">
       <div class="reg-field">
         <label>Nome do local <span class="reg-required">*</span></label>
@@ -444,42 +609,24 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
         <label>Tipo <span class="reg-required">*</span></label>
         <select id="reg-tipo">
           <option value="">Selecione...</option>
-          <option>Restaurante</option>
-          <option>Café</option>
-          <option>Bar</option>
-          <option>Experiência</option>
-          <option>Evento</option>
-          <option>Trilha</option>
-          <option>Cachoeira</option>
-          <option>Fazenda</option>
-          <option>Museu</option>
-          <option>Igreja</option>
-          <option>Outro</option>
+          <option>Restaurante</option><option>Café</option><option>Bar</option>
+          <option>Experiência</option><option>Evento</option><option>Trilha</option>
+          <option>Cachoeira</option><option>Fazenda</option><option>Museu</option>
+          <option>Igreja</option><option>Outro</option>
         </select>
       </div>
     </div>
-
     <div class="reg-field">
       <label>Cidade <span class="reg-required">*</span></label>
       <select id="reg-cidade">
         <option value="">Selecione...</option>
-        <option>Tiradentes</option>
-        <option>Ouro Preto</option>
-        <option>São João del-Rei</option>
-        <option>Diamantina</option>
-        <option>Mariana</option>
-        <option>Congonhas</option>
-        <option>Lavras Novas</option>
-        <option>Carrancas</option>
-        <option>Capitólio</option>
-        <option>Monte Verde</option>
-        <option>Serra do Cipó</option>
-        <option>Brumadinho</option>
-        <option>Belo Horizonte</option>
-        <option>Outra cidade de MG</option>
+        <option>Tiradentes</option><option>Ouro Preto</option><option>São João del-Rei</option>
+        <option>Diamantina</option><option>Mariana</option><option>Congonhas</option>
+        <option>Lavras Novas</option><option>Carrancas</option><option>Capitólio</option>
+        <option>Monte Verde</option><option>Serra do Cipó</option><option>Brumadinho</option>
+        <option>Belo Horizonte</option><option>Outra cidade de MG</option>
       </select>
     </div>
-
     <div class="reg-form-row">
       <div class="reg-field">
         <label>WhatsApp</label>
@@ -490,19 +637,15 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
         <input type="text" id="reg-ig" placeholder="@nomedoperfil">
       </div>
     </div>
-
     <div class="reg-field">
       <label>Endereço ou localização</label>
       <input type="text" id="reg-end" placeholder="Rua, número ou ponto de referência" maxlength="200">
     </div>
-
     <div class="reg-field">
       <label>Breve descrição <span class="reg-required">*</span></label>
       <textarea id="reg-desc" placeholder="Conte o que torna este lugar especial..." maxlength="500"></textarea>
     </div>
-
     <div id="reg-feedback" class="reg-feedback"></div>
-
     <div class="reg-btn-row">
       <button class="reg-btn-cancel" onclick="closeRegModalBtn()">Cancelar</button>
       <button class="reg-btn-send" id="reg-send-btn" onclick="enviarCadastro()">
@@ -513,17 +656,21 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
   </div>
 </div>
 
-<div class="footer">
-  <strong style="color:#444">roteiro.mg</strong> · Guia de viagem em Minas Gerais<br>
-  Dados baseados em Google, TripAdvisor e guias especializados · 13 cidades de Minas Gerais
-</div>
+<!-- ══ FOOTER ══════════════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <strong style="color:#444;font-size:14px">roteiro<span style="color:var(--blue)">.mg</span></strong>
+    <div class="footer-links">
+      <a href="#" onclick="showView('view-sobre');return false;">Sobre</a>
+      <a href="#" onclick="showView('view-contato');return false;">Contato</a>
+      <a href="#" onclick="showView('view-privacidade');return false;">Política de Privacidade</a>
+      <a href="#" onclick="showView('view-termos');return false;">Termos de Uso</a>
+    </div>
+    <p class="footer-copy">© 2025 roteiro.mg · Guia de turismo em Minas Gerais · Dados baseados em Google, TripAdvisor e guias especializados</p>
+  </div>
+</footer>
 
 <script>
-// ═══════════════════════════════════════════════════════════════════════════
-// DB — estrutura escalável por cidade
-// Para adicionar nova cidade: DB['slug'] = { nome, desc, cafes, almoco, jantar, bares, experiencias, visitas }
-// Campos mínimos por item: { n, desc, tip }   Opcionais: wpp, ig, g
-// ═══════════════════════════════════════════════════════════════════════════
 const DB = {
 
   tiradentes: {
@@ -971,7 +1118,6 @@ const DB = {
   },
 
 };
-
 // ═══════════════════════════════════════════════════════════════════════════
 // CATEGORY CONFIG
 // ═══════════════════════════════════════════════════════════════════════════
@@ -987,18 +1133,37 @@ const CATS = [
 ];
 
 // ═══════════════════════════════════════════════════════════════════════════
-// STATE
+// CITY STATIC DATA (para homepage — visível sem interação)
 // ═══════════════════════════════════════════════════════════════════════════
-let activeCidade = null;  // slug da cidade ativa
-let activeCat    = null;  // categoria ativa na tela de cidade
+const CITY_META = {
+  tiradentes:     { emoji:'⛪', type:'Cidade Histórica', highlight:'Barroco colonial, gastronomia premiada, trilhas na Serra de São José e degustações de cachaça artesanal.', tags:['Patrimônio Nacional','Gastronomia','Trilhas','Cachaça'] },
+  ouro_preto:     { emoji:'🏛️', type:'Patrimônio Mundial UNESCO', highlight:'Igrejas barrocas de Aleijadinho, minas de ouro abertas à visitação e centro histórico mais rico do Brasil.', tags:['UNESCO','Barroco','Minas de Ouro','Cultura'] },
+  sao_joao:       { emoji:'🚂', type:'Cidade Histórica', highlight:'Maria Fumaça, orquestras mais antigas do Brasil, arquitetura colonial e boemia na Rua da Cachaça.', tags:['Maria Fumaça','Música','Patrimônio','Noite'] },
+  diamantina:     { emoji:'💎', type:'Patrimônio Mundial UNESCO', highlight:'Vesperata nas sacadas, centro histórico encantador, Parque do Biribiri e berço do presidente JK.', tags:['UNESCO','Vesperata','Natureza','JK'] },
+  capitolio:      { emoji:'🏞️', type:'Natureza & Aventura', highlight:'Cânions e Lago de Furnas com passeios de lancha, Lagoa Azul cristalina e trilhas no Cerrado.', tags:['Cânions','Lago','Lancha','Cerrado'] },
+  monte_verde:    { emoji:'🏔️', type:'Serra da Mantiqueira', highlight:'Clima de montanha, fondue, cerveja artesanal, chocolates, trilhas e o famoso strudel de maçã.', tags:['Serra','Fondue','Chocolate','Trilhas'] },
+  serra_cipo:     { emoji:'🌊', type:'Parque Nacional', highlight:'Cachoeiras cristalinas, trilhas no Cerrado, rafting no Rio Cipó e biodiversidade extraordinária.', tags:['Cachoeiras','Trilhas','Rafting','Cerrado'] },
+  belo_horizonte: { emoji:'🏙️', type:'Capital · UNESCO Gastronomia', highlight:'Cidade Criativa da Gastronomia pela UNESCO, botequins famosos, arte moderna e o gigantesco Inhotim a 45km.', tags:['Gastronomia','UNESCO','Cultura','Inhotim'] },
+  brumadinho:     { emoji:'🎨', type:'Arte Contemporânea', highlight:'Instituto Inhotim — maior museu de arte a céu aberto do mundo com 5.000 hectares de arte e natureza.', tags:['Inhotim','Arte','Natureza','Museu'] },
+  mariana:        { emoji:'⛏️', type:'Primeira Cidade de Minas', highlight:'Mina da Passagem, Igrejas Gêmeas, órgão alemão do séc. XVIII e passeio de trem para Ouro Preto.', tags:['Mina de Ouro','Barroco','Trem','História'] },
+  congonhas:      { emoji:'🗿', type:'Patrimônio Mundial UNESCO', highlight:'Os 12 Profetas de Aleijadinho — as maiores esculturas do barroco brasileiro na Basílica do Bom Jesus.', tags:['UNESCO','Aleijadinho','Profetas','Barroco'] },
+  lavras_novas:   { emoji:'🌄', type:'Distrito Serrano', highlight:'Cachoeiras, artesanato de anjos, paisagem serrana de Ouro Preto e um vilarejo que parece parado no tempo.', tags:['Serra','Cachoeiras','Artesanato','Natureza'] },
+  carrancas:      { emoji:'💦', type:'Ecoturismo · 70+ Cachoeiras', highlight:'Mais de 70 cachoeiras mapeadas, complexos naturais com pinturas rupestres e passeios de 4x4 pela Serra.', tags:['Cachoeiras','Ecoturismo','Natureza','Aventura'] },
+};
 
 // ═══════════════════════════════════════════════════════════════════════════
-// NAVIGATION HELPERS
+// STATE
 // ═══════════════════════════════════════════════════════════════════════════
+let activeCidade = null;
+let activeCat    = null;
+
+// ═══════════════════════════════════════════════════════════════════════════
+// NAVIGATION
+// ═══════════════════════════════════════════════════════════════════════════
+const ALL_VIEWS = ['view-home','view-city','view-form','view-result','view-sobre','view-contato','view-privacidade','view-termos'];
+
 function showView(id) {
-  ['view-home','view-city','view-form','view-result'].forEach(v => {
-    document.getElementById(v).classList.toggle('hidden', v !== id);
-  });
+  ALL_VIEWS.forEach(v => document.getElementById(v).classList.toggle('hidden', v !== id));
   window.scrollTo(0,0);
 }
 
@@ -1006,7 +1171,7 @@ function goHome() {
   activeCidade = null;
   document.getElementById('sel-cidade-home').value = '';
   document.getElementById('btn-explorar-home').disabled = true;
-  document.getElementById('nav-badge').textContent = 'Minas Gerais';
+  document.getElementById('nav-badge').textContent = '13 cidades';
   showView('view-home');
 }
 
@@ -1034,29 +1199,42 @@ function abrirCidade() {
 
 function abrirRoteiro() {
   if (!activeCidade) return;
-  const db = DB[activeCidade];
-  document.getElementById('form-cidade-nome').textContent = db.nome;
+  document.getElementById('form-cidade-nome').textContent = DB[activeCidade].nome;
   showView('view-form');
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// CITY PAGE — category tabs + place cards
+// HOMEPAGE — grid estático de cidades (visível sem interação / indexável)
+// ═══════════════════════════════════════════════════════════════════════════
+function buildHomepageCities() {
+  const grid = document.getElementById('cities-grid-static');
+  if (!grid) return;
+  grid.innerHTML = Object.entries(CITY_META).map(([slug, meta]) => {
+    const db = DB[slug];
+    if (!db) return '';
+    return `<button class="city-card-static" onclick="activeCidade='${slug}';abrirCidade()">
+      <div class="city-type">${meta.emoji} ${meta.type}</div>
+      <h3>${db.nome}</h3>
+      <p>${meta.highlight}</p>
+      <div class="city-tags">${meta.tags.map(t => `<span class="city-tag">${t}</span>`).join('')}</div>
+    </button>`;
+  }).join('');
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// CITY PAGE
 // ═══════════════════════════════════════════════════════════════════════════
 function buildCityTabs(cidadeKey) {
-  const db  = DB[cidadeKey];
+  const db   = DB[cidadeKey];
   const tabs = document.getElementById('cat-tabs');
-
-  // find first non-empty category
   const firstCat = CATS.find(c => (db[c.key]||[]).length > 0);
   activeCat = firstCat ? firstCat.key : CATS[0].key;
-
   tabs.innerHTML = CATS.map(c => {
     const count = (db[c.key]||[]).length;
     const on    = c.key === activeCat ? ' on' : '';
     const dim   = count === 0 ? ' style="opacity:.4"' : '';
     return `<button class="ctab${on}" data-cat="${c.key}" onclick="selectCat('${c.key}')"${dim}>${c.label}${count?` <span style="font-size:10px;opacity:.6">${count}</span>`:''}</button>`;
   }).join('');
-
   renderPlaces(cidadeKey, activeCat);
 }
 
@@ -1082,7 +1260,6 @@ function renderPlaces(cidadeKey, catKey) {
     return;
   }
 
-  // Eventos: render especial com data
   if (catKey === 'eventos') {
     grid.innerHTML = items.map((item, idx) => {
       const btns = buildCardContactBtns(item);
@@ -1115,8 +1292,6 @@ function renderPlaces(cidadeKey, catKey) {
   }).join('');
 }
 
-
-// ── CARD CONTACT BUTTONS ─────────────────────────────────────────────
 function buildCardContactBtns(item) {
   let btns = '';
   if (item.wpp) btns += `<a class="card-contact-btn w" href="${item.wpp}" target="_blank" onclick="event.stopPropagation()">📱 WhatsApp</a>`;
@@ -1131,24 +1306,20 @@ function buildCardContactBtns(item) {
 function openModal(cidadeKey, catKey, idx) {
   const item = DB[cidadeKey][catKey][idx];
   const cfg  = CATS.find(c => c.key === catKey);
-
   document.getElementById('modal-emoji').textContent = cfg.emoji;
   document.getElementById('modal-cat').textContent   = cfg.catLabel;
   document.getElementById('modal-name').textContent  = item.n;
   document.getElementById('modal-desc').textContent  = item.desc || '';
   const tipEl = document.getElementById('modal-tip');
-  tipEl.textContent  = item.tip || '';
+  tipEl.textContent   = item.tip || '';
   tipEl.style.display = item.tip ? '' : 'none';
-
   let pills = '';
   if (item.wpp) pills += `<a class="pill w" href="${item.wpp}" target="_blank">📱 WhatsApp</a>`;
   if (item.ig)  pills += `<a class="pill ig" href="${item.ig}" target="_blank">📷 Instagram</a>`;
   if (item.g)   pills += `<a class="pill g" href="${item.g}" target="_blank">🗺️ Google</a>`;
   document.getElementById('modal-pills').innerHTML = pills;
-
   const q = encodeURIComponent(item.n + ' ' + DB[cidadeKey].nome + ' MG');
   document.getElementById('modal-search').href = 'https://www.google.com/search?q=' + q;
-
   const overlay = document.getElementById('modal-overlay');
   overlay.style.display = 'flex';
   requestAnimationFrame(() => overlay.classList.add('open'));
@@ -1160,15 +1331,10 @@ function closeModalBtn() {
   overlay.classList.remove('open');
   setTimeout(() => { overlay.style.display = 'none'; document.body.style.overflow = ''; }, 220);
 }
-
-function closeModal(e) {
-  if (e.target === document.getElementById('modal-overlay')) closeModalBtn();
-}
-
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalBtn(); });
+function closeModal(e) { if (e.target === document.getElementById('modal-overlay')) closeModalBtn(); }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// ROTEIRO — chips, form, gerar
+// ROTEIRO
 // ═══════════════════════════════════════════════════════════════════════════
 document.querySelectorAll('.chip').forEach(c => c.addEventListener('click', () => c.classList.toggle('on')));
 const prefs = () => [...document.querySelectorAll('.chip.on')].map(c => c.dataset.p);
@@ -1183,57 +1349,32 @@ function gerar() {
   const v   = document.getElementById('viaj').value;
   const prf = prefs();
   const ctx = document.getElementById('contexto').value.trim();
-
   document.getElementById('err-datas').classList.add('hidden');
-  if (!d1v || !d2v || d1v > d2v) {
-    document.getElementById('err-datas').classList.remove('hidden');
-    return;
-  }
-
+  if (!d1v || !d2v || d1v > d2v) { document.getElementById('err-datas').classList.remove('hidden'); return; }
   const btn = document.getElementById('btn-gerar');
-  btn.disabled = true;
-  btn.textContent = 'Gerando...';
-
+  btn.disabled = true; btn.textContent = 'Gerando...';
   showView('view-result');
-
-  const d1   = new Date(d1v + 'T12:00:00');
-  const d2   = new Date(d2v + 'T12:00:00');
+  const d1 = new Date(d1v + 'T12:00:00'), d2 = new Date(d2v + 'T12:00:00');
   const dias = Math.round((d2 - d1) / 86400000) + 1;
-  const db   = DB[activeCidade];
-
+  const db = DB[activeCidade];
   document.getElementById('res-title').textContent = 'Roteiro · ' + db.nome;
-  document.getElementById('res-meta').textContent  =
-    fmtDate(d1) + ' → ' + fmtDate(d2) + ' · ' + dias + ' dia' + (dias > 1 ? 's' : '') +
-    ' · ' + v + ' viajante' + (v > 1 ? 's' : '') + (ctx ? ' · Personalizado' : '');
+  document.getElementById('res-meta').textContent  = fmtDate(d1) + ' → ' + fmtDate(d2) + ' · ' + dias + ' dia' + (dias > 1 ? 's' : '') + ' · ' + v + ' viajante' + (v > 1 ? 's' : '') + (ctx ? ' · Personalizado' : '');
   document.getElementById('loading').classList.remove('hidden');
   document.getElementById('output').innerHTML = '';
-
   callClaude(buildPrompt(db.nome, d1v, d2v, dias, v, prf, db, ctx), db, dias, d1)
-    .finally(() => {
-      btn.disabled = false;
-      btn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> Criar meu roteiro';
-    });
+    .finally(() => { btn.disabled = false; btn.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg> Criar meu roteiro'; });
 }
 
-// ═══════════════════════════════════════════════════════════════════════════
-// PROMPT — inalterado
-// ═══════════════════════════════════════════════════════════════════════════
 function buildPrompt(cidade, d1, d2, dias, v, prf, db, ctx) {
   const l = cat => db[cat].map(x => x.n).join(' | ');
   const ctxLine = ctx ? '\n\nDETALHES EXTRAS DO VIAJANTE: "' + ctx + '" — use essas informações para personalizar o roteiro.' : '';
   return 'Você é um especialista em turismo em ' + cidade + ', MG. Monte um roteiro de ' + dias + ' dia(s) para ' + v + ' viajante(s) de ' + d1 + ' a ' + d2 + '. Preferências: ' + prf.join(', ') + '.' + ctxLine +
     '\n\nLUGARES REAIS disponíveis — use SOMENTE estes nomes, exatamente como escritos:\nCAFÉS: ' + l('cafes') +
-    '\nALMOÇO: ' + l('almoco') +
-    '\nJANTAR: ' + l('jantar') +
-    '\nBARES: ' + l('bares') +
-    '\nEXPERIÊNCIAS: ' + l('experiencias') +
-    '\nVISITAS: ' + l('visitas') +
+    '\nALMOÇO: ' + l('almoco') + '\nJANTAR: ' + l('jantar') + '\nBARES: ' + l('bares') +
+    '\nEXPERIÊNCIAS: ' + l('experiencias') + '\nVISITAS: ' + l('visitas') +
     '\n\nREGRAS:\n1. Roteiro dia a dia com horários. Estrutura: café 8-10h, visita/exp manhã, almoço 12-14h, visita/exp tarde, jantar 19-21h, bar 21h+ (opcional).\n2. Use SOMENTE nomes da lista — exatamente como escritos.\n3. Não repita o mesmo lugar em dias diferentes.\n4. Adapte às preferências e detalhes extras.\n5. Inclua ao menos 1 experiência por dia.\n6. dica_dia: dica prática curta.\n\nResponda SOMENTE com JSON válido:\n{"dias":[{"titulo":"título temático criativo","itens":[{"horario":"09h00","tipo":"CAFÉ","nome":"Nome Exato","desc":"1-2 frases","dica":"dica curta"}],"dica_dia":"dica do dia"}]}';
 }
 
-// ═══════════════════════════════════════════════════════════════════════════
-// RENDER ROTEIRO
-// ═══════════════════════════════════════════════════════════════════════════
 const DOTS = {'CAFÉ':'cafe','ALMOÇO':'almoco','JANTAR':'jantar','BAR':'bar','VISITA':'visita','EXPERIÊNCIA':'exp'};
 const LBLS = {'CAFÉ':'☕ Café da manhã','ALMOÇO':'🍽️ Almoço','JANTAR':'🍷 Jantar','BAR':'🍸 Bar & Drinks','VISITA':'🏛️ Visita','EXPERIÊNCIA':'✨ Experiência'};
 
@@ -1241,22 +1382,11 @@ function findDB(db, nome) {
   if (!nome) return null;
   const all = [...db.cafes,...db.almoco,...db.jantar,...db.bares,...db.experiencias,...db.visitas];
   const nm  = nome.toLowerCase().trim();
-  let found = all.find(x => x.n && x.n.toLowerCase() === nm);
-  if (found) return found;
-  found = all.find(x => x.n && (nm.includes(x.n.toLowerCase()) || x.n.toLowerCase().includes(nm)));
-  if (found) return found;
+  let found = all.find(x => x.n && x.n.toLowerCase() === nm); if (found) return found;
+  found = all.find(x => x.n && (nm.includes(x.n.toLowerCase()) || x.n.toLowerCase().includes(nm))); if (found) return found;
   const qw = nm.split(/\s+/).filter(w => w.length > 2);
-  found = all.find(x => {
-    if (!x.n) return false;
-    const iw = x.n.toLowerCase().split(/\s+/);
-    return qw.filter(w => iw.some(i => i.includes(w) || w.includes(i))).length >= 2;
-  });
-  if (found) return found;
-  found = all.find(x => {
-    if (!x.n) return false;
-    const iw = x.n.toLowerCase().split(/\s+/).filter(w => w.length > 3);
-    return qw.some(w => iw.some(i => i === w));
-  });
+  found = all.find(x => { if (!x.n) return false; const iw = x.n.toLowerCase().split(/\s+/); return qw.filter(w => iw.some(i => i.includes(w)||w.includes(i))).length >= 2; }); if (found) return found;
+  found = all.find(x => { if (!x.n) return false; const iw = x.n.toLowerCase().split(/\s+/).filter(w=>w.length>3); return qw.some(w=>iw.some(i=>i===w)); });
   return found || null;
 }
 
@@ -1267,7 +1397,7 @@ function buildContactLinks(dbr) {
   if (dbr.ig)  pills += `<a class="pill ig" href="${dbr.ig}" target="_blank">📷 Instagram</a>`;
   if (dbr.g)   pills += `<a class="pill g" href="${dbr.g}" target="_blank">🗺️ Google</a>`;
   if (!dbr.wpp && !dbr.ig && !dbr.g) {
-    const q = encodeURIComponent((dbr.n || '') + ' Tiradentes MG WhatsApp Instagram');
+    const q = encodeURIComponent((dbr.n||'') + ' MG WhatsApp Instagram');
     pills += `<a class="pill g" href="https://www.google.com/search?q=${q}" target="_blank">🔍 Buscar contato</a>`;
   }
   return pills;
@@ -1276,30 +1406,16 @@ function buildContactLinks(dbr) {
 function render(parsed, db, d1) {
   const out = document.getElementById('output');
   out.innerHTML = '';
-  if (!(parsed.dias || []).length) {
-    out.innerHTML = '<div class="err">Não foi possível gerar. Tente novamente.</div>';
-    return;
-  }
+  if (!(parsed.dias||[]).length) { out.innerHTML = '<div class="err">Não foi possível gerar. Tente novamente.</div>'; return; }
   parsed.dias.forEach((dia, i) => {
-    const date = new Date(d1);
-    date.setDate(date.getDate() + i);
-    const itens = (dia.itens || []).map((item, idx) => {
-      const last  = idx === (dia.itens || []).length - 1;
-      const dot   = DOTS[item.tipo] || 'other';
-      const lbl   = LBLS[item.tipo] || item.tipo;
-      const dbr   = findDB(db, item.nome);
+    const date = new Date(d1); date.setDate(date.getDate() + i);
+    const itens = (dia.itens||[]).map((item, idx) => {
+      const last = idx === (dia.itens||[]).length - 1;
+      const dot  = DOTS[item.tipo] || 'other';
+      const lbl  = LBLS[item.tipo] || item.tipo;
+      const dbr  = findDB(db, item.nome);
       const pills = buildContactLinks(dbr);
-      return `<div class="tl-item">
-        <div class="tl-left"><span class="tl-time">${item.horario||''}</span></div>
-        <div class="tl-icon"><div class="tl-dot ${dot}"></div>${last?'':'<div class="tl-line"></div>'}</div>
-        <div class="tl-body">
-          <p class="tl-type">${lbl}</p>
-          <p class="tl-name">${item.nome}</p>
-          <p class="tl-desc">${item.desc||''}</p>
-          ${item.dica ? `<p class="tl-tip">💡 ${item.dica}</p>` : ''}
-          ${pills ? `<div class="pills">${pills}</div>` : ''}
-        </div>
-      </div>`;
+      return `<div class="tl-item"><div class="tl-left"><span class="tl-time">${item.horario||''}</span></div><div class="tl-icon"><div class="tl-dot ${dot}"></div>${last?'':'<div class="tl-line"></div>'}</div><div class="tl-body"><p class="tl-type">${lbl}</p><p class="tl-name">${item.nome}</p><p class="tl-desc">${item.desc||''}</p>${item.dica?`<p class="tl-tip">💡 ${item.dica}</p>`:''}${pills?`<div class="pills">${pills}</div>`:''}</div></div>`;
     }).join('');
     const dica  = dia.dica_dia ? `<div class="dica-dia">🗓️ <b>Dica do dia:</b> ${dia.dica_dia}</div>` : '';
     const block = document.createElement('div');
@@ -1310,36 +1426,25 @@ function render(parsed, db, d1) {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// API CLAUDE — inalterada
+// API CLAUDE
 // ═══════════════════════════════════════════════════════════════════════════
 async function callClaude(prompt, db, dias, d1) {
   const APIKEY = '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';
   let r;
   try {
     const headers = {'Content-Type':'application/json'};
-    if (APIKEY) {
-      headers['x-api-key'] = APIKEY;
-      headers['anthropic-version'] = '2023-06-01';
-      headers['anthropic-dangerous-direct-browser-access'] = 'true';
-    }
-    r = await fetch('https://api.anthropic.com/v1/messages', {
-      method:'POST', headers,
-      body: JSON.stringify({model:'claude-sonnet-4-5', max_tokens:4000, messages:[{role:'user', content:prompt}]})
-    });
+    if (APIKEY) { headers['x-api-key'] = APIKEY; headers['anthropic-version'] = '2023-06-01'; headers['anthropic-dangerous-direct-browser-access'] = 'true'; }
+    r = await fetch('https://api.anthropic.com/v1/messages', { method:'POST', headers, body: JSON.stringify({model:'claude-sonnet-4-5', max_tokens:4000, messages:[{role:'user', content:prompt}]}) });
     if (!r.ok) { const e = await r.text(); throw new Error('HTTP ' + r.status + ': ' + e.slice(0,200)); }
   } catch(fetchErr) {
     document.getElementById('loading').classList.add('hidden');
-    document.getElementById('output').innerHTML =
-      '<div class="err" style="flex-direction:column;align-items:flex-start;gap:8px;border-radius:14px;padding:18px">' +
-      '<b>⚠ Erro de conexão com o serviço</b>' +
-      '<span>Verifique sua conexão e tente novamente.</span>' +
-      '<span style="color:#999;font-size:11px">' + fetchErr.message + '</span></div>';
+    document.getElementById('output').innerHTML = '<div class="err" style="flex-direction:column;align-items:flex-start;gap:8px;border-radius:14px;padding:18px"><b>⚠ Erro de conexão</b><span>Verifique sua conexão e tente novamente.</span><span style="color:#999;font-size:11px">' + fetchErr.message + '</span></div>';
     return;
   }
   try {
-    const data  = await r.json();
-    const text  = (data.content||[]).map(b => b.text||'').join('');
-    let clean   = text.replace(/```json|```/g,'').trim();
+    const data = await r.json();
+    const text = (data.content||[]).map(b => b.text||'').join('');
+    let clean  = text.replace(/```json|```/g,'').trim();
     const s = clean.indexOf('{'), e = clean.lastIndexOf('}');
     if (s >= 0 && e >= 0) clean = clean.slice(s, e+1);
     const parsed = JSON.parse(clean);
@@ -1347,48 +1452,31 @@ async function callClaude(prompt, db, dias, d1) {
     render(parsed, db, d1);
   } catch(parseErr) {
     document.getElementById('loading').classList.add('hidden');
-    document.getElementById('output').innerHTML =
-      '<div class="err" style="flex-direction:column;align-items:flex-start;gap:6px;border-radius:14px;padding:16px">' +
-      '<b>⚠ Erro ao processar roteiro</b><span>Tente novamente.</span>' +
-      '<span style="color:#999;font-size:11px">' + parseErr.message + '</span></div>';
+    document.getElementById('output').innerHTML = '<div class="err" style="flex-direction:column;align-items:flex-start;gap:6px;border-radius:14px;padding:16px"><b>⚠ Erro ao processar roteiro</b><span>Tente novamente.</span><span style="color:#999;font-size:11px">' + parseErr.message + '</span></div>';
   }
 }
-
 
 // ═══════════════════════════════════════════════════════════════════════════
 // REGISTER MODAL
 // ═══════════════════════════════════════════════════════════════════════════
 function openRegModal() {
-  // Pre-fill city from active page
   const cidSel = document.getElementById('reg-cidade');
   if (activeCidade && DB[activeCidade]) {
     const nome = DB[activeCidade].nome;
-    for (let i = 0; i < cidSel.options.length; i++) {
-      if (cidSel.options[i].text === nome) { cidSel.selectedIndex = i; break; }
-    }
+    for (let i = 0; i < cidSel.options.length; i++) { if (cidSel.options[i].text === nome) { cidSel.selectedIndex = i; break; } }
   }
   const overlay = document.getElementById('reg-overlay');
   overlay.style.display = 'flex';
   requestAnimationFrame(() => overlay.classList.add('open'));
   document.body.style.overflow = 'hidden';
 }
-
 function closeRegModalBtn() {
   const overlay = document.getElementById('reg-overlay');
   overlay.classList.remove('open');
   setTimeout(() => { overlay.style.display = 'none'; document.body.style.overflow = ''; }, 220);
 }
-
-function closeRegModal(e) {
-  if (e.target === document.getElementById('reg-overlay')) closeRegModalBtn();
-}
-
-function showRegFeedback(msg, type) {
-  const el = document.getElementById('reg-feedback');
-  el.textContent = msg;
-  el.className = 'reg-feedback ' + type;
-  el.style.display = 'block';
-}
+function closeRegModal(e) { if (e.target === document.getElementById('reg-overlay')) closeRegModalBtn(); }
+function showRegFeedback(msg, type) { const el = document.getElementById('reg-feedback'); el.textContent = msg; el.className = 'reg-feedback ' + type; el.style.display = 'block'; }
 
 async function enviarCadastro() {
   const nome  = document.getElementById('reg-nome').value.trim();
@@ -1398,62 +1486,58 @@ async function enviarCadastro() {
   const wpp   = document.getElementById('reg-wpp').value.trim();
   const ig    = document.getElementById('reg-ig').value.trim();
   const end   = document.getElementById('reg-end').value.trim();
-
-  // Validate required
-  if (!nome || !tipo || !cidade || !desc) {
-    showRegFeedback('Preencha os campos obrigatórios: Nome, Tipo, Cidade e Descrição.', 'err');
-    return;
-  }
-
+  if (!nome || !tipo || !cidade || !desc) { showRegFeedback('Preencha os campos obrigatórios: Nome, Tipo, Cidade e Descrição.', 'err'); return; }
   const btn = document.getElementById('reg-send-btn');
-  btn.disabled = true;
-  btn.innerHTML = '<div class="spinner" style="width:16px;height:16px;margin:0"></div> Enviando...';
+  btn.disabled = true; btn.innerHTML = '<div class="spinner" style="width:16px;height:16px;margin:0"></div> Enviando...';
   document.getElementById('reg-feedback').style.display = 'none';
-
-  const payload = {
-    access_key: 'COLOQUE_SEU_WEB3FORMS_KEY_AQUI',
-    subject: `[roteiro.mg] Nova sugestão: ${nome} — ${cidade}`,
-    from_name: 'roteiro.mg',
-    nome, tipo, cidade, wpp, ig, descricao: desc, endereco: end,
-    data_envio: new Date().toLocaleString('pt-BR'),
-    to_email: 'roteirosmg@gmail.com',
-  };
-
+  const payload = { access_key: 'COLOQUE_SEU_WEB3FORMS_KEY_AQUI', subject: `[roteiro.mg] Nova sugestão: ${nome} — ${cidade}`, from_name: 'roteiro.mg', nome, tipo, cidade, wpp, ig, descricao: desc, endereco: end, data_envio: new Date().toLocaleString('pt-BR'), to_email: 'roteirosmg@gmail.com' };
   try {
-    const res = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: {'Content-Type':'application/json','Accept':'application/json'},
-      body: JSON.stringify(payload)
-    });
+    const res = await fetch('https://api.web3forms.com/submit', { method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body: JSON.stringify(payload) });
     const data = await res.json();
     if (data.success) {
       showRegFeedback('Cadastro enviado com sucesso! Vamos analisar as informações antes de publicar.', 'ok');
-      // Clear form
       ['reg-nome','reg-wpp','reg-ig','reg-end','reg-desc'].forEach(id => document.getElementById(id).value = '');
-      document.getElementById('reg-tipo').selectedIndex = 0;
-      document.getElementById('reg-cidade').selectedIndex = 0;
-      btn.disabled = false;
-      btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Enviar cadastro';
-    } else {
-      throw new Error(data.message || 'Erro desconhecido');
-    }
+      document.getElementById('reg-tipo').selectedIndex = 0; document.getElementById('reg-cidade').selectedIndex = 0;
+      btn.disabled = false; btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Enviar cadastro';
+    } else { throw new Error(data.message || 'Erro desconhecido'); }
   } catch (err) {
     showRegFeedback('Não foi possível enviar agora. Tente novamente em alguns instantes.', 'err');
-    btn.disabled = false;
-    btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Enviar cadastro';
+    btn.disabled = false; btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Enviar cadastro';
   }
 }
 
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') {
-    closeModalBtn();
-    closeRegModalBtn();
+// ═══════════════════════════════════════════════════════════════════════════
+// CONTACT FORM
+// ═══════════════════════════════════════════════════════════════════════════
+async function enviarContato(event) {
+  event.preventDefault();
+  const nome    = document.getElementById('ct-nome').value.trim();
+  const email   = document.getElementById('ct-email').value.trim();
+  const assunto = document.getElementById('ct-assunto').value.trim();
+  const msg     = document.getElementById('ct-msg').value.trim();
+  const fb = document.getElementById('ct-feedback');
+  fb.style.display = 'none';
+  const btn = event.target.querySelector('.contact-submit');
+  btn.disabled = true; btn.textContent = 'Enviando...';
+  const payload = { access_key: 'COLOQUE_SEU_WEB3FORMS_KEY_AQUI', subject: `[roteiro.mg] Contato: ${assunto}`, from_name: nome, email, message: msg, to_email: 'roteirosmg@gmail.com' };
+  try {
+    const res  = await fetch('https://api.web3forms.com/submit', { method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'}, body: JSON.stringify(payload) });
+    const data = await res.json();
+    if (data.success) {
+      fb.textContent = 'Mensagem enviada! Responderemos em até 2 dias úteis.'; fb.className = 'contact-feedback ok'; fb.style.display = 'block';
+      event.target.reset();
+    } else { throw new Error(data.message); }
+  } catch(err) {
+    fb.textContent = 'Não foi possível enviar. Tente novamente ou escreva diretamente para roteirosmg@gmail.com'; fb.className = 'contact-feedback err'; fb.style.display = 'block';
   }
-});
+  btn.disabled = false; btn.textContent = 'Enviar mensagem';
+}
 
 // ═══════════════════════════════════════════════════════════════════════════
 // INIT
 // ═══════════════════════════════════════════════════════════════════════════
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeModalBtn(); closeRegModalBtn(); } });
+
 const hoje = new Date().toISOString().split('T')[0];
 document.getElementById('dt-in').min  = hoje;
 document.getElementById('dt-fim').min = hoje;
@@ -1462,6 +1546,10 @@ document.getElementById('dt-in').addEventListener('change', function() {
   if (document.getElementById('dt-fim').value && document.getElementById('dt-fim').value < this.value)
     document.getElementById('dt-fim').value = this.value;
 });
+
+// Constrói o grid estático de cidades na homepage
+buildHomepageCities();
+
 </script>
 </body>
 </html>
