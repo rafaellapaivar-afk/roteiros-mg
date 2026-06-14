@@ -11,7 +11,16 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>roteiro.mg — Guia de Viagem em Minas Gerais</title>
+<title>roteiro.mg — Guia de Viagem em Tiradentes, Minas Gerais</title>
+<meta name="description" content="Guia de turismo de Tiradentes MG: restaurantes, cafés, experiências, trilhas, eventos e roteiros personalizados na cidade histórica mais encantadora de Minas Gerais.">
+<meta name="keywords" content="turismo Tiradentes MG, o que fazer em Tiradentes, restaurantes Tiradentes, eventos Tiradentes 2026, Walking Tour Tiradentes">
+<meta property="og:title" content="roteiro.mg — Guia de Tiradentes, Minas Gerais">
+<meta property="og:description" content="Restaurantes, cafés, experiências, trilhas e eventos em Tiradentes MG.">
+<meta property="og:type" content="website">
+<script>
+  // Safe gtag wrapper — funciona mesmo se GA4 for bloqueado por ad-blocker
+  window.gtag = window.gtag || function() {};
+</script>
 <meta name="google-adsense-account" content="ca-pub-2485267589231876">
 <!-- Google AdSense -->
 <script>
@@ -186,19 +195,47 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 .footer{border-top:1px solid var(--g6);padding:24px 20px;font-size:12px;color:var(--g4);text-align:center}
 
 .hidden{display:none!important}
-/* ── HOMEPAGE CONTENT ── */
-.home-content{max-width:800px;margin:0 auto;padding:48px 20px}
-.home-content h2{font-size:20px;font-weight:700;letter-spacing:-.4px;margin-bottom:8px;color:var(--black)}
-.home-content p{font-size:14px;color:var(--g3);line-height:1.7;margin-bottom:16px}
-.cities-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin:24px 0}
-.city-card-static{border:1px solid var(--g6);border-radius:var(--r-lg);padding:18px;background:var(--white);cursor:pointer;transition:all .15s;text-align:left;width:100%;font-family:inherit}
-.city-card-static:hover{border-color:var(--blue-bd);box-shadow:0 2px 12px rgba(37,99,235,.08);transform:translateY(-1px)}
-.city-card-static h3{font-size:15px;font-weight:700;color:var(--black);margin-bottom:4px}
-.city-card-static .city-type{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
-.city-card-static p{font-size:12px;color:var(--g3);line-height:1.5;margin-bottom:10px}
-.city-card-static .city-tags{display:flex;gap:5px;flex-wrap:wrap}
-.city-tag{font-size:10px;padding:2px 7px;border-radius:4px;background:var(--g7);color:var(--g3);border:1px solid var(--g6)}
-.section-divider{border:none;border-top:1px solid var(--g6);margin:40px 0}
+/* ── HERO BUTTONS ROW ── */
+.hero-btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
+.btn-explorar-sec{padding:11px 20px;background:transparent;color:var(--black);border:1.5px solid var(--black);border-radius:var(--r);font-size:14px;font-weight:600;cursor:pointer;white-space:nowrap;transition:all .13s;font-family:inherit}
+.btn-explorar-sec:hover{background:var(--black);color:var(--white)}
+
+/* ── ROTEIRO FIXO ── */
+.roteiro-fixo-wrap{max-width:740px;margin:0 auto;padding:28px 20px}
+.roteiro-fixo-hd{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px;flex-wrap:wrap;gap:10px}
+.roteiro-fixo-title{font-size:20px;font-weight:700;letter-spacing:-.4px}
+.roteiro-fixo-sub{font-size:13px;color:var(--g4);margin-bottom:20px}
+.share-btns{display:flex;gap:8px;flex-shrink:0;flex-wrap:wrap}
+.share-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:var(--r);font-size:12px;font-weight:600;cursor:pointer;border:none;font-family:inherit;transition:all .13s;text-decoration:none}
+.share-btn.wpp{background:#22c55e;color:#fff}.share-btn.wpp:hover{background:#16a34a}
+.share-btn.ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff}
+.share-btn.ig:hover{opacity:.88}
+.share-btn.copy{background:var(--g7);color:var(--g2);border:1px solid var(--g6)}.share-btn.copy:hover{background:var(--g6)}
+
+/* ── ROTEIRO FIXO — timeline (reusa estilos do roteiro gerado) ── */
+.rf-day{margin-bottom:32px}
+.rf-day-hd{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--g6)}
+.rf-day-num{background:var(--black);color:var(--white);font-size:10px;font-weight:700;padding:3px 9px;border-radius:40px;letter-spacing:.06em}
+.rf-day-title{font-size:14px;font-weight:600}
+.rf-item{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--g6)}
+.rf-item:last-of-type{border-bottom:none}
+.rf-time{flex-shrink:0;width:56px;text-align:right;padding-top:4px;font-size:11px;font-weight:600;color:var(--g4)}
+.rf-dot-col{flex-shrink:0;width:18px;display:flex;flex-direction:column;align-items:center}
+.rf-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:5px}
+.rf-line{flex:1;width:1px;background:var(--g6);margin-top:3px}
+.rf-body{flex:1;min-width:0}
+.rf-type{font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--g4);margin-bottom:1px}
+.rf-name{font-size:14px;font-weight:600;color:var(--black);margin-bottom:3px;line-height:1.3}
+.rf-desc{font-size:13px;color:var(--g3);line-height:1.5;margin-bottom:4px}
+.rf-tip{font-size:12px;color:var(--g4);font-style:italic;margin-bottom:6px}
+.rf-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+.rf-pill{display:inline-flex;align-items:center;gap:3px;padding:4px 10px;border-radius:40px;font-size:11px;font-weight:500;text-decoration:none;border:1px solid var(--g6);color:var(--g3);transition:all .12s;background:var(--white)}
+.rf-pill:hover{border-color:var(--g5);color:var(--black)}
+.rf-pill.w{border-color:#bbf7d0;color:#15803d}.rf-pill.w:hover{background:#22c55e;border-color:#22c55e;color:#fff}
+.rf-pill.ig{border-color:#f9c;color:#c13584}.rf-pill.ig:hover{background:#e1306c;border-color:#e1306c;color:#fff}
+.rf-pill.g{border-color:var(--blue-bd);color:var(--blue)}.rf-pill.g:hover{background:var(--blue);border-color:var(--blue);color:#fff}
+.rf-dica{background:var(--blue-lt);border:1px solid var(--blue-bd);border-radius:var(--r);padding:11px 14px;margin-top:14px;font-size:13px;color:var(--g2);line-height:1.5}
+.rf-dica b{color:var(--blue)}
 
 /* ── STATIC PAGES ── */
 .static-page{max-width:720px;margin:0 auto;padding:40px 20px}
@@ -206,8 +243,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 .static-page .page-sub{font-size:13px;color:var(--g4);margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid var(--g6)}
 .static-page h2{font-size:16px;font-weight:600;margin:28px 0 8px;color:var(--black)}
 .static-page p{font-size:14px;color:var(--g3);line-height:1.75;margin-bottom:12px}
-.static-page ul{font-size:14px;color:var(--g3);line-height:1.75;margin:8px 0 14px 20px}
-.static-page li{margin-bottom:4px}
 .static-page a{color:var(--blue);text-decoration:none}
 .static-page a:hover{text-decoration:underline}
 .contact-form{display:flex;flex-direction:column;gap:14px;margin-top:20px}
@@ -220,12 +255,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 .contact-feedback.ok{background:#f0fdf4;border:1px solid #bbf7d0;color:#15803d}
 .contact-feedback.err{background:#fff5f5;border:1px solid #fecaca;color:var(--red)}
 
-/* ── FOOTER ── */
-.footer-inner{max-width:800px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
-.footer-links{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
-.footer-links a{color:var(--g4);text-decoration:none;transition:color .12s}
-.footer-links a:hover{color:var(--black)}
-.footer-copy{font-size:11px;color:var(--g5)}
+/* ── PLACE CARD WITH PHOTO ── */
+.place-card-img{width:100%;height:140px;object-fit:cover;border-radius:8px 8px 0 0;display:block;background:var(--g6)}
+.place-card-img-wrap{margin:-16px -16px 12px -16px;border-radius:var(--r-lg) var(--r-lg) 0 0;overflow:hidden}
+.place-card-no-img{width:100%;height:80px;background:linear-gradient(135deg,var(--blue-lt),var(--g7));display:flex;align-items:center;justify-content:center;font-size:28px;margin:-16px -16px 12px -16px;width:calc(100% + 32px)}
 
 /* ── CARD CONTACT BUTTONS (replace dots) ── */
 .card-contacts{display:flex;gap:5px;flex-wrap:wrap}
@@ -303,64 +336,19 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 
 <nav class="nav">
   <span class="logo" onclick="goHome()">roteiro<em>.mg</em></span>
-  <span class="nav-badge" id="nav-badge">13 cidades</span>
+  <span class="nav-badge" id="nav-badge">Tiradentes · MG</span>
 </nav>
 
 <!-- ══ VIEW: HOME ══════════════════════════════════════════════════════════ -->
 <div id="view-home">
   <div class="hero">
-    <p class="hero-eyebrow">Minas Gerais · Guia de viagem</p>
-    <h1>Descubra <em>Minas Gerais</em></h1>
-    <p class="hero-sub">Selecione uma cidade para explorar os melhores lugares ou criar um roteiro personalizado.</p>
-    <div class="city-search-wrap">
-      <div class="city-search-row">
-        <div class="city-select-wrap">
-          <select id="sel-cidade-home" onchange="onCidadeHome()">
-            <option value="">Escolha uma cidade...</option>
-            <optgroup label="Cidades disponíveis">
-              <option value="tiradentes">Tiradentes</option>
-              <option value="ouro_preto">Ouro Preto</option>
-              <option value="sao_joao">São João del-Rei</option>
-              <option value="diamantina">Diamantina</option>
-              <option value="mariana">Mariana</option>
-              <option value="congonhas">Congonhas</option>
-              <option value="lavras_novas">Lavras Novas</option>
-              <option value="carrancas">Carrancas</option>
-              <option value="capitolio">Capitólio</option>
-              <option value="monte_verde">Monte Verde</option>
-              <option value="serra_cipo">Serra do Cipó</option>
-              <option value="brumadinho">Brumadinho</option>
-              <option value="belo_horizonte">Belo Horizonte</option>
-            </optgroup>
-          </select>
-        </div>
-        <button class="btn-explorar" id="btn-explorar-home" onclick="explorarCidade()" disabled>
-          Explorar cidade →
-        </button>
-      </div>
+    <p class="hero-eyebrow">Tiradentes · Minas Gerais · Patrimônio Histórico Nacional</p>
+    <h1>Seu guia em <em>Tiradentes</em></h1>
+    <p class="hero-sub">Restaurantes, cafés, experiências, trilhas e eventos da cidade histórica mais encantadora de Minas Gerais.</p>
+    <div class="hero-btns">
+      <button class="btn-explorar" onclick="abrirRoteiroFixo()">📋 Ver roteiro de 3 dias</button>
+      <button class="btn-explorar-sec" onclick="abrirTiradentes()">Explorar Tiradentes →</button>
     </div>
-  </div>
-
-  <!-- Conteúdo estático para AdSense e SEO -->
-  <div class="home-content">
-    <h2>O melhor guia de turismo em Minas Gerais</h2>
-    <p>Minas Gerais é um dos estados mais ricos do Brasil em cultura, história, gastronomia e natureza. Com cidades que preservam o barroco colonial português, serras cobertas de Mata Atlântica e Cerrado, cachoeiras cristalinas e uma culinária que é patrimônio afetivo nacional, Minas tem algo especial para cada perfil de viajante.</p>
-    <p>O roteiro.mg reúne em um só lugar as melhores indicações de restaurantes, cafés, bares, experiências culturais, trilhas e atrações turísticas das 13 principais cidades mineiras — com informações reais, atualizadas e verificadas.</p>
-    <hr class="section-divider">
-    <h2>Explore as cidades</h2>
-    <p>Clique em qualquer cidade para ver uma seleção completa de lugares recomendados, organizados por categoria.</p>
-    <div class="cities-grid" id="cities-grid-static"></div>
-    <hr class="section-divider">
-    <h2>Por que viajar para Minas Gerais?</h2>
-    <p>Minas Gerais concentra mais de 70% dos sítios históricos tombados como Patrimônio Nacional do Brasil. Cidades como Ouro Preto, Tiradentes, Diamantina e Congonhas foram palco da colonização portuguesa e da Inconfidência Mineira — o movimento que inspirou a independência do Brasil.</p>
-    <p>Além da riqueza histórica, o estado oferece experiências naturais únicas: a Serra do Cipó com suas cachoeiras e trilhas no Cerrado, o Lago de Furnas em Capitólio com cânions de tirar o fôlego, e a Serra da Mantiqueira em Monte Verde com clima de montanha europeia no coração de Minas.</p>
-    <h2>Gastronomia mineira</h2>
-    <p>A culinária de Minas Gerais é reconhecida mundialmente. Belo Horizonte foi eleita <strong>Cidade Criativa da Gastronomia pela UNESCO</strong>, e pratos como o feijão tropeiro, o frango com quiabo, o pão de queijo, a carne de porco com tutu e o queijo artesanal da Canastra fazem parte do patrimônio imaterial do estado.</p>
-    <h2>Experiências imperdíveis</h2>
-    <p>De degustações em vinícolas no Sul de Minas a visitas a alambiques centenários, de passeios de trem a vapor pela Maria Fumaça a cavalgadas pelas serras de Tiradentes — Minas oferece experiências que vão muito além do turismo convencional.</p>
-    <hr class="section-divider">
-    <h2>Sobre o roteiro.mg</h2>
-    <p>O roteiro.mg é um portal de turismo dedicado a Minas Gerais. Todos os locais cadastrados são reais, verificados e descritos com base em fontes como Google, TripAdvisor e guias especializados.</p>
   </div>
 </div>
 
@@ -488,15 +476,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 <div id="view-sobre" class="hidden">
   <div class="static-page">
     <h1>Sobre o roteiro.mg</h1>
-    <p class="page-sub">Portal de turismo dedicado a Minas Gerais</p>
+    <p class="page-sub">Guia de viagem focado em Tiradentes, Minas Gerais</p>
     <h2>O que é o roteiro.mg?</h2>
-    <p>O roteiro.mg é um guia de viagem digital focado exclusivamente em Minas Gerais. Nosso objetivo é ajudar viajantes a descobrir os melhores restaurantes, cafés, bares, experiências culturais, trilhas e atrações turísticas de 13 cidades mineiras.</p>
+    <p>O roteiro.mg é um guia digital criado para ajudar visitantes a descobrir o melhor de Tiradentes — restaurantes, cafés, experiências, trilhas, eventos e muito mais. Todas as informações são baseadas em fontes reais e verificáveis.</p>
     <h2>Como os dados são curados?</h2>
-    <p>Todos os locais cadastrados são reais e verificáveis. As informações são baseadas em fontes como Google Maps, TripAdvisor e guias especializados. <strong>Não inventamos dados, endereços, telefones ou redes sociais.</strong> Quando não encontramos uma informação confiável, deixamos o campo em branco.</p>
-    <h2>Cidades disponíveis</h2>
-    <p>O portal cobre atualmente 13 cidades: Tiradentes, Ouro Preto, São João del-Rei, Diamantina, Mariana, Congonhas, Lavras Novas, Carrancas, Capitólio, Monte Verde, Serra do Cipó, Brumadinho e Belo Horizonte. Novas cidades são adicionadas continuamente.</p>
+    <p>Todos os locais são reais e verificados via Google Maps, TripAdvisor e guias especializados. <strong>Não inventamos dados, endereços ou contatos.</strong> Se não encontramos uma informação confiável, deixamos o campo vazio.</p>
     <h2>Contato</h2>
-    <p>Para parcerias, sugestões ou correções, entre em contato pelo e-mail <a href="mailto:roteirosmg@gmail.com">roteirosmg@gmail.com</a> ou pela nossa <a href="#" onclick="showView('view-contato');return false;">página de contato</a>.</p>
+    <p>Parcerias ou correções: <a href="mailto:roteirosmg@gmail.com">roteirosmg@gmail.com</a></p>
   </div>
 </div>
 
@@ -504,11 +490,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
 <div id="view-contato" class="hidden">
   <div class="static-page">
     <h1>Contato</h1>
-    <p class="page-sub">Fale conosco sobre parcerias, sugestões ou correções</p>
-    <h2>E-mail direto</h2>
-    <p>Para assuntos urgentes ou parcerias comerciais, escreva para: <a href="mailto:roteirosmg@gmail.com">roteirosmg@gmail.com</a></p>
-    <h2>Formulário de contato</h2>
-    <p>Preencha o formulário abaixo e responderemos em até 2 dias úteis.</p>
+    <p class="page-sub">Parcerias, sugestões ou correções</p>
+    <h2>E-mail</h2>
+    <p><a href="mailto:roteirosmg@gmail.com">roteirosmg@gmail.com</a></p>
+    <h2>Formulário</h2>
     <form class="contact-form" onsubmit="enviarContato(event)">
       <input type="text" id="ct-nome" placeholder="Seu nome" required>
       <input type="email" id="ct-email" placeholder="Seu e-mail" required>
@@ -517,8 +502,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
       <button type="submit" class="contact-submit">Enviar mensagem</button>
       <div id="ct-feedback" class="contact-feedback"></div>
     </form>
-    <h2>Sugerir um lugar</h2>
-    <p>Conhece um lugar incrível? Selecione uma cidade na <a href="#" onclick="goHome();return false;">página inicial</a> e use o botão <strong>"+ Cadastrar experiência"</strong>.</p>
   </div>
 </div>
 
@@ -527,20 +510,16 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
   <div class="static-page">
     <h1>Política de Privacidade</h1>
     <p class="page-sub">Última atualização: junho de 2025</p>
-    <h2>1. Quem somos</h2>
-    <p>O roteiro.mg é um portal de turismo dedicado a Minas Gerais. Este documento descreve como tratamos as informações dos usuários.</p>
-    <h2>2. Dados coletados</h2>
-    <p>O roteiro.mg não coleta dados pessoais além dos que você voluntariamente fornece pelo formulário de contato ou ao cadastrar uma experiência (nome, e-mail e mensagem).</p>
-    <h2>3. Google AdSense e cookies</h2>
+    <h2>1. Dados coletados</h2>
+    <p>O roteiro.mg não coleta dados pessoais além dos fornecidos voluntariamente pelo formulário de contato (nome, e-mail, mensagem).</p>
+    <h2>2. Google AdSense e cookies</h2>
     <p>Este site utiliza o Google AdSense para exibir anúncios. O Google pode usar cookies para exibir anúncios personalizados. Para desativar, acesse as <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener">configurações de anúncios do Google</a>.</p>
-    <h2>4. Google Analytics</h2>
-    <p>Utilizamos o Google Analytics 4 para analisar o uso do site (páginas visitadas, cliques, tempo de permanência). Esses dados são anônimos e agregados.</p>
-    <h2>5. Seus direitos (LGPD)</h2>
-    <p>De acordo com a Lei Geral de Proteção de Dados (LGPD — Lei 13.709/2018), você tem o direito de acessar, corrigir ou solicitar a exclusão dos seus dados. Entre em contato por <a href="mailto:roteirosmg@gmail.com">roteirosmg@gmail.com</a>.</p>
-    <h2>6. Links externos</h2>
-    <p>O roteiro.mg contém links para sites externos (Instagram, WhatsApp, Google Maps). Não nos responsabilizamos pelas práticas de privacidade desses sites.</p>
-    <h2>7. Contato</h2>
-    <p>Dúvidas? Escreva para <a href="mailto:roteirosmg@gmail.com">roteirosmg@gmail.com</a>.</p>
+    <h2>3. Google Analytics</h2>
+    <p>Utilizamos o Google Analytics 4 para análise de uso do site (páginas, cliques, tempo de permanência). Os dados são anônimos e agregados.</p>
+    <h2>4. Seus direitos (LGPD)</h2>
+    <p>Conforme a Lei Geral de Proteção de Dados (Lei 13.709/2018), você pode solicitar acesso, correção ou exclusão de seus dados pelo e-mail <a href="mailto:roteirosmg@gmail.com">roteirosmg@gmail.com</a>.</p>
+    <h2>5. Links externos</h2>
+    <p>O site contém links para Instagram, WhatsApp e Google Maps. Não nos responsabilizamos pelas políticas de privacidade desses serviços.</p>
   </div>
 </div>
 
@@ -549,20 +528,297 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
   <div class="static-page">
     <h1>Termos de Uso</h1>
     <p class="page-sub">Última atualização: junho de 2025</p>
-    <h2>1. Aceitação dos termos</h2>
-    <p>Ao acessar e usar o roteiro.mg, você concorda com estes Termos de Uso.</p>
-    <h2>2. Sobre o conteúdo</h2>
-    <p>O roteiro.mg oferece informações turísticas com fins informativos. Nos esforçamos para manter os dados corretos, mas não garantimos a precisão total. Horários e preços podem mudar — sempre confirme com o local antes de visitar.</p>
-    <h2>3. Cadastro de experiências</h2>
-    <p>Ao cadastrar uma experiência, você declara que as informações são verdadeiras. O roteiro.mg pode recusar ou remover conteúdos que não atendam aos nossos critérios editoriais.</p>
-    <h2>4. Propriedade intelectual</h2>
-    <p>O conteúdo original do roteiro.mg é de propriedade do roteiro.mg. Os nomes e marcas de estabelecimentos pertencem aos seus respectivos donos.</p>
-    <h2>5. Limitação de responsabilidade</h2>
-    <p>O roteiro.mg não se responsabiliza por danos resultantes do uso das informações disponíveis no site.</p>
-    <h2>6. Legislação aplicável</h2>
-    <p>Estes termos são regidos pela legislação brasileira.</p>
-    <h2>7. Contato</h2>
-    <p>Dúvidas? Escreva para <a href="mailto:roteirosmg@gmail.com">roteirosmg@gmail.com</a>.</p>
+    <h2>1. Uso do site</h2>
+    <p>As informações do roteiro.mg têm caráter informativo. Horários, preços e disponibilidade podem mudar — sempre confirme com o estabelecimento antes de visitar.</p>
+    <h2>2. Cadastro de experiências</h2>
+    <p>Ao sugerir um local, você declara que as informações são verdadeiras. Reservamo-nos o direito de recusar conteúdos imprecisos ou que não atendam aos critérios editoriais.</p>
+    <h2>3. Propriedade intelectual</h2>
+    <p>O conteúdo original do roteiro.mg é de nossa propriedade. Nomes e marcas de estabelecimentos pertencem a seus respectivos donos.</p>
+    <h2>4. Contato</h2>
+    <p>Dúvidas: <a href="mailto:roteirosmg@gmail.com">roteirosmg@gmail.com</a></p>
+  </div>
+</div>
+
+
+<!-- ══ VIEW: ROTEIRO FIXO ═══════════════════════════════════════════════════ -->
+<div id="view-roteiro-fixo" class="hidden">
+  <div class="roteiro-fixo-wrap">
+
+    <div class="roteiro-fixo-hd">
+      <div>
+        <h2 class="roteiro-fixo-title">Roteiro de 3 dias em Tiradentes</h2>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn-outline" onclick="goHome()">← Início</button>
+        <button class="btn-outline" onclick="gtag('event','roteiro_nav',{action:'explorar'});abrirTiradentes()">🗺️ Explorar</button>
+      </div>
+    </div>
+    <p class="roteiro-fixo-sub">Inclui visita ao vilarejo de Bichinho e almoço na Angela. Café da manhã na pousada.</p>
+    <div class="rf-day-tabs" style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:24px">
+      <button class="ctab on" onclick="filtrarDia(0)" id="tab-todos">Todos os dias</button>
+      <button class="ctab" onclick="filtrarDia(1)" id="tab-d1">Dia 1</button>
+      <button class="ctab" onclick="filtrarDia(2)" id="tab-d2">Dia 2</button>
+      <button class="ctab" onclick="filtrarDia(3)" id="tab-d3">Dia 3</button>
+    </div>
+
+    <div class="share-btns" style="margin-bottom:28px">
+      <a class="share-btn wpp" onclick="compartilharWpp()" href="#">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+        Compartilhar no WhatsApp
+      </a>
+      <a class="share-btn ig" onclick="compartilharIg()" href="#">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        Copiar para Instagram
+      </a>
+      <button class="share-btn copy" onclick="copiarRoteiro()">
+        📋 Copiar texto
+      </button>
+    </div>
+    <div id="share-toast" style="display:none;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:var(--r);padding:9px 14px;font-size:13px;color:#15803d;margin-bottom:16px">✅ Copiado! Cole no WhatsApp, Instagram ou onde quiser.</div>
+
+    <!-- DIA 1 -->
+    <div class="rf-day" id="rf-day-1">
+      <div class="rf-day-hd">
+        <span class="rf-day-num">DIA 1</span>
+        <span class="rf-day-title">Chegada e centro histórico</span>
+      </div>
+
+      <div class="rf-item">
+        <div class="rf-time">10h30</div>
+        <div class="rf-dot-col"><div class="rf-dot" style="background:var(--sky)"></div><div class="rf-line"></div></div>
+        <div class="rf-body">
+          <p class="rf-type">🏛️ Visita</p>
+          <p class="rf-name">Matriz de Santo Antônio</p>
+          <p class="rf-desc">Comece pelo coração histórico — a Matriz com seu interior dourado, fachada em pedra-sabão e órgão do séc. XVIII ainda em funcionamento.</p>
+          <p class="rf-tip">📍 Praça Padre Lourival · Centro histórico · Entrada gratuita</p>
+          <div class="rf-actions"><a class="rf-pill g" href="https://www.google.com/maps/search/Matriz+Santo+Antônio+Tiradentes+MG" target="_blank">🗺️ Maps</a></div>
+        </div>
+      </div>
+
+      <div class="rf-item">
+        <div class="rf-time">11h30</div>
+        <div class="rf-dot-col"><div class="rf-dot" style="background:var(--sky)"></div><div class="rf-line"></div></div>
+        <div class="rf-body">
+          <p class="rf-type">🏛️ Visita</p>
+          <p class="rf-name">Museu Padre Toledo + Chafariz de São José</p>
+          <p class="rf-desc">A casa original do padre inconfidente e o chafariz mais antigo da cidade — ainda abastecido por fonte natural desde o séc. XVIII.</p>
+          <p class="rf-tip">📍 Rua Padre Toledo + Rua da Câmara · Centro histórico</p>
+          <div class="rf-actions"><a class="rf-pill g" href="https://www.google.com/maps/search/Museu+Padre+Toledo+Tiradentes+MG" target="_blank">🗺️ Maps</a></div>
+        </div>
+      </div>
+
+      <div class="rf-item">
+        <div class="rf-time">13h00</div>
+        <div class="rf-dot-col"><div class="rf-dot" style="background:var(--red)"></div><div class="rf-line"></div></div>
+        <div class="rf-body">
+          <p class="rf-type">🍽️ Almoço</p>
+          <p class="rf-name">Empório Santo Antônio</p>
+          <p class="rf-desc">Bufê regional completo com pernil, cupim e clássicos mineiros. Reserve com antecedência, especialmente aos domingos.</p>
+          <p class="rf-tip">📍 Av. Gov. Israel Pinheiro s/n · Reserve antes!</p>
+          <div class="rf-actions">
+            <a class="rf-pill ig" href="https://www.instagram.com/emporiosantoantonio/" target="_blank">📷 Instagram</a>
+            <a class="rf-pill g" href="https://www.google.com/maps/search/Empório+Santo+Antônio+Tiradentes+MG" target="_blank">🗺️ Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="rf-item">
+        <div class="rf-time">15h00</div>
+        <div class="rf-dot-col"><div class="rf-dot" style="background:var(--green)"></div><div class="rf-line"></div></div>
+        <div class="rf-body">
+          <p class="rf-type">✨ Experiência</p>
+          <p class="rf-name">Tiradentes Walking Tour — Becos de Tiradentes</p>
+          <p class="rf-desc">Pelo 4º ano consecutivo entre as 10 melhores experiências do Brasil no TripAdvisor. Passeio guiado de 2h20 pelos becos históricos com guias nativos. Mais de 1.200 avaliações 5 estrelas.</p>
+          <p class="rf-tip">📍 R. Custódio Gomes, 13 · Centro · Reserve antes!</p>
+          <div class="rf-actions">
+            <a class="rf-pill w" href="https://wa.me/5532988106628?text=Olá!+Quero+fazer+o+Walking+Tour" target="_blank" onclick="gtag('event','roteiro_wpp',{place:'Walking Tour'})">📱 WhatsApp</a>
+            <a class="rf-pill ig" href="https://www.instagram.com/tiradenteswalkingtour/" target="_blank">📷 Instagram</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="rf-item">
+        <div class="rf-time">19h00</div>
+        <div class="rf-dot-col"><div class="rf-dot" style="background:var(--red)"></div><div class="rf-line"></div></div>
+        <div class="rf-body">
+          <p class="rf-type">🍷 Jantar</p>
+          <p class="rf-name">Tragaluz</p>
+          <p class="rf-desc">Top 100 Restaurantes do Brasil. A galinha d'Angola com molho de cogumelo é o prato mais falado. Casarão colonial de quase 300 anos. Reserve com antecedência.</p>
+          <p class="rf-tip">📍 Rua Direita, 52 · Qua–Seg a partir das 19h</p>
+          <div class="rf-actions">
+            <a class="rf-pill ig" href="https://www.instagram.com/tragaluztiradentes/" target="_blank">📷 Instagram</a>
+            <a class="rf-pill g" href="https://www.google.com/maps/search/Tragaluz+Tiradentes+MG" target="_blank">🗺️ Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="rf-item">
+        <div class="rf-time">21h00</div>
+        <div class="rf-dot-col"><div class="rf-dot" style="background:var(--purple)"></div></div>
+        <div class="rf-body">
+          <p class="rf-type">🍸 Bar</p>
+          <p class="rf-name">Entrepot du Vin</p>
+          <p class="rf-desc">Os melhores drinks de Tiradentes. Carta de vinhos impressionante, coquetéis autorais e ambiente sofisticado no centro histórico.</p>
+          <p class="rf-tip">📍 Centro histórico · Tiradentes</p>
+          <div class="rf-actions"><a class="rf-pill ig" href="https://www.instagram.com/entrepotduvintiradentes/" target="_blank">📷 Instagram</a></div>
+        </div>
+      </div>
+      <div class="rf-dica">🗓️ <b>Dica do dia 1:</b> Chegue cedo para garantir vaga no Empório Santo Antônio (especialmente domingo). Reserve o Walking Tour com antecedência pelo WhatsApp.</div>
+    </div>
+
+    <!-- DIA 2 -->
+    <div class="rf-day" id="rf-day-2">
+      <div class="rf-day-hd">
+        <span class="rf-day-num">DIA 2</span>
+        <span class="rf-day-title">Bichinho e cachaça artesanal</span>
+      </div>
+
+      <div class="rf-item">
+        <div class="rf-time">10h00</div>
+        <div class="rf-dot-col"><div class="rf-dot" style="background:var(--green)"></div><div class="rf-line"></div></div>
+        <div class="rf-body">
+          <p class="rf-type">✨ Experiência</p>
+          <p class="rf-name">Cachaçaria Mazuma — Bichinho</p>
+          <p class="rf-desc">Do canavial à destilação — visita guiada completa ao alambique em Bichinho. Cachaças premiadas envelhecidas em amburana e jequitibá.</p>
+          <p class="rf-tip">📍 Bichinho · 7km de Tiradentes · Seg–Sáb 9h30–17h</p>
+          <div class="rf-actions">
+            <a class="rf-pill ig" href="https://www.instagram.com/mazumamineira/" target="_blank">📷 Instagram</a>
+            <a class="rf-pill g" href="https://www.google.com/maps/search/Cachaçaria+Mazuma+Bichinho+MG" target="_blank">🗺️ Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="rf-item">
+        <div class="rf-time">11h00</div>
+        <div class="rf-dot-col"><div class="rf-dot" style="background:var(--green)"></div><div class="rf-line"></div></div>
+        <div class="rf-body">
+          <p class="rf-type">✨ Experiência</p>
+          <p class="rf-name">Degustação de Queijos Artesanais — Bichinho</p>
+          <p class="rf-desc">Queijos da Canastra, Serro e Alagoa harmonizados com cervejas artesanais. Também: goiabadas, doces e azeites artesanais do vilarejo.</p>
+          <p class="rf-tip">📍 Bichinho · Vilarejo histórico · 7km de Tiradentes</p>
+          <div class="rf-actions"><a class="rf-pill g" href="https://www.google.com/maps/search/queijaria+artesanal+Bichinho+MG" target="_blank">🗺️ Maps</a></div>
+        </div>
+      </div>
+
+      <div class="rf-item">
+        <div class="rf-time">12h30</div>
+        <div class="rf-dot-col"><div class="rf-dot" style="background:var(--red)"></div><div class="rf-line"></div></div>
+        <div class="rf-body">
+          <p class="rf-type">🍽️ Almoço</p>
+          <p class="rf-name">Temperos d'Angela — Bichinho</p>
+          <p class="rf-desc">Comida típica mineira feita direto no fogão a lenha. A caipirinha de maracujá com cachaça em amburana é imperdível. Visita obrigatória em Bichinho.</p>
+          <p class="rf-tip">📍 Bichinho · 7km de Tiradentes</p>
+          <div class="rf-actions"><a class="rf-pill g" href="https://share.google/hzrRisYQUV7H2ZQkJ" target="_blank">🗺️ Maps</a></div>
+        </div>
+      </div>
+
+      <div class="rf-item">
+        <div class="rf-time">15h00</div>
+        <div class="rf-dot-col"><div class="rf-dot" style="background:var(--green)"></div><div class="rf-line"></div></div>
+        <div class="rf-body">
+          <p class="rf-type">✨ Experiência</p>
+          <p class="rf-name">Ateliê da Cachaça CM — Centro Histórico</p>
+          <p class="rf-desc">De volta ao centro: pioneiros desde 1998 com mais de 1100 rótulos. Degustação guiada gratuita de cachaças envelhecidas em madeiras brasileiras.</p>
+          <p class="rf-tip">📍 Centro histórico · Tiradentes · Degustação gratuita</p>
+          <div class="rf-actions">
+            <a class="rf-pill ig" href="https://www.instagram.com/ateliedacachacacm/" target="_blank">📷 Instagram</a>
+            <a class="rf-pill g" href="https://www.google.com/maps/search/Ateliê+da+Cachaça+Tiradentes+MG" target="_blank">🗺️ Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="rf-item">
+        <div class="rf-time">19h00</div>
+        <div class="rf-dot-col"><div class="rf-dot" style="background:var(--red)"></div><div class="rf-line"></div></div>
+        <div class="rf-body">
+          <p class="rf-type">🍷 Jantar</p>
+          <p class="rf-name">Angatu</p>
+          <p class="rf-desc">Menu degustação requintado. Membro da Boa Lembrança. Pratos autorais que reinterpretam Minas com técnica e elegância. Um dos mais premiados da cidade.</p>
+          <p class="rf-tip">📍 Rua da Cadeia, 38 · Somente jantar · Reserve!</p>
+          <div class="rf-actions">
+            <a class="rf-pill ig" href="https://www.instagram.com/anguaturestaurante/" target="_blank">📷 Instagram</a>
+            <a class="rf-pill g" href="https://www.google.com/maps/search/Angatu+Tiradentes+MG" target="_blank">🗺️ Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="rf-item">
+        <div class="rf-time">21h00</div>
+        <div class="rf-dot-col"><div class="rf-dot" style="background:var(--purple)"></div></div>
+        <div class="rf-body">
+          <p class="rf-type">🍸 Bar</p>
+          <p class="rf-name">Conto de Reis Bar</p>
+          <p class="rf-desc">Polenta com jiló num boteco autêntico — o mais querido do centro histórico. Se você não foi, ainda não conheceu Tiradentes de verdade.</p>
+          <p class="rf-tip">📍 Centro histórico · Tiradentes</p>
+          <div class="rf-actions"><a class="rf-pill ig" href="https://www.instagram.com/contodereis_bar/" target="_blank">📷 Instagram</a></div>
+        </div>
+      </div>
+      <div class="rf-dica">🗓️ <b>Dica do dia 2:</b> Bichinho fica a 7km — leve carro ou negocie com um táxi local. A visita à Angela costuma encher rapidinho aos fins de semana.</div>
+    </div>
+
+    <!-- DIA 3 -->
+    <div class="rf-day" id="rf-day-3">
+      <div class="rf-day-hd">
+        <span class="rf-day-num">DIA 3</span>
+        <span class="rf-day-title">Natureza, história e despedida</span>
+      </div>
+
+      <div class="rf-item">
+        <div class="rf-time">09h00</div>
+        <div class="rf-dot-col"><div class="rf-dot" style="background:var(--green)"></div><div class="rf-line"></div></div>
+        <div class="rf-body">
+          <p class="rf-type">🌿 Natureza</p>
+          <p class="rf-name">Trilha da Serra de São José</p>
+          <p class="rf-desc">Trilha de 8km com vista panorâmica de Tiradentes, cachoeiras e flora nativa da Mata Atlântica. Dificuldade moderada. Guia recomendado pelo Walking Tour.</p>
+          <p class="rf-tip">📍 Acesso pela Rua do Chafariz · 4–5h · Guia recomendado</p>
+          <div class="rf-actions">
+            <a class="rf-pill w" href="https://wa.me/5532988106628?text=Quero+contratar+guia+para+a+Serra+de+São+José" target="_blank" onclick="gtag('event','roteiro_wpp',{place:'Guia Serra'})">📱 Contratar guia</a>
+            <a class="rf-pill g" href="https://www.google.com/maps/search/Serra+de+São+José+Tiradentes+trilha+MG" target="_blank">🗺️ Maps</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="rf-item">
+        <div class="rf-time">13h00</div>
+        <div class="rf-dot-col"><div class="rf-dot" style="background:var(--red)"></div><div class="rf-line"></div></div>
+        <div class="rf-body">
+          <p class="rf-type">🍽️ Almoço</p>
+          <p class="rf-name">Viradas do Largo</p>
+          <p class="rf-desc">Feijão tropeiro, frango com quiabo e couve refogada — a essência da cozinha mineira em ambiente histórico aconchegante com vista para as igrejas.</p>
+          <p class="rf-tip">📍 Rua do Moinho, 11 · Tiradentes</p>
+          <div class="rf-actions"><a class="rf-pill g" href="https://www.google.com/maps/search/Viradas+do+Largo+Tiradentes+MG" target="_blank">🗺️ Maps</a></div>
+        </div>
+      </div>
+
+      <div class="rf-item">
+        <div class="rf-time">15h00</div>
+        <div class="rf-dot-col"><div class="rf-dot" style="background:var(--sky)"></div><div class="rf-line"></div></div>
+        <div class="rf-body">
+          <p class="rf-type">🏛️ Visita</p>
+          <p class="rf-name">Estação Ferroviária + Maria Fumaça</p>
+          <p class="rf-desc">Viagem nostálgica de trem a vapor entre Tiradentes e São João del-Rei. Uma das experiências mais inesquecíveis de Minas. Sáb, Dom e feriados.</p>
+          <p class="rf-tip">📍 Largo das Forras · Sáb, Dom e feriados</p>
+          <div class="rf-actions"><a class="rf-pill g" href="https://www.google.com/maps/search/Estação+Ferroviária+Tiradentes+MG" target="_blank">🗺️ Maps</a></div>
+        </div>
+      </div>
+
+      <div class="rf-item">
+        <div class="rf-time">19h00</div>
+        <div class="rf-dot-col"><div class="rf-dot" style="background:var(--red)"></div></div>
+        <div class="rf-body">
+          <p class="rf-type">🍷 Jantar de despedida</p>
+          <p class="rf-name">UaiThai</p>
+          <p class="rf-desc">Uma das maiores surpresas de Tiradentes: culinária tailandesa autoral com ingredientes mineiros. Para encerrar a viagem com uma experiência única e inesquecível.</p>
+          <p class="rf-tip">📍 Centro histórico · Reserve com antecedência</p>
+          <div class="rf-actions">
+            <a class="rf-pill ig" href="https://www.instagram.com/uaithaitiradentes/" target="_blank">📷 Instagram</a>
+            <a class="rf-pill g" href="https://www.google.com/maps/search/UaiThai+Tiradentes+MG" target="_blank">🗺️ Maps</a>
+          </div>
+        </div>
+      </div>
+      <div class="rf-dica">🗓️ <b>Dica do dia 3:</b> Saia para a trilha bem cedo — a Serra de São José fica muito quente depois das 11h. A Maria Fumaça só opera sáb, dom e feriados.</div>
+    </div>
+
   </div>
 </div>
 
@@ -665,16 +921,16 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,san
   </div>
 </div>
 
-<footer class="footer">
-  <div class="footer-inner">
+<footer class="footer" style="border-top:1px solid var(--g6);padding:28px 20px;background:var(--g8)">
+  <div style="max-width:800px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center">
     <strong style="color:#444;font-size:14px">roteiro<span style="color:var(--blue)">.mg</span></strong>
-    <div class="footer-links">
-      <a href="#" onclick="showView('view-sobre');return false;">Sobre</a>
-      <a href="#" onclick="showView('view-contato');return false;">Contato</a>
-      <a href="#" onclick="showView('view-privacidade');return false;">Política de Privacidade</a>
-      <a href="#" onclick="showView('view-termos');return false;">Termos de Uso</a>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center">
+      <a href="#" onclick="gtag('event','ver_pagina',{page:'sobre'});showView('view-sobre');return false;" style="color:var(--g4);text-decoration:none;font-size:12px">Sobre</a>
+      <a href="#" onclick="gtag('event','ver_pagina',{page:'contato'});showView('view-contato');return false;" style="color:var(--g4);text-decoration:none;font-size:12px">Contato</a>
+      <a href="#" onclick="gtag('event','ver_pagina',{page:'privacidade'});showView('view-privacidade');return false;" style="color:var(--g4);text-decoration:none;font-size:12px">Política de Privacidade</a>
+      <a href="#" onclick="gtag('event','ver_pagina',{page:'termos'});showView('view-termos');return false;" style="color:var(--g4);text-decoration:none;font-size:12px">Termos de Uso</a>
     </div>
-    <p class="footer-copy">© 2025 roteiro.mg · Guia de turismo em Minas Gerais · Dados baseados em Google, TripAdvisor e guias especializados</p>
+    <p style="font-size:11px;color:var(--g5)">© 2026 roteiro.mg · Guia de turismo em Tiradentes, Minas Gerais</p>
   </div>
 </footer>
 
@@ -690,53 +946,64 @@ const DB = {
     nome: 'Tiradentes',
     desc: 'Minas Gerais · Patrimônio Histórico Nacional',
     cafes: [
-      {n:'Café da Viela',desc:'Café colonial com pão de queijo fresco, biscoito de polvilho, queijo canastra e doce de leite artesanal em casarão do séc. XVIII. Um dos mais queridos da cidade.',tip:'📍 Viela das Mercês, 14 · Centro histórico',ig:'https://instagram.com/cafedaviela'},
-      {n:'Marcas Mineiras Café',desc:'Você entra numa loja de decoração e descobre ao fundo um café aconchegante em meio à natureza. Ambiente único e encantador no centro histórico.',tip:'📍 Centro histórico de Tiradentes',ig:'https://instagram.com/marcasmineiras_loja_cafe'},
-      {n:"Taberna d'Omar",desc:'Cozinha e padaria artesanal com pães premiados, tortas caseiras e cafés especiais. Vista privilegiada para a Igreja do Carmo em São João del-Rei.',tip:'📍 Rua Direita, 187 · Tiradentes · (32) 99981-9478',ig:'https://instagram.com/tabernad.omar'},
-      {n:'Porão Tiradentes',desc:'Café intimista no centro histórico com ambiente acolhedor. Espaço que também recebe eventos e noites especiais com música.',tip:'📍 Centro histórico de Tiradentes',ig:'https://instagram.com/poraotiradentes'},
+      {n:'Café da Viela',desc:'Café colonial com pão de queijo fresco, biscoito de polvilho, queijo canastra e doce de leite artesanal em casarão do séc. XVIII. Um dos mais queridos da cidade.',tip:'📍 Viela das Mercês, 14 · Centro histórico',ig:'https://instagram.com/cafedaviela',g:'https://www.google.com/maps/search/Café+da+Viela+Tiradentes+MG'},
+      {n:'Marcas Mineiras Café',desc:'Você entra numa loja de decoração e descobre ao fundo um café aconchegante em meio à natureza. Ambiente único e encantador no centro histórico.',tip:'📍 Centro histórico de Tiradentes',ig:'https://www.instagram.com/marcasmineiras_loja_cafe/',g:'https://www.google.com/maps/search/Marcas+Mineiras+Café+Tiradentes+MG'},
+      {n:"Taberna d'Omar",desc:'Cozinha e padaria artesanal com pães premiados, tortas caseiras e cafés especiais. Um dos melhores café da manhã de Tiradentes.',tip:'📍 Rua Direita, 187 · Tiradentes · (32) 99981-9478',ig:'https://www.instagram.com/tabernad.omar/',g:'https://www.google.com/maps/search/Taberna+dOmar+Tiradentes+MG'},
+      {n:'Porão Tiradentes',desc:'Café intimista no centro histórico com ambiente acolhedor. Espaço que também recebe eventos e noites especiais com música.',tip:'📍 Centro histórico de Tiradentes',ig:'https://www.instagram.com/poraotiradentes/',g:'https://www.google.com/maps/search/Porão+Tiradentes+MG'},
     ],
     almoco: [
-      {n:'Empório Santo Antônio',desc:'A comida aqui é simplesmente um absurdo de bom! Bufê regional completo com pernil, cupim e clássicos mineiros. Reserve com antecedência para o domingo!',tip:'📍 Av. Gov. Israel Pinheiro s/n · Reserve antes!',ig:'https://instagram.com/emporiosantoantonio'},
+      {n:'Empório Santo Antônio',desc:'A comida aqui é simplesmente um absurdo de bom! Bufê regional completo com pernil, cupim e clássicos mineiros. Reserve com antecedência especialmente para o domingo!',tip:'📍 Av. Gov. Israel Pinheiro s/n · Reserve antes!',ig:'https://www.instagram.com/emporiosantoantonio/',g:'https://www.google.com/maps/search/Empório+Santo+Antônio+Tiradentes+MG'},
       {n:"Temperos d'Angela",desc:'Comida típica mineira feita direto no fogão a lenha com ingredientes fresquinhos. Não deixe de experimentar a caipirinha de maracujá com cachaça em amburana! Visita obrigatória!',tip:'📍 Bichinho · 7km de Tiradentes',g:'https://share.google/hzrRisYQUV7H2ZQkJ'},
-      {n:'Viradas do Largo',desc:'Feijão tropeiro, frango com quiabo e couve refogada — a essência da cozinha mineira em ambiente histórico aconchegante com vista para as igrejas.',tip:'📍 Rua do Moinho, 11 · Tiradentes'},
-      {n:'Pau de Angu',desc:'Culinária mineira raiz em Bichinho — pratos caprichados e ambiente campestre irresistível. Vale o desvio de 3km da cidade.',tip:'📍 Estrada para Bichinho, km 3',ig:'https://instagram.com/paudeangutda'},
-      
+      {n:'Viradas do Largo',desc:'Feijão tropeiro, frango com quiabo e couve refogada — a essência da cozinha mineira em ambiente histórico aconchegante com vista para as igrejas.',tip:'📍 Rua do Moinho, 11 · Tiradentes',g:'https://www.google.com/maps/search/Viradas+do+Largo+Tiradentes+MG'},
+      {n:'Pau de Angu',desc:'Culinária mineira raiz em Bichinho — pratos caprichados e ambiente campestre irresistível. Vale o desvio de 7km da cidade.',tip:'📍 Bichinho · 7km de Tiradentes',ig:'https://www.instagram.com/paudeangutda/',g:'https://www.google.com/maps/search/Pau+de+Angu+Bichinho+MG'},
+      {n:'Beta do Rosário',desc:'Custo-benefício excelente no centro histórico — boa comida mineira sem complicações. Também vira bar animado à noite.',tip:'📍 Centro histórico · Tiradentes',ig:'https://www.instagram.com/betadorosario/',g:'https://www.google.com/maps/search/Beta+do+Rosário+Tiradentes+MG'},
     ],
     jantar: [
-      {n:'Tragaluz',desc:"Top 100 Restaurantes do Brasil (Exame Casual 2024). A galinha d'Angola com molho de cogumelo é o prato mais falado. Casarão colonial de quase 300 anos.",tip:'📍 Rua Direita, 52 · Qua–Seg a partir das 19h · Reserve!',ig:'https://instagram.com/tragaluztiradentes'},
-      {n:'Angatu',desc:'Menu degustação requintado. Membro da Boa Lembrança. Pratos autorais que reinterpretam Minas com técnica e elegância.',tip:'📍 Rua da Cadeia, 38 · Somente jantar · Reserve!'},
-      {n:'UaiThai',desc:'Uma das maiores surpresas de Tiradentes: culinária tailandesa autoral com ingredientes mineiros. Experiência única e inesquecível.',tip:'📍 Centro histórico · Reserve com antecedência',ig:'https://instagram.com/uaithai'},
-      {n:'Ora Restaurante',desc:'Cozinha contemporânea com técnica apurada e ingredientes locais. Uma das grandes descobertas do circuito gastronômico de Tiradentes.',tip:'📍 Centro histórico · Tiradentes',ig:'https://instagram.com/orarestaurante'},
-      {n:'Pacco & Bacco',desc:'Italiana contemporânea com excelente carta de vinhos. Ótimo para um jantar especial ou romântico em ambiente aconchegante.',tip:'📍 Rua Direita, 166 · Tiradentes'},
-      {n:'O Provençal',desc:'Culinária francesa com frutos do mar autorais. Ambiente intimista — perfeito para ocasiões especiais.',tip:'📍 Rua da Cadeia, 226A · Tiradentes'},
+      {n:'Tragaluz',desc:"Top 100 Restaurantes do Brasil (Exame Casual 2024). A galinha d'Angola com molho de cogumelo é o prato mais falado. Casarão colonial de quase 300 anos com atmosfera única.",tip:'📍 Rua Direita, 52 · Qua–Seg a partir das 19h · Reserve!',ig:'https://www.instagram.com/tragaluztiradentes/',g:'https://www.google.com/maps/search/Tragaluz+Tiradentes+MG'},
+      {n:'Angatu',desc:'Menu degustação requintado. Membro da Boa Lembrança. Pratos autorais que reinterpretam Minas com técnica e elegância. Um dos mais premiados da cidade.',tip:'📍 Rua da Cadeia, 38 · Somente jantar · Reserve!',ig:'https://www.instagram.com/anguaturestaurante/',g:'https://www.google.com/maps/search/Angatu+Tiradentes+MG'},
+      {n:'UaiThai',desc:'Uma das maiores surpresas de Tiradentes: culinária tailandesa autoral com ingredientes mineiros. Experiência única e inesquecível.',tip:'📍 Centro histórico · Reserve com antecedência',ig:'https://www.instagram.com/uaithaitiradentes/',g:'https://www.google.com/maps/search/UaiThai+Tiradentes+MG'},
+      {n:'Ora Restaurante',desc:'Cozinha contemporânea com técnica apurada e ingredientes locais. Uma das grandes descobertas do circuito gastronômico de Tiradentes.',tip:'📍 Centro histórico · Tiradentes',ig:'https://www.instagram.com/ora.restaurante/',g:'https://www.google.com/maps/search/Ora+Restaurante+Tiradentes+MG'},
+      {n:'Pacco & Bacco',desc:'Italiana contemporânea com excelente carta de vinhos. Ótimo para um jantar especial ou romântico em ambiente aconchegante.',tip:'📍 Rua Direita, 166 · Tiradentes',g:'https://www.google.com/maps/search/Pacco+e+Bacco+Tiradentes+MG'},
+      {n:'O Provençal',desc:'Culinária francesa com frutos do mar autorais. Ambiente intimista — perfeito para ocasiões especiais.',tip:'📍 Rua da Cadeia, 226A · Tiradentes',g:'https://www.google.com/maps/search/O+Provençal+Tiradentes+MG'},
     ],
     bares: [
-      {n:'Entrepot du Vin',desc:'Sem dúvida os melhores drinks de Tiradentes. Carta de vinhos impressionante, coquetéis autorais e ambiente sofisticado.',tip:'📍 Centro histórico · Tiradentes',ig:'https://instagram.com/entrepotduvin'},
-      {n:'Conto de Reis Bar',desc:'Se você gosta de uma polenta com jiló num boteco autêntico, este é o lugar. Se você não gosta é porque ainda não foi lá!',tip:'📍 Centro histórico · Tiradentes',ig:'https://instagram.com/contodereis_bar'},
-      {n:'Beta do Rosário',desc:'De dia é restaurante, à noite vira bar animado com petiscos mineiros e cerveja gelada. Ambiente descontraído no centro histórico.',tip:'📍 Centro histórico · Tiradentes',ig:'https://instagram.com/betadorosario'},
+      {n:'Entrepot du Vin',desc:'Sem dúvida os melhores drinks de Tiradentes. Carta de vinhos impressionante, coquetéis autorais e ambiente sofisticado no centro histórico.',tip:'📍 Centro histórico · Tiradentes',ig:'https://www.instagram.com/entrepotduvintiradentes/',g:'https://www.google.com/maps/search/Entrepot+du+Vin+Tiradentes+MG'},
+      {n:'Conto de Reis Bar',desc:'Se você gosta de uma polenta com jiló num boteco autêntico, este é o lugar. Se você não gosta é porque ainda não foi lá!',tip:'📍 Centro histórico · Tiradentes',ig:'https://www.instagram.com/contodereis_bar/',g:'https://www.google.com/maps/search/Conto+de+Reis+Bar+Tiradentes+MG'},
+      {n:'Beta do Rosário',desc:'De dia é restaurante, à noite vira bar animado com petiscos mineiros e cerveja gelada. Ambiente descontraído no coração histórico.',tip:'📍 Centro histórico · Tiradentes',ig:'https://www.instagram.com/betadorosario/',g:'https://www.google.com/maps/search/Beta+do+Rosário+Tiradentes+MG'},
+      {n:'Porão Tiradentes',desc:'Espaço intimista com eventos e noites especiais, música e drinks no centro histórico de Tiradentes.',tip:'📍 Centro histórico · Tiradentes',ig:'https://www.instagram.com/poraotiradentes/',g:'https://www.google.com/maps/search/Porão+Tiradentes+MG'},
     ],
     experiencias: [
-      {n:'Vinícola Luiz Porto',desc:'Visita guiada às caves com barricas de carvalho e degustação de 4 rótulos de vinhos finos mineiros. Tour de 1h30 — encanta mesmo quem não é especialista.',tip:'📍 Av. Gov. Israel Pinheiro, 878 · Qui–Sáb 10h–14h · R$125/pessoa',ig:'https://instagram.com/luizportovinhosfinos'},
-      {n:'Sunset na Vinícola Trindade',desc:'Domo geodésico em Bichinho: pôr do sol sobre a Serra de São José, vinho mineiro, queijo e música ao vivo. A experiência mais memorável da região.',tip:'📍 Bichinho – 7 km de Tiradentes · Vagas limitadas — reserve!',ig:'https://instagram.com/vinicolatrindade',wpp:'https://wa.me/5531972342195?text=Reserva+Sunset+Trindade'},
-      {n:'Ateliê da Cachaça CM',desc:'Pioneiros desde 1998 com mais de 1100 rótulos. Degustação guiada explicando cada cachaça envelhecida em madeiras brasileiras. Degustação gratuita na loja!',tip:'📍 Centro histórico · Tiradentes · 23 anos de tradição',ig:'https://instagram.com/ateliedacachacacm'},
-      {n:'Cachaçaria Mazuma',desc:'Do canavial à destilação — visita guiada completa ao alambique em Bichinho. Cachaças premiadas envelhecidas em madeiras raras como amburana e jequitibá.',tip:'📍 Bichinho · Seg–Sáb 9h30–17h · Dom até 14h',ig:'https://instagram.com/mazumamineira'},
-      {n:'Degustação de Queijos Artesanais',desc:'Queijaria premiada com queijos da Canastra, Serro e Alagoa harmonizados com cervejas artesanais. Também: goiabadas, doces e azeites artesanais.',tip:'📍 Centro histórico · Tiradentes'},
-      {n:'Maria Fumaça — Trem Histórico',desc:'Viagem nostálgica de trem a vapor entre Tiradentes e São João del-Rei pelos trilhos históricos do séc. XIX. Uma das experiências mais inesquecíveis de Minas.',tip:'📍 Estação Ferroviária de Tiradentes · Sáb, Dom e feriados'},
+      {n:'Tiradentes Walking Tour — Becos de Tiradentes',desc:'Pelo 4º ano consecutivo entre as 10 melhores experiências do Brasil pelo TripAdvisor. Passeio guiado de 2h20 pelos becos históricos com guias nativos credenciados pela Cadastur. Mais de 1.200 avaliações 5 estrelas.',tip:'📍 R. Custódio Gomes, 13 · Centro · Seg–Sáb 9h30',ig:'https://www.instagram.com/tiradenteswalkingtour/',wpp:'https://wa.me/5532988106628?text=Olá!+Quero+fazer+o+Walking+Tour+em+Tiradentes',g:'https://www.google.com/maps/search/Tiradentes+Walking+Tour+MG'},
+      {n:'Vinícola Luiz Porto',desc:'Visita guiada às caves com barricas de carvalho e degustação de 4 rótulos de vinhos finos mineiros. Tour de 1h30 — encanta mesmo quem não é especialista.',tip:'📍 Av. Gov. Israel Pinheiro, 878 · Qui–Sáb 10h–14h · R$125/pessoa',ig:'https://www.instagram.com/luizportovinhosfinos/',g:'https://www.google.com/maps/search/Vinícola+Luiz+Porto+Tiradentes+MG'},
+      {n:'Sunset na Vinícola Trindade',desc:'Domo geodésico em Bichinho: pôr do sol sobre a Serra de São José, vinho mineiro, queijo e música ao vivo. A experiência mais memorável da região.',tip:'📍 Bichinho – 7 km de Tiradentes · Vagas limitadas — reserve!',ig:'https://www.instagram.com/vinicolatrindade/',wpp:'https://wa.me/5531972342195?text=Reserva+Sunset+Trindade',g:'https://www.google.com/maps/search/Vinícola+Trindade+Bichinho+MG'},
+      {n:'Ateliê da Cachaça CM',desc:'Pioneiros desde 1998 com mais de 1100 rótulos. Degustação guiada de cachaças envelhecidas em madeiras brasileiras. Degustação gratuita na loja!',tip:'📍 Centro histórico · Tiradentes · 23 anos de tradição',ig:'https://www.instagram.com/ateliedacachacacm/',g:'https://www.google.com/maps/search/Ateliê+da+Cachaça+Tiradentes+MG'},
+      {n:'Cachaçaria Mazuma',desc:'Do canavial à destilação — visita guiada completa ao alambique em Bichinho. Cachaças premiadas envelhecidas em amburana e jequitibá.',tip:'📍 Bichinho · Seg–Sáb 9h30–17h · Dom até 14h',ig:'https://www.instagram.com/mazumamineira/',g:'https://www.google.com/maps/search/Cachaçaria+Mazuma+Bichinho+MG'},
+      {n:'Degustação de Queijos Artesanais',desc:'Queijaria premiada com queijos da Canastra, Serro e Alagoa harmonizados com cervejas artesanais. Também: goiabadas, doces e azeites artesanais.',tip:'📍 Centro histórico · Tiradentes',g:'https://www.google.com/maps/search/queijaria+artesanal+Tiradentes+MG'},
+      {n:'Maria Fumaça — Trem Histórico',desc:'Viagem nostálgica de trem a vapor entre Tiradentes e São João del-Rei pelos trilhos históricos do séc. XIX. Uma das experiências mais inesquecíveis de Minas.',tip:'📍 Estação Ferroviária de Tiradentes · Sáb, Dom e feriados',g:'https://www.google.com/maps/search/Estação+Ferroviária+Tiradentes+MG'},
     ],
     natureza: [
-      {n:'Trilha da Serra de São José',desc:'Trilha de 8km com vista panorâmica de Tiradentes e São João del-Rei, cachoeiras e flora nativa da Mata Atlântica. Dificuldade moderada, 4–5h.',tip:'📍 Acesso pela Rua do Chafariz · Tiradentes · Guia recomendado'},
-      {n:'Cachoeira do Mangue',desc:'Cachoeira escondida nas matas da Serra de São José. Acesso por trilha de ~3h, dificuldade fácil. Ideal para um banho refrescante e fotos.',tip:'📍 ~4km de Tiradentes · Estrada do Mangue'},
+      {n:'Trilha da Serra de São José',desc:'Trilha de 8km com vista panorâmica de Tiradentes e São João del-Rei, cachoeiras e flora nativa da Mata Atlântica. Dificuldade moderada, 4–5h.',tip:'📍 Acesso pela Rua do Chafariz · Tiradentes · Guia recomendado',g:'https://www.google.com/maps/search/Serra+de+São+José+Tiradentes+trilha+MG'},
+      {n:'Cachoeira do Mangue',desc:'Cachoeira escondida nas matas da Serra de São José. Trilha de ~3h, dificuldade fácil. Ideal para um banho refrescante e fotos.',tip:'📍 ~4km de Tiradentes · Estrada do Mangue',g:'https://www.google.com/maps/search/Cachoeira+do+Mangue+Tiradentes+MG'},
     ],
     visitas: [
-      {n:'Matriz de Santo Antônio',desc:'Interior dourado a ouro, fachada em pedra-sabão esculpida por discípulos de Aleijadinho e órgão do séc. XVIII ainda em funcionamento.',tip:'📍 Praça Padre Lourival · Centro histórico · Aberta diariamente'},
-      {n:'Museu Padre Toledo',desc:'Casa original do padre inconfidente com acervo histórico da Inconfidência Mineira — documentos e mobiliário originais do séc. XVIII.',tip:'📍 Rua Padre Toledo · Centro histórico'},
-      {n:'Chafariz de São José',desc:'O chafariz mais antigo de Tiradentes, ainda abastecido por fonte natural. Ponto histórico e simbólico da cidade desde o séc. XVIII.',tip:'📍 Rua da Câmara · Centro histórico'},
-      {n:'Estação Ferroviária de Tiradentes',desc:'Museu ferroviário em estação do séc. XIX com acervo fotográfico e histórico. Ponto de partida da histórica Maria Fumaça.',tip:'📍 Largo das Forras · Centro histórico'},
+      {n:'Matriz de Santo Antônio',desc:'Interior dourado a ouro, fachada em pedra-sabão esculpida por discípulos de Aleijadinho e órgão do séc. XVIII ainda em funcionamento. Joia do barroco mineiro.',tip:'📍 Praça Padre Lourival · Centro histórico · Aberta diariamente',g:'https://www.google.com/maps/search/Matriz+Santo+Antônio+Tiradentes+MG'},
+      {n:'Museu Padre Toledo',desc:'Casa original do padre inconfidente com acervo histórico da Inconfidência Mineira — documentos e mobiliário originais do séc. XVIII.',tip:'📍 Rua Padre Toledo · Centro histórico',g:'https://www.google.com/maps/search/Museu+Padre+Toledo+Tiradentes+MG'},
+      {n:'Chafariz de São José',desc:'O chafariz mais antigo de Tiradentes, ainda abastecido por fonte natural. Ponto histórico e simbólico da cidade desde o séc. XVIII.',tip:'📍 Rua da Câmara · Centro histórico',g:'https://www.google.com/maps/search/Chafariz+São+José+Tiradentes+MG'},
+      {n:'Estação Ferroviária de Tiradentes',desc:'Museu ferroviário em estação do séc. XIX com acervo fotográfico e histórico. Ponto de partida da histórica Maria Fumaça.',tip:'📍 Largo das Forras · Centro histórico',g:'https://www.google.com/maps/search/Estação+Ferroviária+Tiradentes+MG'},
     ],
     eventos: [
-      {n:'Festival de Inverno de Tiradentes',desc:'Um dos festivais culturais mais tradicionais do Brasil, com shows, teatro, gastronomia e exposições no centro histórico.',tip:'📍 Centro histórico · Julho de cada ano',data:'Julho',ig:'https://instagram.com/festivaltiradentes'},
-      {n:'Semana da Inconfidência',desc:'Cortejo histórico, teatro de rua e exposições sobre Tiradentes e a Inconfidência Mineira. Evento cívico e cultural de grande relevância nacional.',tip:'📍 Centro histórico · 15 de novembro',data:'15 de novembro'},
-      {n:'Cantata de Natal nas Igrejas Barrocas',desc:'Concertos de coral e música sacra nas igrejas históricas iluminadas de Tiradentes. Encerramento de ano inesquecível.',tip:'📍 Igrejas históricas · Dezembro',data:'Dezembro'},
+      {n:'Mostra de Cinema de Tiradentes',desc:'Um dos principais festivais de cinema do país, reunindo exibições de filmes brasileiros, debates, oficinas e encontros com realizadores no centro histórico. Atividades gratuitas nas praças.',tip:'📍 Centro histórico · 23 a 31 de janeiro de 2026',data:'23–31 Jan 2026',g:'https://www.google.com/search?q=Mostra+Cinema+Tiradentes+2026'},
+      {n:'Carnaval de Tiradentes',desc:'Carnaval de rua considerado um dos melhores de Minas, com blocos tradicionais como "Domésticas" e "Roma foi pouco", cortejo pelas ruas de pedra e muita animação familiar.',tip:'📍 Centro histórico · 12 a 17 de fevereiro de 2026',data:'12–17 Fev 2026',g:'https://www.google.com/search?q=Carnaval+Tiradentes+2026'},
+      {n:'Semana Santa em Tiradentes',desc:'Evento religioso com tradições centenárias: tapetes ornamentais nas ruas, passos históricos abertos e procissões emocionantes pelas vielas. Um dos mais belos do Brasil.',tip:'📍 Centro histórico · 29 mar a 05 abr 2026',data:'29 Mar–5 Abr 2026',g:'https://www.google.com/search?q=Semana+Santa+Tiradentes+2026'},
+      {n:'Duo Jazz Festival',desc:'Festival dedicado à música jazz instrumental com shows, cursos e palestras para músicos e amantes da música.',tip:'📍 Centro histórico · 19 a 22 de março de 2026',data:'19–22 Mar 2026',ig:'https://www.instagram.com/duojazzfestivaltiradentes/',g:'https://www.google.com/search?q=Duo+Jazz+Festival+Tiradentes+2026'},
+      {n:'Caminhos de Fogo — Festival Gastronômico na Brasa',desc:'5ª edição do festival de gastronomia na brasa com ~25 chefs, experiências de parrilla, defumação e lenha. Tema 2026: "Encontros". Realizado no Santíssimo Resort.',tip:'📍 Santíssimo Resort · Rua dos Inconfidentes, 140 · 25 de abril de 2026',data:'25 Abr 2026',ig:'https://www.instagram.com/caminhosdefogo/',g:'https://www.google.com/search?q=Caminhos+de+Fogo+Festival+Tiradentes+2026'},
+      {n:'Tiradentes em Cena — Mostra de Artes Cênicas',desc:'Festival de teatro que reúne espetáculos, cursos e debates com quem produz e quem aprecia teatro. 25.000 seguidores no Instagram.',tip:'📍 Centro histórico · 13 a 17 de maio de 2026',data:'13–17 Mai 2026',ig:'https://www.instagram.com/tiradentesemcena/',g:'https://www.google.com/search?q=Tiradentes+em+Cena+2026'},
+      {n:'Trem Bier — Festival de Cervejas Artesanais',desc:'Festival dedicado à cultura cervejeira artesanal, com degustações, música e gastronomia no centro histórico.',tip:'📍 Centro histórico · 21 a 24 de maio de 2026',data:'21–24 Mai 2026',g:'https://www.google.com/search?q=Trem+Bier+Tiradentes+2026'},
+      {n:'Vinho e Jazz Tiradentes',desc:'Festival que une música jazz, vinhos selecionados e gastronomia em ambientes charmosos. Um dos eventos mais aguardados do calendário.',tip:'📍 Centro histórico · 5 a 14 de junho de 2026',data:'5–14 Jun 2026',ig:'https://www.instagram.com/vinhoejazztiradentes/',g:'https://www.google.com/search?q=Vinho+e+Jazz+Tiradentes+2026'},
+      {n:'Festival de Cultura e Gastronomia de Tiradentes',desc:'O primeiro e mais tradicional festival gastronômico do Brasil, eleito pela Condé Nast Traveller um dos melhores lugares para comer no mundo em 2026. Grandes chefs, menus especiais, aulas e shows.',tip:'📍 Centro histórico · 21 a 30 de agosto de 2026',data:'21–30 Ago 2026',ig:'https://www.instagram.com/farturabrasil/',g:'https://www.google.com/search?q=Festival+Cultura+Gastronomia+Tiradentes+2026'},
+      {n:'Semana Criativa de Tiradentes',desc:'Evento que promove criatividade, inovação, design e cultura. 70.000 seguidores no Instagram. Uma das edições mais esperadas do ano.',tip:'📍 Centro histórico · 15 a 18 de outubro de 2026',data:'15–18 Out 2026',ig:'https://www.instagram.com/semanacriativadetiradentes/',g:'https://www.google.com/search?q=Semana+Criativa+Tiradentes+2026'},
+      {n:'Semana da Inconfidência',desc:'Cortejo histórico, teatro de rua e exposições sobre Tiradentes e a Inconfidência Mineira. Evento cívico e cultural de grande relevância nacional.',tip:'📍 Centro histórico · 17 a 25 de abril de 2026',data:'17–25 Abr 2026',g:'https://www.google.com/search?q=Semana+Inconfidência+Tiradentes+2026'},
+      {n:'Cantata de Natal nas Igrejas Barrocas',desc:'Concertos de coral e música sacra nas igrejas históricas iluminadas de Tiradentes. Encerramento de ano inesquecível.',tip:'📍 Igrejas históricas · Dezembro de 2026',data:'Dez 2026',g:'https://www.google.com/search?q=Natal+Tiradentes+2026'},
     ],
   },
 
@@ -1156,7 +1423,7 @@ let activeCat    = null;  // categoria ativa na tela de cidade
 // NAVIGATION HELPERS
 // ═══════════════════════════════════════════════════════════════════════════
 function showView(id) {
-  ['view-home','view-city','view-form','view-result','view-sobre','view-contato','view-privacidade','view-termos'].forEach(v => {
+  ['view-home','view-city','view-form','view-result','view-sobre','view-contato','view-privacidade','view-termos','view-roteiro-fixo'].forEach(v => {
     document.getElementById(v).classList.toggle('hidden', v !== id);
   });
   window.scrollTo(0,0);
@@ -1164,25 +1431,15 @@ function showView(id) {
 
 function goHome() {
   activeCidade = null;
-  document.getElementById('sel-cidade-home').value = '';
-  document.getElementById('btn-explorar-home').disabled = true;
-  document.getElementById('nav-badge').textContent = 'Minas Gerais';
+  document.getElementById('nav-badge').textContent = 'Tiradentes · MG';
   showView('view-home');
 }
 
-function onCidadeHome() {
-  const val = document.getElementById('sel-cidade-home').value;
-  document.getElementById('btn-explorar-home').disabled = !val || !DB[val];
-  if (val) gtag('event', 'selecionar_cidade', {city: val});
-}
 
-function explorarCidade() {
-  const val = document.getElementById('sel-cidade-home').value;
-  if (!val || !DB[val]) return;
-  gtag('event', 'explorar_cidade', {city: val});
-  activeCidade = val;
-  abrirCidade();
-}
+
+function onCidadeHome() { /* seletor removido no MVP Tiradentes */ }
+
+function explorarCidade() { abrirTiradentes(); }
 
 function abrirCidade() {
   if (!activeCidade) return;
@@ -1192,6 +1449,7 @@ function abrirCidade() {
   document.getElementById('nav-badge').textContent  = db.nome;
   buildCityTabs(activeCidade);
   showView('view-city');
+  if (activeCidade === 'tiradentes') location.hash = 'tiradentes';
 }
 
 function abrirRoteiro() {
@@ -1265,8 +1523,11 @@ function renderPlaces(cidadeKey, catKey) {
 
   grid.innerHTML = items.map((item, idx) => {
     const btns = buildCardContactBtns(item);
+    const photoHtml = item.foto
+      ? `<div class="place-card-img-wrap"><img class="place-card-img" src="${item.foto}" alt="${item.n}" loading="lazy" onerror="this.parentElement.style.display='none'"></div>`
+      : `<div class="place-card-no-img">${cfg.emoji}</div>`;
     return `<button class="place-card" onclick="openModal('${cidadeKey}','${catKey}',${idx})">
-      <span class="place-card-emoji">${cfg.emoji}</span>
+      ${photoHtml}
       <p class="place-card-name">${item.n}</p>
       <p class="place-card-desc">${item.desc||''}</p>
       ${item.tip ? `<p class="place-card-tip">${item.tip}</p>` : ''}
@@ -1320,6 +1581,7 @@ function openModal(cidadeKey, catKey, idx) {
 }
 
 function closeModalBtn() {
+  gtag('event','fechar_modal',{});
   const overlay = document.getElementById('modal-overlay');
   overlay.classList.remove('open');
   setTimeout(() => { overlay.style.display = 'none'; document.body.style.overflow = ''; }, 220);
@@ -1648,39 +1910,125 @@ async function enviarContato(event) {
   btn.disabled = false; btn.textContent = 'Enviar mensagem';
 }
 
-// ═══════════════════════════════════════════════════════════════════════════
-// CITY META + HOMEPAGE GRID
-// ═══════════════════════════════════════════════════════════════════════════
-const CITY_META = {
-  tiradentes:     { emoji:'⛪', type:'Cidade Histórica', highlight:'Barroco colonial, gastronomia premiada, trilhas na Serra de São José e degustações de cachaça artesanal.', tags:['Patrimônio Nacional','Gastronomia','Trilhas','Cachaça'] },
-  ouro_preto:     { emoji:'🏛️', type:'Patrimônio Mundial UNESCO', highlight:'Igrejas barrocas de Aleijadinho, minas de ouro abertas à visitação e centro histórico mais rico do Brasil.', tags:['UNESCO','Barroco','Minas de Ouro','Cultura'] },
-  sao_joao:       { emoji:'🚂', type:'Cidade Histórica', highlight:'Maria Fumaça, orquestras mais antigas do Brasil, arquitetura colonial e boemia na Rua da Cachaça.', tags:['Maria Fumaça','Música','Patrimônio','Noite'] },
-  diamantina:     { emoji:'💎', type:'Patrimônio Mundial UNESCO', highlight:'Vesperata nas sacadas, centro histórico encantador, Parque do Biribiri e berço do presidente JK.', tags:['UNESCO','Vesperata','Natureza','JK'] },
-  capitolio:      { emoji:'🏞️', type:'Natureza & Aventura', highlight:'Cânions e Lago de Furnas com passeios de lancha, Lagoa Azul cristalina e trilhas no Cerrado.', tags:['Cânions','Lago','Lancha','Cerrado'] },
-  monte_verde:    { emoji:'🏔️', type:'Serra da Mantiqueira', highlight:'Clima de montanha, fondue, cerveja artesanal, chocolates, trilhas e o famoso strudel de maçã.', tags:['Serra','Fondue','Chocolate','Trilhas'] },
-  serra_cipo:     { emoji:'🌊', type:'Parque Nacional', highlight:'Cachoeiras cristalinas, trilhas no Cerrado, rafting no Rio Cipó e biodiversidade extraordinária.', tags:['Cachoeiras','Trilhas','Rafting','Cerrado'] },
-  belo_horizonte: { emoji:'🏙️', type:'Capital · UNESCO Gastronomia', highlight:'Cidade Criativa da Gastronomia pela UNESCO, botequins famosos, arte moderna e o gigantesco Inhotim a 45km.', tags:['Gastronomia','UNESCO','Cultura','Inhotim'] },
-  brumadinho:     { emoji:'🎨', type:'Arte Contemporânea', highlight:'Instituto Inhotim — maior museu de arte a céu aberto do mundo com 5.000 hectares de arte e natureza.', tags:['Inhotim','Arte','Natureza','Museu'] },
-  mariana:        { emoji:'⛏️', type:'Primeira Cidade de Minas', highlight:'Mina da Passagem, Igrejas Gêmeas, órgão alemão do séc. XVIII e passeio de trem para Ouro Preto.', tags:['Mina de Ouro','Barroco','Trem','História'] },
-  congonhas:      { emoji:'🗿', type:'Patrimônio Mundial UNESCO', highlight:'Os 12 Profetas de Aleijadinho — as maiores esculturas do barroco brasileiro na Basílica do Bom Jesus.', tags:['UNESCO','Aleijadinho','Profetas','Barroco'] },
-  lavras_novas:   { emoji:'🌄', type:'Distrito Serrano', highlight:'Cachoeiras, artesanato de anjos, paisagem serrana de Ouro Preto e um vilarejo que parece parado no tempo.', tags:['Serra','Cachoeiras','Artesanato','Natureza'] },
-  carrancas:      { emoji:'💦', type:'Ecoturismo · 70+ Cachoeiras', highlight:'Mais de 70 cachoeiras mapeadas, complexos naturais com pinturas rupestres e passeios de 4x4 pela Serra.', tags:['Cachoeiras','Ecoturismo','Natureza','Aventura'] },
-};
 
-function buildHomepageCities() {
-  const grid = document.getElementById('cities-grid-static');
-  if (!grid) return;
-  grid.innerHTML = Object.entries(CITY_META).map(([slug, meta]) => {
-    const db = DB[slug];
-    if (!db) return '';
-    return `<button class="city-card-static" onclick="gtag('event','explorar_cidade_home',{city:'${slug}'});activeCidade='${slug}';abrirCidade()">
-      <div class="city-type">${meta.emoji} ${meta.type}</div>
-      <h3>${db.nome}</h3>
-      <p>${meta.highlight}</p>
-      <div class="city-tags">${meta.tags.map(t => `<span class="city-tag">${t}</span>`).join('')}</div>
-    </button>`;
-  }).join('');
+// ═══════════════════════════════════════════════════════════════════════════
+// ROUTING — deep links /tiradentes e /roteiro
+// ═══════════════════════════════════════════════════════════════════════════
+function handleRoute() {
+  const hash = window.location.hash.replace('#','');
+  if (hash === 'tiradentes') {
+    activeCidade = 'tiradentes';
+    abrirCidade();
+  } else if (hash === 'roteiro') {
+    abrirRoteiroFixo();
+  }
 }
+
+function abrirTiradentes() {
+  gtag('event', 'explorar_tiradentes', {city: 'tiradentes'});
+  activeCidade = 'tiradentes';
+  location.hash = 'tiradentes';
+  abrirCidade();
+}
+
+function abrirRoteiroFixo() {
+  gtag('event', 'ver_roteiro_fixo', {from: activeCidade || 'home'});
+  location.hash = 'roteiro';
+  showView('view-roteiro-fixo');
+  document.getElementById('nav-badge').textContent = 'Roteiro 3 dias';
+}
+
+// Override goHome to reset URL too
+function goHome() {
+  activeCidade = null;
+  document.getElementById('nav-badge').textContent = 'Tiradentes · MG';
+  location.hash = '';
+  showView('view-home');
+}
+
+// Override abrirCidade to update nav-badge (already done) and URL
+const _abrirCidadeOrig = abrirCidade;
+// We redefine abrirCidade below with URL update included
+
+// Handle browser back/forward
+window.addEventListener('hashchange', () => handleRoute());
+
+
+// ═══════════════════════════════════════════════════════════════════════════
+// ROTEIRO FIXO — filtragem por dia
+// ═══════════════════════════════════════════════════════════════════════════
+function filtrarDia(dia) {
+  gtag('event', 'filtrar_dia_roteiro', {dia: dia === 0 ? 'todos' : 'dia_' + dia});
+  // Update tabs
+  ['tab-todos','tab-d1','tab-d2','tab-d3'].forEach((id, i) => {
+    const el = document.getElementById(id);
+    if (el) el.classList.toggle('on', i === dia);
+  });
+  // Show/hide days
+  [1,2,3].forEach(d => {
+    const el = document.getElementById('rf-day-' + d);
+    if (el) el.style.display = (dia === 0 || dia === d) ? '' : 'none';
+  });
+  // Scroll to day if specific
+  if (dia > 0) {
+    const el = document.getElementById('rf-day-' + dia);
+    if (el) el.scrollIntoView({behavior: 'smooth', block: 'start'});
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// SHARE — WhatsApp, Instagram, Copy
+// ═══════════════════════════════════════════════════════════════════════════
+const ROTEIRO_TEXTO = `📍 *Roteiro 3 dias em Tiradentes, MG*
+
+*DIA 1 — Centro histórico*
+🏛️ 10h30 Matriz de Santo Antônio
+🏛️ 11h30 Museu Padre Toledo + Chafariz
+🍽️ 13h00 Almoço · Empório Santo Antônio
+✨ 15h00 Tiradentes Walking Tour
+🍷 19h00 Jantar · Tragaluz
+🍸 21h00 Bar · Entrepot du Vin
+
+*DIA 2 — Bichinho e cachaça*
+✨ 10h00 Cachaçaria Mazuma · Bichinho
+✨ 11h00 Queijos Artesanais · Bichinho
+🍽️ 12h30 Almoço · Temperos d'Angela
+✨ 15h00 Ateliê da Cachaça CM
+🍷 19h00 Jantar · Angatu
+🍸 21h00 Bar · Conto de Reis
+
+*DIA 3 — Natureza e despedida*
+🌿 09h00 Trilha da Serra de São José
+🍽️ 13h00 Almoço · Viradas do Largo
+🏛️ 15h00 Estação Ferroviária + Maria Fumaça
+🍷 19h00 Jantar · UaiThai
+
+🔗 roteiro.mg/roteiro`;
+
+function compartilharWpp() {
+  gtag('event', 'compartilhar_roteiro', {canal: 'whatsapp'});
+  const url = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(ROTEIRO_TEXTO);
+  window.open(url, '_blank');
+}
+
+function compartilharIg() {
+  gtag('event', 'compartilhar_roteiro', {canal: 'instagram'});
+  navigator.clipboard.writeText(ROTEIRO_TEXTO).then(() => {
+    const toast = document.getElementById('share-toast');
+    toast.style.display = 'block';
+    setTimeout(() => toast.style.display = 'none', 4000);
+  }).catch(() => copiarRoteiro());
+}
+
+function copiarRoteiro() {
+  gtag('event', 'compartilhar_roteiro', {canal: 'copy'});
+  navigator.clipboard.writeText(ROTEIRO_TEXTO).then(() => {
+    const toast = document.getElementById('share-toast');
+    toast.style.display = 'block';
+    setTimeout(() => toast.style.display = 'none', 4000);
+  });
+}
+
 // ═══════════════════════════════════════════════════════════════════════════
 // INIT
 // ═══════════════════════════════════════════════════════════════════════════
@@ -1692,6 +2040,9 @@ document.getElementById('dt-in').addEventListener('change', function() {
   if (document.getElementById('dt-fim').value && document.getElementById('dt-fim').value < this.value)
     document.getElementById('dt-fim').value = this.value;
 });
+
+// Handle deep links on load
+handleRoute();
 </script>
 </body>
 </html>
